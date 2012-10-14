@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B85172EC-D78D-47A0-AD9E-A801D238F28C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>PeterO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\PeterO.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\PeterO.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>petero_csharp</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PeterO\ArrayUtil.cs" />
+    <Compile Include="PeterO\BinaryIO.cs" />
+    <Compile Include="PeterO\CulturedText.cs" />
+    <Compile Include="PeterO\DisposableList.cs" />
+    <Compile Include="PeterO\DoubleComparer.cs" />
+    <Compile Include="PeterO\IniEntry.cs" />
+    <Compile Include="PeterO\IniFile.cs" />
+    <Compile Include="PeterO\IniMergeBehavior.cs" />
+    <Compile Include="PeterO\InvariantText.cs" />
+    <Compile Include="PeterO\IStructure.cs" />
+    <Compile Include="PeterO\ListSegment.cs" />
+    <Compile Include="PeterO\PartialStream.cs" />
+    <Compile Include="PeterO\Pair.cs" />
+    <Compile Include="PeterO\Png.cs" />
+    <Compile Include="PeterO\Png4BitIndexed.cs" />
+    <Compile Include="PeterO\Png8BitIndexed.cs" />
+    <Compile Include="PeterO\SingleComparer.cs" />
+    <Compile Include="PeterO\Util.cs" />
+    <Compile Include="PeterO\XEReader.cs" />
+    <Compile Include="PeterO\XEWriter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <Import Project="$(MSBuildExtensionsPath)\StyleCop\v4.7\StyleCop.targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

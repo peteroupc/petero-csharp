@@ -1,0 +1,7 @@
+bin/
+*.exe
+obj/
+*.user
+*.suo
+*.Cache
+*.sdsettings
