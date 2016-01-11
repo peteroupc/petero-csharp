@@ -1,7 +1,7 @@
 petero-csharp
 ===========
 
-Written by Peter O. in 2012. [http://upokecenter.dreamhosters.com/](http://upokecenter.dreamhosters.com/)
+Written by Peter O. in 2012-2016. [http://upokecenter.dreamhosters.com/](http://upokecenter.dreamhosters.com/)
 
 A collection of utility classes in C#.
 
