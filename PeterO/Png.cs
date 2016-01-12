@@ -21,7 +21,7 @@ int length) {
       var ofs = offset;
       var chunk = 0;
       while (len > 0) {
-        chunk = Math.Min(3854,len);
+        chunk = Math.Min(3854, len);
         len -= chunk;
         while (chunk > 0) {
           v1 = unchecked((int)v1 + array[ofs]);
