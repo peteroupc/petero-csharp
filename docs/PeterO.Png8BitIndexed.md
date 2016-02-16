@@ -10,7 +10,7 @@ A simple class for encoding PNG image files.
         int width,
         int height);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.Png8BitIndexed](PeterO.Png8BitIndexed.md) class.
 
 <b>Parameters:</b>
 
@@ -59,7 +59,7 @@ Not documented yet.
 
  * <i>index</i>: A 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A byte array.
 
@@ -74,7 +74,7 @@ Not documented yet.
 
  * <i>y</i>: A 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Byte object.
 
@@ -92,7 +92,7 @@ Not documented yet.
 
  * <i>y</i>: A 32-bit signed integer. (3).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 

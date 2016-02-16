@@ -11,7 +11,7 @@ Not documented yet.
     public IniFile(
         string path);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniFile](PeterO.IniFile.md) class.
 
 <b>Parameters:</b>
 
@@ -23,7 +23,7 @@ Initializes a new instance of the  class.
         string path,
         PeterO.IniMergeBehavior behavior);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniFile](PeterO.IniFile.md) class.
 
 <b>Parameters:</b>
 
@@ -41,7 +41,7 @@ The parameter <i>path</i>
 
     public IniFile();
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniFile](PeterO.IniFile.md) class.
 
 ### Count
 
@@ -64,7 +64,7 @@ Not documented yet.
 
  * <i>sectionName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IniSection object.
 
@@ -82,7 +82,7 @@ Not documented yet.
 
  * <i>behavior</i>: An IniMergeBehavior object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IniSection object.
 
@@ -97,7 +97,7 @@ Not documented yet.
 
  * <i>sectionName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IniSection object.
 
@@ -115,7 +115,7 @@ Not documented yet.
 
  * <i>keyName</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -183,7 +183,7 @@ The parameter <i>keyName</i>
 
 Converts this object to a text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 

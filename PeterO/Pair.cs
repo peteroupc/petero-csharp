@@ -60,8 +60,7 @@ public sealed class Pair<TFirst, TSecond> : IEquatable<Pair<TFirst, TSecond>> {
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.Pair`2.Equals(PeterO.Pair
-    /// {`0,`1})"]'/>
+    /// path='docs/doc[@name="M:PeterO.Pair`2.Equals(PeterO.Pair{`0,`1})"]/*'/>
     public bool Equals(Pair<TFirst, TSecond> other) {
       return Object.Equals(this.first, other.first) &&
         Object.Equals(this.second, other.second);

@@ -9,7 +9,7 @@ Reads and writes data types in little endian or big endian.
     public BinaryIO(
         System.IO.Stream stream);
 
-Initializes a new instance of the  class. Initializes a new BinaryIO instance.
+Initializes a new instance of the[PeterO.BinaryIO](PeterO.BinaryIO.md) class. Initializes a new BinaryIO instance.
 
 <b>Parameters:</b>
 
@@ -29,7 +29,7 @@ Gets a value indicating whether the underlying stream can be read.
 
 <b>Returns:</b>
 
-True if the underlying stream can be read; otherwise, false.
+ `true`  If the underlying stream can be read; otherwise,.  `false` .
 
 ### CanSeek
 
@@ -39,7 +39,7 @@ Gets a value indicating whether the underlying stream supports seeking.
 
 <b>Returns:</b>
 
-True if the underlying stream supports seeking; otherwise, false.
+ `true`  If the underlying stream supports seeking; otherwise,.  `false` .
 
 ### CanWrite
 
@@ -49,7 +49,7 @@ Gets a value indicating whether the underlying stream supports writing.
 
 <b>Returns:</b>
 
-True if the underlying stream supports writing; otherwise, false.
+ `true`  If the underlying stream supports writing; otherwise,.  `false` .
 
 ### Length
 
@@ -91,7 +91,7 @@ Not documented yet.
  (but not more than  <i>data</i>
  's length).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -116,7 +116,7 @@ Either  <i>offset</i>
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -128,7 +128,7 @@ Reads a signed 32-bit integer encoded in 7-bit encoding to the stream.
 
 In 7-bit encoding, an integer is encoded in one or more bytes. Each byte contains 7 bits of the result, starting with the least-significant bits. If the eighth (highest) bit is 1, then the byte that follows it contains 7 more bits, and so on. Otherwise, the process stops and the resulting integer is returned. The return value of this method can be up to 32 bits long. If bit 32 is 1, the return value is negative; otherwise positive.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -138,7 +138,7 @@ A 32-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit signed integer.
 
@@ -148,7 +148,7 @@ A 64-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit signed integer.
 
@@ -158,7 +158,7 @@ A 64-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -170,7 +170,7 @@ Reads an unsigned 32-bit integer encoded in 7-bit encoding to the stream.
 
 In 7-bit encoding, an integer is encoded in one or more bytes. Each byte contains 7 bits of the result, starting with the least-significant bits. If the eighth (highest) bit is 1, then the byte that follows it contains 7 more bits, and so on. Otherwise, the process stops and the resulting integer is returned. The return value of this method can be up to 31 bits long and is positive.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -180,7 +180,7 @@ A 32-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Byte object.
 
@@ -195,7 +195,7 @@ Reads data from a stream into a byte array.
 
  * <i>size</i>: A 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A byte array containing the data read.
 
@@ -205,7 +205,7 @@ A byte array containing the data read.
 
 Reads a 64-bit floating-point number in big-endian byte order.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit floating-point number.
 
@@ -215,7 +215,7 @@ A 64-bit floating-point number.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit floating-point number.
 
@@ -225,7 +225,7 @@ A 64-bit floating-point number.
 
 Reads a 16-bit signed integer in big-endian byte order (2 bytes).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 16-bit signed integer.
 
@@ -235,7 +235,7 @@ A 16-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 16-bit signed integer.
 
@@ -245,7 +245,7 @@ A 16-bit signed integer.
 
 Reads a 32-bit signed integer in big-endian byte order (4 bytes).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -255,7 +255,7 @@ A 32-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -265,7 +265,7 @@ A 32-bit signed integer.
 
 Reads a 64-bit signed integer in big-endian byte order (8 bytes).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit signed integer.
 
@@ -275,7 +275,7 @@ A 64-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit signed integer.
 
@@ -285,7 +285,7 @@ A 64-bit signed integer.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit floating-point number.
 
@@ -295,7 +295,7 @@ A 32-bit floating-point number.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit floating-point number.
 
@@ -373,7 +373,7 @@ Not documented yet.
 
  * <i>value</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -388,7 +388,7 @@ Not documented yet.
 
  * <i>value</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -403,7 +403,7 @@ Not documented yet.
 
  * <i>value</i>: A 64-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -418,7 +418,7 @@ Not documented yet.
 
  * <i>value</i>: A 64-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -433,7 +433,7 @@ Not documented yet.
 
  * <i>value</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -448,7 +448,7 @@ Not documented yet.
 
  * <i>value</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 

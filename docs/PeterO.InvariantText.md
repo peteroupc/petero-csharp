@@ -18,7 +18,7 @@ Compares a text string with a string.
 
  * <i>value2</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -36,7 +36,7 @@ Not documented yet.
 
  * <i>value2</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -54,7 +54,7 @@ Not documented yet.
 
  * <i>value2</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -78,7 +78,7 @@ Not documented yet.
 
  * <i>options</i>: A params object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -93,7 +93,7 @@ Not documented yet.
 
  * <i>value</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -108,7 +108,7 @@ Not documented yet.
 
  * <i>value</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -126,7 +126,7 @@ Not documented yet.
 
  * <i>value2</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -147,7 +147,7 @@ Converts this object to a text string.
 
  * <i>value</i>: A Byte object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -162,7 +162,7 @@ Converts this object to a text string.
 
  * <i>value</i>: A 64-bit floating-point number.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -177,7 +177,7 @@ Converts this object to a text string.
 
  * <i>value</i>: A 32-bit floating-point number.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -192,7 +192,7 @@ Converts this object to a text string.
 
  * <i>value</i>: A 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -207,7 +207,7 @@ Converts this object to a text string.
 
  * <i>value</i>: A 64-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -222,7 +222,7 @@ Converts this object to a text string.
 
  * <i>value</i>: An arbitrary object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -237,6 +237,6 @@ Converts this object to a text string.
 
  * <i>value</i>: A 16-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.

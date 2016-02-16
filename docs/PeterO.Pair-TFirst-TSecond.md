@@ -17,7 +17,7 @@ Stores a pair of related objects.
         TFirst first,
         TSecond second);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the class.
 
 <b>Parameters:</b>
 
@@ -45,7 +45,7 @@ Gets the second object in the pair.
 
 The second object in the pair.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A TSecond object.
 
@@ -60,9 +60,9 @@ Determines whether this object and another object are equal.
 
  * <i>obj</i>: An arbitrary object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
-True if this object and another object are equal; otherwise, false.
+ `true`  if this object and another object are equal; otherwise, false .
 
 ### GetHashCode
 
@@ -70,7 +70,7 @@ True if this object and another object are equal; otherwise, false.
 
 Returns the hash code for this instance.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -80,6 +80,6 @@ A 32-bit signed integer.
 
 Converts this object to a text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.

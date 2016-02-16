@@ -13,7 +13,7 @@ Represents a portion of another data stream. For this to work, the underlying st
         long start,
         long length);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.PartialStream](PeterO.PartialStream.md) class.
 
 <b>Parameters:</b>
 
@@ -31,7 +31,7 @@ Initializes a new instance of the  class.
         long length,
         bool closeOnDispose);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.PartialStream](PeterO.PartialStream.md) class.
 
 <b>Parameters:</b>
 
@@ -62,7 +62,7 @@ Gets a value indicating whether the underlying stream supports reading.
 
 <b>Returns:</b>
 
-True if the underlying stream supports reading; otherwise, false.
+ `true`  If the underlying stream supports reading; otherwise,.  `false` .
 
 ### CanSeek
 
@@ -72,7 +72,7 @@ Gets a value indicating whether the underlying stream supports seeking.
 
 <b>Returns:</b>
 
-True if the underlying stream supports seeking; otherwise, false.
+ `true`  If the underlying stream supports seeking; otherwise,.  `false` .
 
 ### CanWrite
 
@@ -82,7 +82,7 @@ Gets a value indicating whether the underlying stream supports writing.
 
 <b>Returns:</b>
 
-True if the underlying stream supports writing; otherwise, false.
+ `true`  If the underlying stream supports writing; otherwise,.  `false` .
 
 ### Length
 
@@ -141,7 +141,7 @@ Not documented yet.
  (but not more than  <i>buffer</i>
  's length).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -174,7 +174,7 @@ Not documented yet.
 
  * <i>origin</i>: A SeekOrigin object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 64-bit signed integer.
 

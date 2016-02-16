@@ -9,6 +9,17 @@ Not documented yet.
     public static int ArrayHashCode(
         System.Collections.Generic.IEnumerable array);
 
+Not documented yet.
+
+<b>Parameters:</b>
+
+ * <i>array</i>: The parameter  <i>array</i>
+ is not documented yet.
+
+<b>Return Value:</b>
+
+A 32-bit signed integer.
+
 ### ArrayHashCode
 
     public static int ArrayHashCode<T>(
@@ -22,7 +33,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -31,6 +42,20 @@ A 32-bit signed integer.
     public static bool ArraysEqual(
         System.Collections.Generic.IEnumerable array1,
         System.Collections.Generic.IEnumerable array2);
+
+Not documented yet.
+
+<b>Parameters:</b>
+
+ * <i>array1</i>: The parameter  <i>array1</i>
+ is not documented yet.
+
+ * <i>array2</i>: The parameter  <i>array2</i>
+ is not documented yet.
+
+<b>Return Value:</b>
+
+A Boolean object.
 
 ### ArraysEqual
 
@@ -48,9 +73,9 @@ Determines whether two enumerable objects are equal.
 
  * &lt;T&gt;: Any object type.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
-True if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false.
+ `true`  if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false .
 
 ### ArraysEqual
 
@@ -71,9 +96,9 @@ Determines whether two enumerable objects are equal.
 
  * &lt;T&gt;: Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
-True if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false.
+ `true`  if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false .
 
 <b>Exceptions:</b>
 
@@ -94,7 +119,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -102,6 +127,17 @@ A text string.
 
     public static string ArrayToStringHex(
         System.Collections.Generic.IEnumerable array);
+
+Not documented yet.
+
+<b>Parameters:</b>
+
+ * <i>array</i>: The parameter  <i>array</i>
+ is not documented yet.
+
+<b>Return Value:</b>
+
+A text string.
 
 ### ArrayToStringHex
 
@@ -116,7 +152,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -137,7 +173,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -161,7 +197,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -212,7 +248,7 @@ If instead, list1 and list2 were switched, the method would return 1, since list
 
  * &lt;T&gt;: Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -238,7 +274,7 @@ See CompareLists(IList, IList) for an example of the comparison rules.
 
  * &lt;T&gt;: Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -267,7 +303,7 @@ Not documented yet.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -297,7 +333,7 @@ Finds an item or returns a default value if an item is not found.
 
  * &lt;T&gt;: Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 The item within the list that equals _itemToFind_, or _defaultValue_ if the item is not found.
 
@@ -355,8 +391,8 @@ Either  <i>index</i>
  or  <i>count</i>
  is less than 0 or greater than  <i>list</i>
  's length, or  <i>list</i>
- 's length minus  <i>index</i>
- is less than <i>count</i>
+ ' s length minus  <i>index</i>
+ is less than  <i>count</i>
 .
 
 ### Shuffle
@@ -498,11 +534,11 @@ Not documented yet.
  (but not more than  <i>list</i>
  's length).
 
- * &lt;T&gt;: Type parameter not documented yet.
+ * &lt; T&gt;: Type parameter not documented yet.
 
 <b>Exceptions:</b>
 
- * System.ArgumentNullException:
+ * !: T:System.ArgumentNullException:
 The parameter <i>list</i>
  is null.
 
@@ -514,6 +550,10 @@ Either  <i>offset</i>
  ' s length minus  <i>offset</i>
  is less than  <i>count</i>
 .
+
+ * System.ArgumentNullException:
+The parameter  <i>list</i>
+ is null.
 
 ### Sort
 
@@ -538,11 +578,11 @@ Not documented yet.
 
  * <i>comparer</i>: An IComparer object.
 
- * &lt;T&gt;: Type parameter not documented yet.
+ * &lt; T&gt;: Type parameter not documented yet.
 
 <b>Exceptions:</b>
 
- * System.ArgumentNullException:
+ * !: T:System.ArgumentNullException:
 The parameter <i>list</i>
  or  <i>comparer</i>
  is null.
@@ -555,6 +595,11 @@ Either  <i>offset</i>
  ' s length minus  <i>offset</i>
  is less than  <i>count</i>
 .
+
+ * System.ArgumentNullException:
+The parameter  <i>list</i>
+ or  <i>comparer</i>
+ is null.
 
 ### StableSort
 
@@ -597,11 +642,11 @@ Sorts an array of objects using a sorting method that preserves the order of equ
  (but not more than  <i>list</i>
  's length).
 
- * &lt;T&gt;: Type parameter not documented yet.
+ * &lt; T&gt;: Type parameter not documented yet.
 
 <b>Exceptions:</b>
 
- * System.ArgumentNullException:
+ * !: T:System.ArgumentNullException:
 The parameter <i>list</i>
  is null.
 
@@ -613,6 +658,10 @@ Either  <i>offset</i>
  ' s length minus  <i>offset</i>
  is less than  <i>count</i>
 .
+
+ * System.ArgumentNullException:
+The parameter  <i>list</i>
+ is null.
 
 ### StableSort
 
@@ -691,7 +740,7 @@ Converts an enumerable to an array.
 
  * &lt;T&gt;: Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An array generated from the specified enumerable. Note that the order of elements is not guaranteed if the enumerable does not implement IList.
 

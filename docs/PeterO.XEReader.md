@@ -13,9 +13,9 @@ Gets a value indicating whether the currently read element is found to be empty.
 
 <b>Returns:</b>
 
-True if the currently read element is found to be empty; otherwise, false.
+ `true`  If the currently read element is found to be empty; otherwise,.  `false` .
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -75,7 +75,7 @@ Not documented yet.
 
  * <i>file</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEReader object.
 
@@ -96,7 +96,7 @@ Not documented yet.
 
  * <i>reader</i>: A XmlReader object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEReader object.
 
@@ -112,7 +112,7 @@ The parameter <i>reader</i>
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEReader object.
 
@@ -133,7 +133,7 @@ Not documented yet.
 
  * <i>localName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -151,7 +151,7 @@ Not documented yet.
 
  * <i>namespaceName</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -171,7 +171,7 @@ Not documented yet.
 
  * <i>localName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -189,7 +189,7 @@ Not documented yet.
 
  * <i>namespaceName</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -199,7 +199,7 @@ A Boolean object.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -209,6 +209,6 @@ A Boolean object.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.

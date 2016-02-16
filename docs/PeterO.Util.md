@@ -97,7 +97,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Any object type.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -126,7 +126,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;TItem&gt;: Object type representing items stored in each container.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -150,7 +150,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -213,7 +213,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -230,16 +230,16 @@ The parameter <i>structure</i>
 
 Not documented yet.
 
-Useful in queries where the index must be manipulated r returned by the query. For example:     from o in Util.EachWithIndex(objects) where
-                IndexMeetsCriteria(o.Second) select o.First
+Useful in queries where the index must be manipulated r returned by the query. For example:    from o in Util.EachWithIndex(objects) where
+    IndexMeetsCriteria(o.Second) select o.First
 
 <b>Parameters:</b>
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
-Not documented yet.
+The return value'/> is not documented yet.
 
 ### GetSegment
 
@@ -257,7 +257,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A ListSegment(T) object.
 
@@ -286,7 +286,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Any object type.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A ListSegment(T) object.
 
@@ -309,7 +309,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -338,7 +338,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;TItem&gt;: Object type representing items stored in each container.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -365,7 +365,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -392,7 +392,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -419,7 +419,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -447,7 +447,7 @@ Not documented yet.
 
  * &lt;TSecond&gt;: Any object type.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Pair(TFirst, TSecond) object.
 
@@ -465,7 +465,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Any object type that implements IComparable<T>.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -489,7 +489,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -515,7 +515,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -545,7 +545,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -574,7 +574,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -601,7 +601,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 
@@ -647,7 +647,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * <i>s</i>: An IStructure object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -673,7 +673,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -694,7 +694,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IEnumerable(TOutput) object.
 
@@ -712,7 +712,7 @@ Creates an iterator of integers starting at a minimum value and ending at one le
 
  * <i>maxValue</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IEnumerable(int) object.
 
@@ -735,7 +735,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * <i>maxValue</i>: Another 32-bit signed integer.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IEnumerable(int) object.
 
@@ -755,7 +755,7 @@ Not documented yet.In the .NET implementation, this method is implemented as an 
 
  * &lt;T&gt;: Type parameter not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A T object.
 

@@ -594,9 +594,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable
-    /// {System.Single}, System.Collections.Generic.IEnumerable
-    /// {System.Single})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Single})"]/*'/>
     public static bool ArraysEqual(
       IEnumerable<float> array1,
       IEnumerable<float> array2) {
@@ -604,9 +602,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable
-    /// {System.Double}, System.Collections.Generic.IEnumerable
-    /// {System.Double})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})"]/*'/>
     public static bool ArraysEqual(
       IEnumerable<double> array1,
       IEnumerable<double> array2) {
@@ -653,8 +649,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable
-    /// {System.Byte})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Byte})"]/*'/>
     public static string ArrayToStringHex(IEnumerable<byte> array) {
       if (array == null) {
         return "null";
@@ -674,8 +669,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable
-    /// {System.Int32})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Int32})"]/*'/>
     public static string ArrayToStringHex(IEnumerable<int> array) {
       if (array == null) {
         return "null";
@@ -735,8 +729,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable
-    /// {System.Byte})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Byte})"]/*'/>
     public static int ArrayHashCode(IEnumerable<byte> array) {
       var ret = 17;
       if (array != null) {
@@ -748,8 +741,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable
-    /// {System.Int32})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Int32})"]/*'/>
     public static int ArrayHashCode(IEnumerable<int> array) {
       var ret = 17;
       if (array != null) {
@@ -761,8 +753,7 @@ private static readonly DoubleComparer ValueDblComparer = new
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable
-    /// {System.Single})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Single})"]/*'/>
     public static int ArrayHashCode(IEnumerable<float> array) {
       var ret = 17;
       if (array != null) {
@@ -777,8 +768,7 @@ BitConverter.GetBytes((float)value),
     }
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable
-    /// {System.Double})"]'/>
+    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Double})"]/*'/>
     public static int ArrayHashCode(IEnumerable<double> array) {
       var ret = 17;
       if (array != null) {

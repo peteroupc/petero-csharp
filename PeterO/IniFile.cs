@@ -75,6 +75,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     }
     // <remarks>Section names can be null (null refers to the
     // anonymous section at the beginning of the file).</remarks>
+
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.IniFile.GetValue(System.String,System.String)"]/*'/>
     public string GetValue(string sectionName, string keyName) {

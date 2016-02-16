@@ -69,7 +69,7 @@ Not documented yet.
 
  * <i>localName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -87,7 +87,7 @@ Not documented yet.
 
  * <i>ns</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -136,7 +136,7 @@ Not documented yet.
 
  * <i>localName</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -157,7 +157,7 @@ Not documented yet.
 
  * <i>indent</i>: A Boolean object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -178,7 +178,7 @@ Not documented yet.
 
  * <i>ns</i>: A text string. (3).
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -202,7 +202,7 @@ Not documented yet.
 
  * <i>indent</i>: A Boolean object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -227,7 +227,7 @@ Not documented yet.
 
  * <i>localName</i>: A text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 
@@ -248,7 +248,7 @@ Not documented yet.
 
  * <i>ns</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A XEWriter object.
 

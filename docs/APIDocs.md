@@ -1,4 +1,6 @@
-* [PeterO.ArrayUtil](PeterO.ArrayUtil.md) - Not documented yet.
+## API Documentation
+
+ * [PeterO.ArrayUtil](PeterO.ArrayUtil.md) - Not documented yet.
  * [PeterO.BinaryIO](PeterO.BinaryIO.md) - Reads and writes data types in little endian or big             endian.
  * [PeterO.CulturedText](PeterO.CulturedText.md) - Contains string processing operations that should be             formatted according to the current locale's formatting             rules.
  * [PeterO.DisposableList&lt;T&gt;](PeterO.DisposableList-T.md) - Holds a list of disposable objects, which can all be             disposed at once when this object is disposed.

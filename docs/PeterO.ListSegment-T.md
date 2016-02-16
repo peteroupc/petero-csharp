@@ -19,6 +19,22 @@ Specifies a segment of a list defined by an offset and length. This class cannot
         int start,
         int count);
 
+Initializes a new instance of the class.
+
+<b>Parameters:</b>
+
+ * <i>list</i>: An IList object.
+
+ * <i>start</i>: A 32-bit signed integer.
+
+ * <i>count</i>: Another 32-bit signed integer.
+
+<b>Exceptions:</b>
+
+ * System.ArgumentNullException:
+The parameter <i>list</i>
+ is null.
+
 ### Count
 
     public sealed int Count { get; }
@@ -39,7 +55,7 @@ The read-only status of the list segment is the same as that of the underlying l
 
 <b>Returns:</b>
 
-True if this list segment is read only; otherwise, false.
+ `true`  If this list segment is read only; otherwise,. `false` .
 
 ### StartIndex
 
@@ -90,7 +106,7 @@ Not documented yet.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -100,7 +116,7 @@ A Boolean object.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IEnumerator(T) object.
 
@@ -115,7 +131,7 @@ Not documented yet.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -149,7 +165,7 @@ This method is not supported.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 

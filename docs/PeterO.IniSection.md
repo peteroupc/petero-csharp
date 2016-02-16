@@ -11,7 +11,7 @@ Not documented yet.
     public IniSection(
         PeterO.IniSection other);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniSection](PeterO.IniSection.md) class.
 
 <b>Parameters:</b>
 
@@ -28,7 +28,7 @@ The parameter <i>other</i>
     public IniSection(
         string name);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniSection](PeterO.IniSection.md) class.
 
 <b>Parameters:</b>
 
@@ -149,7 +149,7 @@ Not documented yet.
 
  * <i>keyName</i>: Another string object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.
 
@@ -201,6 +201,6 @@ The parameter <i>keyName</i>
 
 Converts this object to a text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.

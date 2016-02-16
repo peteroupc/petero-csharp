@@ -122,6 +122,7 @@ namespace PeterO {
     }
 
     // Little endian
+
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.BinaryIO.ReadInt32LE"]/*'/>
     public int ReadInt32LE() {
@@ -352,6 +353,7 @@ namespace PeterO {
     // *********************************************
     //
     // Big endian
+
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.BinaryIO.WriteBE(System.Int32)"]/*'/>
     public void WriteBE(int value) {
@@ -476,6 +478,7 @@ namespace PeterO {
     }
 
     // Endian independent
+
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.BinaryIO.WriteBE(System.Byte)"]/*'/>
     public void WriteBE(byte value) {

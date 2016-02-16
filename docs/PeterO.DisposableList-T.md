@@ -18,7 +18,7 @@ Holds a list of disposable objects, which can all be disposed at once when this 
 
     public DisposableList();
 
-Initializes a new instance of the  class.
+Initializes a new instance of the class.
 
 ### Count
 
@@ -38,7 +38,7 @@ Gets a value indicating whether this list is read only.
 
 <b>Returns:</b>
 
-True if this list is read only; otherwise, false.
+ `true`  If this list is read only; otherwise,. `false` .
 
 ### Add
 
@@ -68,7 +68,7 @@ Not documented yet.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 
@@ -84,7 +84,7 @@ Not documented yet.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 An IEnumerator(T) object.
 
@@ -99,7 +99,7 @@ Not documented yet.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A 32-bit signed integer.
 
@@ -128,7 +128,7 @@ Not documented yet.
 
  * <i>item</i>: A T object.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A Boolean object.
 

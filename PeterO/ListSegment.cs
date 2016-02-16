@@ -27,8 +27,7 @@ namespace PeterO {
     private readonly EqualityComparer<T> comparer = EqualityComparer<T>.Default;
 
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList
-    /// {`0},System.Int32,System.Int32)"]'/>
+    /// path='docs/doc[@name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)"]/*'/>
     public ListSegment(IList<T> list, int start, int count) {
       if (list == null) {
         throw new ArgumentNullException("list");

@@ -10,7 +10,7 @@ Not documented yet.
 
 Not documented yet.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A DisposableList(IDisposable) object.
 
@@ -28,6 +28,6 @@ Not documented yet.
 
  * &lt;T&gt;: Any object type that implements IDisposable.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A DisposableList(T) object.

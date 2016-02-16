@@ -9,7 +9,7 @@ Not documented yet.
     public IniEntry(
         PeterO.IniEntry entry);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniEntry](PeterO.IniEntry.md) class.
 
 <b>Parameters:</b>
 
@@ -26,7 +26,7 @@ The parameter <i>entry</i>
     public IniEntry(
         string comment);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniEntry](PeterO.IniEntry.md) class.
 
 <b>Parameters:</b>
 
@@ -44,7 +44,7 @@ The parameter <i>comment</i>
         string key,
         string value);
 
-Initializes a new instance of the  class.
+Initializes a new instance of the[PeterO.IniEntry](PeterO.IniEntry.md) class.
 
 <b>Parameters:</b>
 
@@ -67,7 +67,7 @@ Gets a value indicating whether this entry is a comment line.
 
 <b>Returns:</b>
 
-True if this entry is a comment line; otherwise, false.
+ `true`  If this entry is a comment line; otherwise,. `false` .
 
 ### Key
 
@@ -95,6 +95,6 @@ A value not documented yet.
 
 Converts this object to a text string.
 
-<b>Returns:</b>
+<b>Return Value:</b>
 
 A text string.

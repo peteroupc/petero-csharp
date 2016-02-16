@@ -4,62 +4,69 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Byte})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Double})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Int32})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Single})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
+
+            <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Byte})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Int32})">
 <summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
+            <param name='array'>The parameter <paramref name='array'/> is not
+            documented yet.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToStringHex``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A text string.</returns>
+
+            <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToString``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A text string.</returns>
+
+            <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
 <summary>Not documented yet.</summary>
-            <param name='array1'>An IEnumerable object.</param>
-            <param name='array2'>An IEnumerable object.</param>
+            <param name='array1'>The parameter <paramref name='array1'/> is not
+            documented yet.</param>
+            <param name='array2'>The parameter <paramref name='array2'/> is not
+            documented yet.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Single})">
 <summary>Not documented yet.</summary>
-            <param name='array1'>An IEnumerable object.</param>
-            <param name='array2'>An IEnumerable object.</param>
+            <param name='array1'>The parameter <paramref name='array1'/> is not
+            documented yet.</param>
+            <param name='array2'>The parameter <paramref name='array2'/> is not
+            documented yet.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArraysEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
@@ -68,9 +75,9 @@
             <param name='array1'>First enumerable to compare.</param>
             <param name='array2'>Second enumerable to compare.</param>
             <typeparam name='T'>Any object type.</typeparam>
-            <returns>True if both enumerable objects are null or both
+            <returns><c>true</c> if both enumerable objects are null or both
             enumerable objects have the same elements and number of elements in
-            the same order; otherwise, false.</returns>
+            the same order; otherwise, <c>false</c>.</returns>
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArraysEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
 <summary>Determines whether two enumerable objects are
@@ -80,28 +87,22 @@
             <param name='comparer'>Equality comparer for comparing each element
             in the enumerable objects.</param>
             <typeparam name='T'>Not documented yet.</typeparam>
-            <returns>True if both enumerable objects are null or both
+            <returns><c>true</c> if both enumerable objects are null or both
             enumerable objects have the same elements and number of elements in
-            the same order; otherwise, false.</returns>
+            the same order; otherwise, <c>false</c>.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='comparer'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array1'>An IEnumerable object.</param>
-            <param name='array2'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
+
+            <summary>Not documented yet.</summary><param name='array1'>An IEnumerable object.</param><param name='array2'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array1'>An IEnumerable object.</param>
-            <param name='array2'>An IEnumerable object.</param>
-            <param name='comparer'>An IComparer object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='array1'>An IEnumerable object.</param><param name='array2'>An IEnumerable object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='comparer'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.CompareLists``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})">
 <summary>Compares two lists with the same type of items.</summary>
@@ -142,15 +143,11 @@
             comparison rules.</example>
 </doc>
 <doc name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},``0)">
-<summary>Not documented yet.</summary>
-            <param name='items'>An IEnumerable object.</param>
-            <param name='func'>A Predicate object.</param>
-            <param name='defaultValue'>Another T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='items'>An IEnumerable object.</param><param name='func'>A Predicate object.</param><param name='defaultValue'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='items'/> or <paramref name='func'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},``0,``0)">
 <summary>Finds an item or returns a default value if an item is not
@@ -186,8 +183,8 @@
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
             <exception cref='T:System.ArgumentException'>Either <paramref name='index'/> or <paramref name='count'/> is less than 0 or
-            greater than <paramref name='list'/> 's length, or <paramref name='list'/> 's length minus <paramref name='index'/> is less than
-            <paramref name='count'/>.</exception>
+            greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='index'/> is less
+            than <paramref name='count'/>.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)">
 <summary>Randomizes the order of a list's items.</summary>
@@ -218,81 +215,66 @@
             than <paramref name='count'/>.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0})">
-<summary>Not documented yet.</summary>
-            <param name='list'>An IList object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary>
-            <param name='array'>An IList object.</param>
-            <param name='comparer'>An IComparer object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='array'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='array'/> or <paramref name='comparer'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
-<summary>Not documented yet.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='offset'>A zero-based index showing where the desired
-            portion of <paramref name='list'/> begins.</param>
-            <param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
-            <paramref name='list'/> is null.</exception>
-            <exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
+
+            <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+            portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
-            than <paramref name='count'/>.</exception>
+            than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='offset'>A zero-based index showing where the desired
-            portion of <paramref name='list'/> begins.</param>
-            <param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param>
-            <param name='comparer'>An IComparer object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+            portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>An IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> or <paramref name='comparer'/> is
+            null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
+            greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
+            than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception>
-            <exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
-            greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
-            than <paramref name='count'/>.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0})">
-<summary>Not documented yet.</summary>
-            <param name='list'>An IList object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='comparer'>An IComparer object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+
+            <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
-<summary>Sorts an array of objects using a sorting method that
-            preserves the order of equal elements.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='offset'>A zero-based index showing where the desired
-            portion of <paramref name='list'/> begins.</param>
-            <param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
-            <paramref name='list'/> is null.</exception>
-            <exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
+
+            <summary>Sorts an array of objects using a sorting method that
+            preserves the order of equal elements.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+            portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
-            than <paramref name='count'/>.</exception>
+            than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})">
 <summary>Sorts an array of objects using a sorting method that
@@ -336,20 +318,20 @@
 <doc name="P:PeterO.BinaryIO.CanRead">
 <summary>Gets a value indicating whether the underlying stream can
             be read.</summary>
-            <value>True if the underlying stream can be read; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream can be read; otherwise,
+            . <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.BinaryIO.CanSeek">
 <summary>Gets a value indicating whether the underlying stream
             supports seeking.</summary>
-            <value>True if the underlying stream supports seeking; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream supports seeking;
+            otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.BinaryIO.CanWrite">
 <summary>Gets a value indicating whether the underlying stream
             supports writing.</summary>
-            <value>True if the underlying stream supports writing; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream supports writing;
+            otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.BinaryIO.Length">
 <summary>Gets the length of the underlying stream.</summary>
@@ -686,8 +668,9 @@
             copying items.</param>
 </doc>
 <doc name="P:PeterO.DisposableList`1.Count">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.DisposableList`1.Dispose">
 <summary>Not documented yet.</summary>
@@ -709,7 +692,8 @@
 <doc name="P:PeterO.DisposableList`1.IsReadOnly">
 <summary>Gets a value indicating whether this list is read
             only.</summary>
-            <value>True if this list is read only; otherwise, false.</value>
+            <value><c>true</c> If this list is read only; otherwise,
+            <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.DisposableList`1.Item(System.Int32)">
 <summary>Not documented yet.</summary>
@@ -786,20 +770,22 @@
 <doc name="P:PeterO.IniEntry.IsComment">
 <summary>Gets a value indicating whether this entry is a comment
             line.</summary>
-            <value>True if this entry is a comment line; otherwise,
-            false.</value>
+            <value><c>true</c> If this entry is a comment line; otherwise,
+            <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.IniEntry.Key">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.IniEntry.ToString">
 <summary>Converts this object to a text string.</summary>
             <returns>A text string.</returns>
 </doc>
 <doc name="P:PeterO.IniEntry.Value">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="T:PeterO.IniFile">
 <summary>Not documented yet.</summary>
@@ -830,8 +816,9 @@
             <returns>An IniSection object.</returns>
 </doc>
 <doc name="P:PeterO.IniFile.Count">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.IniFile.GetSection(System.String)">
 <summary>Not documented yet.</summary>
@@ -929,8 +916,9 @@
 <summary>Not documented yet.</summary>
 </doc>
 <doc name="P:PeterO.IniSection.Count">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.IniSection.GetValue(System.String)">
 <summary>Not documented yet.</summary>
@@ -945,8 +933,9 @@
             <returns>An IniEntry object.</returns>
 </doc>
 <doc name="P:PeterO.IniSection.Name">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.IniSection.RemoveEntry(System.String)">
 <summary>Not documented yet.</summary>
@@ -1059,13 +1048,12 @@
             <typeparam name='T'>Any object type.</typeparam>
 </doc>
 <doc name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)">
-<summary>Initializes a new instance of the <see cref='ListSegment'/> class.</summary>
+<summary>Initializes a new instance of the <see cref='!:ListSegment'/> class.</summary>
             <param name='list'>An IList object.</param>
             <param name='start'>A 32-bit signed integer.</param>
-            <param name='count'>A 32-bit signed integer. (2).</param>
-            <exception cref='T:System.ArgumentNullException'>The parameter <paramref name='list'/> is null.</exception>
-            <remarks>The underlying list cannot be changed
-            afterwards.</remarks>
+            <param name='count'>Another 32-bit signed integer.</param>
+            <exception cref='T:System.ArgumentNullException'>The parameter
+            <paramref name='list'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.ListSegment`1.Add(`0)">
 <summary>This method is not supported.</summary>
@@ -1094,8 +1082,9 @@
             <paramref name='array'/> is null.</exception>
 </doc>
 <doc name="P:PeterO.ListSegment`1.Count">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.ListSegment`1.GetEnumerator">
 <summary>Not documented yet.</summary>
@@ -1117,8 +1106,8 @@
 <doc name="P:PeterO.ListSegment`1.IsReadOnly">
 <summary>Gets a value indicating whether this list segment is read
             only.</summary>
-            <value>True if this list segment is read only; otherwise,
-            false.</value>
+            <value><c>true</c> If this list segment is read only; otherwise,
+            <c>false</c>.</value>
             <remarks>The read-only status of the list segment is the same as
             that of the underlying list. However, operations that would change
             the list segment's size, such as adding and removing items, are not
@@ -1130,8 +1119,9 @@
             <returns>A T object.</returns>
 </doc>
 <doc name="P:PeterO.ListSegment`1.ListSegmentEnumerator.Current">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.ListSegment`1.ListSegmentEnumerator.Dispose">
 <summary>Not documented yet.</summary>
@@ -1178,15 +1168,15 @@
 </doc>
 <doc name="M:PeterO.Pair`2.Equals(PeterO.Pair{`0,`1})">
 <summary>Not documented yet.</summary>
-            <param name='other'>A Pair object.</param>
+            <param name='other'>The parameter <paramref name='other'/> is not
+            documented yet.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.Pair`2.Equals(System.Object)">
 <summary>Determines whether this object and another object are
             equal.</summary>
             <param name='obj'>An arbitrary object.</param>
-            <returns>True if this object and another object are equal;
-            otherwise, false.</returns>
+            <returns><c>true</c> if this object and another object are equal; otherwise, <c>false</c>.</returns>
 </doc>
 <doc name="P:PeterO.Pair`2.First">
 <summary>Gets the first object in the pair.</summary>
@@ -1237,20 +1227,20 @@
 <doc name="P:PeterO.PartialStream.CanRead">
 <summary>Gets a value indicating whether the underlying stream
             supports reading.</summary>
-            <value>True if the underlying stream supports reading; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream supports reading;
+            otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.PartialStream.CanSeek">
 <summary>Gets a value indicating whether the underlying stream
             supports seeking.</summary>
-            <value>True if the underlying stream supports seeking; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream supports seeking;
+            otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.PartialStream.CanWrite">
 <summary>Gets a value indicating whether the underlying stream
             supports writing.</summary>
-            <value>True if the underlying stream supports writing; otherwise,
-            false.</value>
+            <value><c>true</c> If the underlying stream supports writing;
+            otherwise, <c>false</c>.</value>
 </doc>
 <doc name="M:PeterO.PartialStream.Dispose(System.Boolean)">
 <summary>Not documented yet.</summary>
@@ -1324,8 +1314,9 @@
             <returns>A byte array.</returns>
 </doc>
 <doc name="P:PeterO.Png.Height">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.Png.Save(System.String)">
 <summary>Not documented yet.</summary>
@@ -1364,8 +1355,9 @@
             <paramref name='pixel'/> is null.</exception>
 </doc>
 <doc name="P:PeterO.Png.Width">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="T:PeterO.Png4BitIndexed">
 <summary>A simple class for encoding PNG image files.</summary>
@@ -1442,8 +1434,9 @@
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Height">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.Save(System.String)">
 <summary>Not documented yet.</summary>
@@ -1470,12 +1463,14 @@
             <param name='pixel'>A 32-bit signed integer. (3).</param>
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Transparent">
-<summary>Gets or sets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets or sets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Width">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value>
+        
 </doc>
 <doc name="M:PeterO.SingleComparer.GetHashCode(System.Single)">
 <summary>Returns the hash code for this instance.</summary>
@@ -1487,34 +1482,29 @@
 <summary>Not documented yet.</summary>
 </doc>
 <doc name="M:PeterO.Util.AddIfMissing``1(System.Collections.Generic.IList{``0},``0)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>dict.AddIfMissing&lt;T&gt;(value)</c>. If the
             object's class already has a AddIfMissing&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='dict'>An IList object.</param>
-            <param name='value'>A T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='dict'>An IList object.</param><param name='value'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='dict'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.AddIfMissing``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IDictionary and can be
             called as follows: <c>dict.AddIfMissing&lt;TKey, TValue&gt;(key,
             value)</c>. If the object's class already has a
             AddIfMissing&lt;TKey, TValue&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary>
-            <param name='dict'>An IDictionary object.</param>
-            <param name='key'>A TKey object.</param>
-            <param name='value'>A TValue object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='dict'>An IDictionary object.</param><param name='key'>A TKey object.</param><param name='value'>A TValue object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='dict'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.AddOverwrite``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
 <summary>Not documented yet.
@@ -1568,16 +1558,15 @@
             null.</exception>
 </doc>
 <doc name="M:PeterO.Util.ArrayToString``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>array.ArrayToString&lt;T&gt;()</c>. If the
             object's class already has a ArrayToString&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='array'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A text string.</returns>
+            method.</para></summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+        
 </doc>
 <doc name="M:PeterO.Util.CopyStream(System.IO.Stream,System.IO.Stream)">
 <summary>Copies all bytes from one stream to another.
@@ -1610,44 +1599,40 @@
             null.</exception>
 </doc>
 <doc name="M:PeterO.Util.CopyStructure``1(``0)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing T and can be called as
             follows: <c>structure.CopyStructure&lt;T&gt;()</c>. If the
             object's class already has a CopyStructure&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='structure'>Another T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='structure'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='structure'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.EachWithIndex``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.</summary>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>Not documented yet.</returns>
-            <remarks>
+
+            <summary>Not documented yet.</summary><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>The return value'/&gt; is not documented yet.</returns><remarks>
              Useful in queries where the index must be manipulated
             or returned by the query. For example:
-            <code> from o in Util.EachWithIndex(objects) where
-            IndexMeetsCriteria(o.Second) select o.First</code>
+            <code>
+            from o in Util.EachWithIndex(objects) where
+            IndexMeetsCriteria(o.Second) select o.First
+            </code>
             </remarks>
+        
 </doc>
 <doc name="M:PeterO.Util.GetSegment``1(System.Collections.Generic.IList{``0},System.Int32)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.GetSegment&lt;T&gt;(start)</c>. If the
             object's class already has a GetSegment&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='start'>A 32-bit signed integer.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A ListSegment(T) object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>An IList object.</param><param name='start'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A ListSegment(T) object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.GetSegment``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
 <summary>Not documented yet.
@@ -1666,18 +1651,16 @@
             <paramref name='list'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Util.HasUnique``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>col.HasUnique&lt;T&gt;()</c>. If the
             object's class already has a HasUnique&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='col'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A Boolean object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='col'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A Boolean object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='col'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.HasUnique``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
 <summary>Not documented yet.
@@ -1700,57 +1683,47 @@
             null.</exception>
 </doc>
 <doc name="M:PeterO.Util.Implode``1(System.Collections.Generic.IEnumerable{``0},System.String)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>col.Implode&lt;T&gt;(separator)</c>. If the
             object's class already has a Implode&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='col'>An IEnumerable object.</param>
-            <param name='separator'>Another string object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A text string.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='col'>An IEnumerable object.</param><param name='separator'>Another string object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='col'/> or <paramref name='separator'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.IndexOf``1(System.Collections.Generic.IList{``0},System.Predicate{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.IndexOf&lt;T&gt;(match)</c>. If the object's
             class already has a IndexOf&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='match'>A Predicate object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>An IList object.</param><param name='match'>A Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='match'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.IndexOf``1(System.Collections.Generic.IList{``0},``0)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.IndexOf&lt;T&gt;(obj)</c>. If the object's
             class already has a IndexOf&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='obj'>A T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>An IList object.</param><param name='obj'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.MakeList``1(``0[])">
-<summary>Not documented yet.</summary>
-            <param name='items'>A params object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>An IList(T) object.</returns>
+
+            <summary>Not documented yet.</summary><param name='items'>A params object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>An IList(T) object.</returns>
+        
 </doc>
 <doc name="M:PeterO.Util.MakePair``2(``0,``1)">
 <summary>Not documented yet.</summary>
@@ -1776,18 +1749,16 @@
             <paramref name='coll'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Util.MinOrDefault``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>coll.MinOrDefault&lt;T&gt;()</c>. If the
             object's class already has a MinOrDefault&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='coll'>An IEnumerable object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='coll'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='coll'/> is null.</exception>
+        
 </doc>
 <doc name="F:PeterO.Util.NullDisposable">
 <summary>An IDisposable object that does nothing when
@@ -1797,82 +1768,65 @@
 <summary>Not documented yet.</summary>
 </doc>
 <doc name="M:PeterO.Util.RemoveAll``1(System.Collections.Generic.IList{``0},System.Predicate{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.RemoveAll&lt;T&gt;(match)</c>. If the object's
             class already has a RemoveAll&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='match'>A Predicate object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>An IList object.</param><param name='match'>A Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='match'/> is
             null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.SetIfMissing``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.SetIfMissing&lt;T&gt;(index, valuefunc)</c>.
             If the object's class already has a SetIfMissing&lt;T&gt; method
             with the same parameters, that method takes precedence over this
-            extension method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='index'>A 32-bit signed integer.</param>
-            <param name='valuefunc'>A Func object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='valuefunc'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.SetIfMissing``1(System.Collections.Generic.IList{``0},System.Int32,``0)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.SetIfMissing&lt;T&gt;(index, value)</c>. If
             the object's class already has a SetIfMissing&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='index'>A 32-bit signed integer.</param>
-            <param name='value'>Another T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='value'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.SetNewIfMissing``1(System.Collections.Generic.IList{``0},System.Int32)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.SetNewIfMissing&lt;T&gt;(index)</c>. If the
             object's class already has a SetNewIfMissing&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='index'>A 32-bit signed integer.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.SetValue``1(System.Collections.Generic.IList{``0},System.Int32,``0)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.SetValue&lt;T&gt;(index, value)</c>. If the
             object's class already has a SetValue&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='index'>A 32-bit signed integer.</param>
-            <param name='value'>A T object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='value'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="M:PeterO.Util.StructureSize(PeterO.IStructure)">
 <summary>Not documented yet.
@@ -1888,31 +1842,27 @@
             <paramref name='s'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Util.Sum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>containers.Sum&lt;T&gt;(func)</c>. If the
             object's class already has a Sum&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary>
-            <param name='containers'>An IEnumerable object.</param>
-            <param name='func'>A Func object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A 32-bit signed integer.</returns>
+            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+        
 </doc>
 <doc name="M:PeterO.Util.Transform``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>containers.Transform&lt;TInput,
             TOutput&gt;(func)</c>. If the object's class already has a
             Transform&lt;TInput, TOutput&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary>
-            <param name='containers'>An IEnumerable object.</param>
-            <param name='func'>A Func object.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>An IEnumerable(TOutput) object.</returns>
+            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>An IEnumerable(TOutput) object.</returns>
+        
 </doc>
 <doc name="M:PeterO.Util.UpToExcluding(System.Int32,System.Int32)">
 <summary>Creates an iterator of integers starting at a minimum
@@ -1942,19 +1892,16 @@
             <returns>An IEnumerable(int) object.</returns>
 </doc>
 <doc name="M:PeterO.Util.ValueOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)">
-<summary>Not documented yet.
+
+            <summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IList and can be called
             as follows: <c>list.ValueOrDefault&lt;T&gt;(index)</c>. If the
             object's class already has a ValueOrDefault&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='index'>A 32-bit signed integer.</param>
-            <typeparam name='T'>Type parameter not documented yet.</typeparam>
-            <returns>A T object.</returns>
-            <exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
+        
 </doc>
 <doc name="T:PeterO.XEReader">
 <summary>Not documented yet.</summary>
@@ -1996,8 +1943,8 @@
 <doc name="P:PeterO.XEReader.IsEmptyElement">
 <summary>Gets a value indicating whether the currently read element
             is found to be empty.</summary>
-            <value>True if the currently read element is found to be empty;
-            otherwise, false.</value>
+            <value><c>true</c> If the currently read element is found to be
+            empty; otherwise, <c>false</c>.</value>
             <returns>A text string.</returns>
 </doc>
 <doc name="P:PeterO.XEReader.Item(System.String)">
@@ -2009,10 +1956,10 @@
             content was already read or being read.</exception>
 </doc>
 <doc name="P:PeterO.XEReader.LocalName">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
-            <exception cref='T:System.InvalidOperationException'>This element's
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value><exception cref='T:System.InvalidOperationException'>This element's
             content was already read or being read.</exception>
+        
 </doc>
 <doc name="M:PeterO.XEReader.MoveNext">
 <summary>Not documented yet.</summary>
@@ -2030,16 +1977,16 @@
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="P:PeterO.XEReader.Name">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
-            <exception cref='T:System.InvalidOperationException'>This element's
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value><exception cref='T:System.InvalidOperationException'>This element's
             content was already read or being read.</exception>
+        
 </doc>
 <doc name="P:PeterO.XEReader.NamespaceName">
-<summary>Gets a value not documented yet.</summary>
-            <value>A value not documented yet.</value>
-            <exception cref='T:System.InvalidOperationException'>This element's
+
+            <summary>Gets a value not documented yet.</summary><value>A value not documented yet.</value><exception cref='T:System.InvalidOperationException'>This element's
             content was already read or being read.</exception>
+        
 </doc>
 <doc name="M:PeterO.XEReader.ReadContent">
 <summary>Not documented yet.</summary>
