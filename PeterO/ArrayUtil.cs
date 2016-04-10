@@ -3,7 +3,7 @@ Written by Peter O.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.Collections.Generic;
@@ -54,14 +54,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (index < 0) {
-        throw new ArgumentException("index (" + index + ") is less than " + 0);
+        throw new ArgumentException("index (" + index + ") is less than 0");
       }
       if (index > list.Count) {
         throw new ArgumentException("index (" + index + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -220,7 +220,7 @@ namespace PeterO {
     }
 
     private static int Mid(int[] array, int ta, int tb, int tc) {
-     return (array[ta] < array[tb]) ? (array[tb] < array[tc] ? tb : array[ta ]<
+     return (array[ta] < array[tb]) ? (array[tb] < array[tc] ? tb : array[ta ] <
                array[tc] ? tc : ta) : (array[tb] > array[tc] ? tb : array[ta] >
                     array[tc] ? tc : ta);
     }
@@ -261,14 +261,14 @@ namespace PeterO {
         throw new ArgumentNullException("array");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > array.Length) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     array.Length);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > array.Length) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -325,14 +325,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > list.Count) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -361,14 +361,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > list.Count) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -432,14 +432,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > list.Count) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -468,14 +468,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > list.Count) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -499,7 +499,7 @@ StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
       public DeferredArray(int length) {
         #if DEBUG
         if (length < 0) {
-      throw new ArgumentException("length (" + length + ") is less than " + 0);
+      throw new ArgumentException("length (" + length + ") is less than 0");
         }
         #endif
         this.arrayLen = length;
@@ -522,13 +522,13 @@ StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
         throw new ArgumentNullException("list");
       }
       if (a < 0) {
-        throw new ArgumentException("a (" + a + ") is less than " + 0);
+        throw new ArgumentException("a (" + a + ") is less than 0");
       }
       if (a > list.Count) {
         throw new ArgumentException("a (" + a + ") is more than " + list.Count);
       }
       if (n < 0) {
-        throw new ArgumentException("n (" + n + ") is less than " + 0);
+        throw new ArgumentException("n (" + n + ") is less than 0");
       }
       if (n > list.Count) {
         throw new ArgumentException("n (" + n + ") is more than " + list.Count);
@@ -759,9 +759,9 @@ private static readonly DoubleComparer ValueDblComparer = new
       if (array != null) {
         foreach (float value in array) {
 ret += (
-37 * ret) + BitConverter.ToInt32(
-BitConverter.GetBytes((float)value),
-0);
+  37 * ret) + BitConverter.ToInt32(
+  BitConverter.GetBytes((float)value),
+  0);
         }
       }
       return ret;

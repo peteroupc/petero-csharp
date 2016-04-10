@@ -116,10 +116,10 @@ namespace PeterO {
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.XEWriter.Create(System.String,System.String,System.String,System.Boolean)"]/*'/>
     public static XEWriter Create(
-string file,
-string localName,
-string ns,
-bool indent) {
+  string file,
+  string localName,
+  string ns,
+  bool indent) {
       if (file == null) {
         throw new ArgumentNullException("file");
       }

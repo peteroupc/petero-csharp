@@ -3,7 +3,7 @@ Written in 2010 by Peter O.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.IO;
@@ -29,10 +29,10 @@ namespace PeterO {
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.PartialStream.#ctor(System.IO.Stream,System.Int64,System.Int64,System.Boolean)"]/*'/>
     public PartialStream(
-Stream stream,
-long start,
-long length,
-bool closeOnDispose) {
+  Stream stream,
+  long start,
+  long length,
+  bool closeOnDispose) {
       if (stream == null) {
         throw new ArgumentNullException("stream");
       }
@@ -44,7 +44,7 @@ bool closeOnDispose) {
       }
       if (start < 0) {
         throw new ArgumentException("start (" + start +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (start > stream.Length) {
         throw new ArgumentException("start (" + start + ") is more than " +
@@ -52,7 +52,7 @@ bool closeOnDispose) {
       }
       if (length < 0) {
         throw new ArgumentException("length (" + length +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (length > stream.Length) {
         throw new ArgumentException("length (" + length + ") is more than " +
@@ -128,7 +128,7 @@ bool closeOnDispose) {
         }
         if (value < 0) {
           throw new ArgumentException("value (" + value +
-                    ") is less than " + 0);
+                    ") is less than 0");
         }
         if (value > this.length) {
           throw new ArgumentException("value (" + value + ") is more than " +
@@ -187,7 +187,7 @@ bool closeOnDispose) {
       }
       if (offset < 0) {
         throw new ArgumentException("offset (" + offset +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (offset > buffer.Length) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
@@ -195,7 +195,7 @@ bool closeOnDispose) {
       }
       if (count < 0) {
         throw new ArgumentException("count (" + count +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (count > buffer.Length) {
         throw new ArgumentException("count (" + count + ") is more than " +
@@ -213,9 +213,9 @@ bool closeOnDispose) {
         return c;
       } else {
         var c = this.stream.Read(
-buffer,
-offset,
-Math.Min(count, (int)(this.length - this.position)));
+  buffer,
+  offset,
+  Math.Min(count, (int)(this.length - this.position)));
         checked { this.position += c;
         }
         return c;
@@ -233,7 +233,7 @@ Math.Min(count, (int)(this.length - this.position)));
       }
       if (offset < 0) {
         throw new ArgumentException("offset (" + offset +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (offset > buffer.Length) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
@@ -241,7 +241,7 @@ Math.Min(count, (int)(this.length - this.position)));
       }
       if (count < 0) {
         throw new ArgumentException("count (" + count +
-                    ") is less than " + 0);
+                    ") is less than 0");
       }
       if (count > buffer.Length) {
         throw new ArgumentException("count (" + count + ") is more than " +

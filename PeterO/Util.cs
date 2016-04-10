@@ -422,7 +422,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
       }
       if (index < 0) {
   throw new ArgumentException("index (" + index +
-    ") is less than " + 0);
+    ") is less than 0");
 }
       return (index >= list.Count) ? default(T) : list[index];
     }
@@ -545,7 +545,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
 }
       if (length < 0) {
   throw new ArgumentException("length (" + length +
-    ") is less than " + 0);
+    ") is less than 0");
 }
       var buffer = new byte[32768];
       var totalLength = length;

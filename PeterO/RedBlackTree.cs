@@ -2,7 +2,7 @@
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.Collections.Generic;
@@ -98,10 +98,10 @@ namespace PeterO {
     // <returns>A Boolean object.</returns>
     public bool Contains(T element) {
       return (
-this.countValue != 0) && (
-this.treeValue.find(
-element,
-this.cmpValue) != null);
+  this.countValue != 0) && (
+  this.treeValue.find(
+  element,
+  this.cmpValue) != null);
     }
 
     // <summary>Copies this object's data to a new array.</summary>
@@ -113,7 +113,7 @@ this.cmpValue) != null);
       }
       if (arrayIndex < 0) {
         throw new ArgumentException("arrayIndex (" + arrayIndex +
-          ") is less than " + 0);
+          ") is less than 0");
       }
       if (this.treeValue != null) {
         RBCell t = this.treeValue.leftmost();
@@ -148,9 +148,9 @@ this.cmpValue) != null);
 
     public int OccurrencesOf(T element) {
       return (
-this.countValue == 0) ? 0 : this.treeValue.count(
-element,
-this.cmpValue);
+  this.countValue == 0) ? 0 : this.treeValue.count(
+  element,
+  this.cmpValue);
     }
 
     // <summary>Implements collections.UpdatableCollection.take. Time
@@ -196,8 +196,8 @@ this.cmpValue);
               t = t.left();
             } else {
               this.treeValue = t.insertLeft(
-new RBCell(element),
-this.treeValue);
+  new RBCell(element),
+  this.treeValue);
               this.incCount();
               return true;
             }
@@ -206,8 +206,8 @@ this.treeValue);
               t = t.right();
             } else {
               this.treeValue = t.insertRight(
-new RBCell(element),
-this.treeValue);
+  new RBCell(element),
+  this.treeValue);
               this.incCount();
               return true;
             }

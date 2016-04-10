@@ -3,7 +3,7 @@ Written by Peter O.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.IO;
@@ -177,14 +177,14 @@ namespace PeterO {
         throw new ArgumentNullException("data");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > data.Length) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     data.Length);
       }
       if (length < 0) {
-      throw new ArgumentException("length (" + length + ") is less than " + 0);
+      throw new ArgumentException("length (" + length + ") is less than 0");
       }
       if (length > data.Length) {
         throw new ArgumentException("length (" + length + ") is more than " +
@@ -211,7 +211,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.BinaryIO.ReadBytes(System.Int32)"]/*'/>
     public byte[] ReadBytes(int size) {
       if (size < 0) {
-        throw new ArgumentException("size (" + size + ") is less than " + 0);
+        throw new ArgumentException("size (" + size + ") is less than 0");
       }
       if (size >= 0x100000) {
         // If size is ludicrous, check whether
@@ -513,14 +513,14 @@ namespace PeterO {
         throw new ArgumentNullException("data");
       }
       if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than " + 0);
+      throw new ArgumentException("offset (" + offset + ") is less than 0");
       }
       if (offset > data.Length) {
         throw new ArgumentException("offset (" + offset + ") is more than " +
                     data.Length);
       }
       if (length < 0) {
-      throw new ArgumentException("length (" + length + ") is less than " + 0);
+      throw new ArgumentException("length (" + length + ") is less than 0");
       }
       if (length > data.Length) {
         throw new ArgumentException("length (" + length + ") is more than " +

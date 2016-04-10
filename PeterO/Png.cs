@@ -12,9 +12,9 @@ namespace PeterO {
     /// path='docs/doc[@name="T:PeterO.Png"]/*'/>
   public sealed class Png {
     internal static byte[] Adler32(
-byte[] array,
-int offset,
-int length) {
+  byte[] array,
+  int offset,
+  int length) {
       var v1 = 1;
       var v2 = 0;
       var len = length;
@@ -70,7 +70,7 @@ int length) {
     /// path='docs/doc[@name="M:PeterO.Png.SetFilter(System.Int32,System.Byte)"]/*'/>
     public void SetFilter(int y, byte filter) {
       if (y < 0) {
-        throw new ArgumentException("y (" + y + ") is less than " + 0);
+        throw new ArgumentException("y (" + y + ") is less than 0");
       }
       if (y > this.height - 1) {
         throw new ArgumentException("y (" + y + ") is more than " +
@@ -83,7 +83,7 @@ int length) {
     /// path='docs/doc[@name="M:PeterO.Png.GetFilter(System.Int32)"]/*'/>
     public byte GetFilter(int y) {
       if (y < 0) {
-        throw new ArgumentException("y (" + y + ") is less than " + 0);
+        throw new ArgumentException("y (" + y + ") is less than 0");
       }
       if (y > this.height - 1) {
         throw new ArgumentException("y (" + y + ") is more than " +
@@ -119,14 +119,14 @@ int length) {
     /// path='docs/doc[@name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Byte)"]/*'/>
     public void SetPixel(int x, int y, byte r, byte g, byte b, byte a) {
       if (x < 0) {
-        throw new ArgumentException("x (" + x + ") is less than " + 0);
+        throw new ArgumentException("x (" + x + ") is less than 0");
       }
       if (x > this.width - 1) {
         throw new ArgumentException("x (" + x + ") is more than " +
                     (this.width - 1));
       }
       if (y < 0) {
-        throw new ArgumentException("y (" + y + ") is less than " + 0);
+        throw new ArgumentException("y (" + y + ") is less than 0");
       }
       if (y > this.height - 1) {
         throw new ArgumentException("y (" + y + ") is more than " +
@@ -145,14 +145,14 @@ int length) {
     /// path='docs/doc[@name="M:PeterO.Png.GetPixel(System.Int32,System.Int32)"]/*'/>
     public byte[] GetPixel(int x, int y) {
       if (x < 0) {
-        throw new ArgumentException("x (" + x + ") is less than " + 0);
+        throw new ArgumentException("x (" + x + ") is less than 0");
       }
       if (x > this.width - 1) {
         throw new ArgumentException("x (" + x + ") is more than " +
                     (this.width - 1));
       }
       if (y < 0) {
-        throw new ArgumentException("y (" + y + ") is less than " + 0);
+        throw new ArgumentException("y (" + y + ") is less than 0");
       }
       if (y > this.height - 1) {
         throw new ArgumentException("y (" + y + ") is more than " +
@@ -186,9 +186,9 @@ int length) {
           ms.WriteByte(0x9c);
           using (
             var ds = new DeflateStream(
-ms,
-CompressionMode.Compress,
-true)) {
+  ms,
+  CompressionMode.Compress,
+  true)) {
             ds.Write(this.data, 0, this.data.Length);
           }
           ms.Write(Adler32(this.data, 0, this.data.Length), 0, 4);
@@ -238,19 +238,18 @@ true)) {
     public Png(int width, int height) {
       if (width < 1) {
         throw new ArgumentException("width (" + width +
-                    ") is less than " + 1);
+                    ") is less than 1");
       }
       if (width > 65535) {
-        throw new ArgumentException("width (" + width + ") is more than " +
-                    65535);
+        throw new ArgumentException("width (" + width + ") is more than 65535");
       }
       if (height < 1) {
         throw new ArgumentException("height (" + height +
-                    ") is less than " + 1);
+                    ") is less than 1");
       }
       if (height > 65535) {
-        throw new ArgumentException("height (" + height + ") is more than " +
-                    65535);
+     throw new ArgumentException("height (" + height +
+          ") is more than 65535");
       }
 this.subdata1 = new byte[] { 0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0,
         0, 0, 0xd,

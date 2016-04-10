@@ -64,7 +64,7 @@
     <Compile Include="PeterO\XEWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
-  <Import Project="$(MSBuildExtensionsPath)\StyleCop\v4.7\StyleCop.targets" />
+  <!--<Import Project="$(MSBuildExtensionsPath)StyleCop4.7StyleCop.targets" />-->
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>

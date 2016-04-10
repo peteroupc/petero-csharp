@@ -231,7 +231,7 @@
 
             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
             than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
@@ -242,7 +242,7 @@
 
             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>An IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>An IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
@@ -269,7 +269,7 @@
             <summary>Sorts an array of objects using a sorting method that
             preserves the order of equal elements.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='!: T:System.ArgumentNullException'>The parameter
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
             than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
@@ -324,14 +324,12 @@
 <doc name="P:PeterO.BinaryIO.CanSeek">
 <summary>Gets a value indicating whether the underlying stream
             supports seeking.</summary>
-            <value><c>true</c> If the underlying stream supports seeking;
-            otherwise, <c>false</c>.</value>
+            <value><c>true</c> If the underlying stream supports seeking; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.BinaryIO.CanWrite">
 <summary>Gets a value indicating whether the underlying stream
             supports writing.</summary>
-            <value><c>true</c> If the underlying stream supports writing;
-            otherwise, <c>false</c>.</value>
+            <value><c>true</c> If the underlying stream supports writing; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.BinaryIO.Length">
 <summary>Gets the length of the underlying stream.</summary>
@@ -692,8 +690,7 @@
 <doc name="P:PeterO.DisposableList`1.IsReadOnly">
 <summary>Gets a value indicating whether this list is read
             only.</summary>
-            <value><c>true</c> If this list is read only; otherwise,
-            <c>false</c>.</value>
+            <value><c>true</c> If this list is read only; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.DisposableList`1.Item(System.Int32)">
 <summary>Not documented yet.</summary>
@@ -770,8 +767,7 @@
 <doc name="P:PeterO.IniEntry.IsComment">
 <summary>Gets a value indicating whether this entry is a comment
             line.</summary>
-            <value><c>true</c> If this entry is a comment line; otherwise,
-            <c>false</c>.</value>
+            <value><c>true</c> If this entry is a comment line; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.IniEntry.Key">
 
@@ -1106,8 +1102,7 @@
 <doc name="P:PeterO.ListSegment`1.IsReadOnly">
 <summary>Gets a value indicating whether this list segment is read
             only.</summary>
-            <value><c>true</c> If this list segment is read only; otherwise,
-            <c>false</c>.</value>
+            <value><c>true</c> If this list segment is read only; otherwise, <c>false</c>.</value>
             <remarks>The read-only status of the list segment is the same as
             that of the underlying list. However, operations that would change
             the list segment's size, such as adding and removing items, are not
@@ -1227,20 +1222,17 @@
 <doc name="P:PeterO.PartialStream.CanRead">
 <summary>Gets a value indicating whether the underlying stream
             supports reading.</summary>
-            <value><c>true</c> If the underlying stream supports reading;
-            otherwise, <c>false</c>.</value>
+            <value><c>true</c> If the underlying stream supports reading; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.PartialStream.CanSeek">
 <summary>Gets a value indicating whether the underlying stream
             supports seeking.</summary>
-            <value><c>true</c> If the underlying stream supports seeking;
-            otherwise, <c>false</c>.</value>
+            <value><c>true</c> If the underlying stream supports seeking; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="P:PeterO.PartialStream.CanWrite">
 <summary>Gets a value indicating whether the underlying stream
             supports writing.</summary>
-            <value><c>true</c> If the underlying stream supports writing;
-            otherwise, <c>false</c>.</value>
+            <value><c>true</c> If the underlying stream supports writing; otherwise, <c>false</c>.</value>
 </doc>
 <doc name="M:PeterO.PartialStream.Dispose(System.Boolean)">
 <summary>Not documented yet.</summary>

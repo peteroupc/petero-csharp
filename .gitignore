@@ -1,7 +1,9 @@
-bin/
-*.exe
-obj/
-*.user
-*.suo
 *.Cache
+*.bat
+*.exe
 *.sdsettings
+*.suo
+*.user
+*.userprefs
+bin/
+obj/

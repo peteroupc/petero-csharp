@@ -17,7 +17,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.Png8BitIndexed.SetFilter(System.Int32,System.Byte)"]/*'/>
     public void SetFilter(int y, byte filter) {
     if (y < 0) {
-  throw new ArgumentException("y (" + y + ") is less than " + 0);
+  throw new ArgumentException("y (" + y + ") is less than 0");
 }
 if (y > this.height - 1) {
   throw new ArgumentException("y (" + y + ") is more than " +
@@ -30,7 +30,7 @@ if (y > this.height - 1) {
     /// path='docs/doc[@name="M:PeterO.Png8BitIndexed.GetFilter(System.Int32)"]/*'/>
     public byte GetFilter(int y) {
     if (y < 0) {
-  throw new ArgumentException("y (" + y + ") is less than " + 0);
+  throw new ArgumentException("y (" + y + ") is less than 0");
 }
 if (y > this.height - 1) {
   throw new ArgumentException("y (" + y + ") is more than " +
@@ -43,14 +43,14 @@ if (y > this.height - 1) {
     /// path='docs/doc[@name="M:PeterO.Png8BitIndexed.SetPixel(System.Int32,System.Int32,System.Int32)"]/*'/>
     public void SetPixel(int x, int y, int pixel) {
     if (x < 0) {
-  throw new ArgumentException("x (" + x + ") is less than " + 0);
+  throw new ArgumentException("x (" + x + ") is less than 0");
 }
 if (x > this.width - 1) {
   throw new ArgumentException("x (" + x + ") is more than " +
     (this.width - 1));
 }
     if (y < 0) {
-  throw new ArgumentException("y (" + y + ") is less than " + 0);
+  throw new ArgumentException("y (" + y + ") is less than 0");
 }
 if (y > this.height - 1) {
   throw new ArgumentException("y (" + y + ") is more than " +
@@ -64,14 +64,14 @@ if (y > this.height - 1) {
     /// path='docs/doc[@name="M:PeterO.Png8BitIndexed.GetPixel(System.Int32,System.Int32)"]/*'/>
     public int GetPixel(int x, int y) {
     if (x < 0) {
-  throw new ArgumentException("x (" + x + ") is less than " + 0);
+  throw new ArgumentException("x (" + x + ") is less than 0");
 }
 if (x > this.width - 1) {
   throw new ArgumentException("x (" + x + ") is more than " +
     (this.width - 1));
 }
     if (y < 0) {
-  throw new ArgumentException("y (" + y + ") is less than " + 0);
+  throw new ArgumentException("y (" + y + ") is less than 0");
 }
 if (y > this.height - 1) {
   throw new ArgumentException("y (" + y + ") is more than " +
@@ -86,11 +86,10 @@ if (y > this.height - 1) {
     public byte[] GetColor(int index) {
     if (index < 0) {
   throw new ArgumentException("index (" + index +
-    ") is less than " + 0);
+    ") is less than 0");
 }
 if (index > 255) {
-  throw new ArgumentException("index (" + index + ") is more than " +
-    255);
+  throw new ArgumentException("index (" + index + ") is more than 255");
 }
       return new byte[] { this.colors[index * 3],
         this.colors[(index * 3) + 1],
@@ -102,11 +101,10 @@ if (index > 255) {
     public void SetColor(int index, byte[] color) {
     if (index < 0) {
   throw new ArgumentException("index (" + index +
-    ") is less than " + 0);
+    ") is less than 0");
 }
 if (index > 255) {
-  throw new ArgumentException("index (" + index + ") is more than " +
-    255);
+  throw new ArgumentException("index (" + index + ") is more than 255");
 }
       if (color == null) {
         throw new ArgumentNullException("color");
@@ -162,10 +160,10 @@ if (filename.Length == 0) {
           ms.WriteByte(0x78);
           ms.WriteByte(0x9c);
           using (
-var ds = new DeflateStream(
-ms,
-CompressionMode.Compress,
-true)) {
+  var ds = new DeflateStream(
+  ms,
+  CompressionMode.Compress,
+  true)) {
             ds.Write(this.data, 0, this.data.Length);
           }
           ms.Write(Png.Adler32(this.data, 0, this.data.Length), 0, 4);
@@ -236,19 +234,17 @@ true)) {
     public Png8BitIndexed(int width, int height) {
     if (width < 1) {
   throw new ArgumentException("width (" + width +
-    ") is less than " + 1);
+    ") is less than 1");
 }
 if (width > 65535) {
-  throw new ArgumentException("width (" + width + ") is more than " +
-    65535);
+  throw new ArgumentException("width (" + width + ") is more than 65535");
 }
     if (height < 1) {
   throw new ArgumentException("height (" + height +
-    ") is less than " + 1);
+    ") is less than 1");
 }
 if (height > 65535) {
-  throw new ArgumentException("height (" + height + ") is more than " +
-    65535);
+  throw new ArgumentException("height (" + height + ") is more than 65535");
 }
       this.colors = new byte[256 * 3];
       this.transparent = -1;

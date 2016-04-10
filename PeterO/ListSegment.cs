@@ -3,7 +3,7 @@ Written by Peter O.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.Collections.Generic;
@@ -33,14 +33,14 @@ namespace PeterO {
         throw new ArgumentNullException("list");
       }
       if (start < 0) {
-        throw new ArgumentException("start (" + start + ") is less than " + 0);
+        throw new ArgumentException("start (" + start + ") is less than 0");
       }
       if (start > list.Count) {
         throw new ArgumentException("start (" + start + ") is more than " +
                     list.Count);
       }
       if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than " + 0);
+        throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +

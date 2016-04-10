@@ -3,7 +3,7 @@ Written in 2013 by Peter O.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
+at: http://peteroupc.github.io/
  */
 using System;
 using System.Collections.Generic;
@@ -86,9 +86,9 @@ namespace PeterO {
         KeyValuePair<T1, T2> kvpIn;
         kvpIn = new KeyValuePair<T1, T2>(key, default(T2));
         if (
-this.tree.Find(
-kvpIn,
-out kvp)) {
+  this.tree.Find(
+  kvpIn,
+  out kvp)) {
           return kvp.Value;
         }
         throw new KeyNotFoundException("Key not found: " + key);
