@@ -24,7 +24,8 @@ namespace PeterO {
       return ret;
     }
 
-    /// <summary>Not documented yet.
+    /// <summary>Reads from a stream until it runs out and writes the data
+    /// read to a file.
     /// <para>In the .NET implementation, this method is implemented as an
     /// extension method to any object implementing Stream and can be
     /// called as follows: <c>s.SaveStream(realPath)</c>. If the object's

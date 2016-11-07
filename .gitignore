@@ -1,6 +1,7 @@
 *.Cache
 *.bat
 *.exe
+*.jar
 *.sdsettings
 *.suo
 *.user
