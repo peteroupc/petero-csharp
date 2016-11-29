@@ -62,9 +62,10 @@
     <Compile Include="PeterO\Util.cs" />
     <Compile Include="PeterO\XEReader.cs" />
     <Compile Include="PeterO\XEWriter.cs" />
+    <Compile Include="PeterO\DisposableLists.cs" />
+    <Compile Include="PeterO\IniSection.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
-  <!--<Import Project="$(MSBuildExtensionsPath)StyleCop4.7StyleCop.targets" />-->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.Targets" />
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>

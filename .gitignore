@@ -2,9 +2,12 @@
 *.bat
 *.exe
 *.jar
+*.map
 *.sdsettings
 *.suo
 *.user
 *.userprefs
+.nuget/
 bin/
 obj/
+packages/

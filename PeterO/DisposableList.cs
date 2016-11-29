@@ -12,24 +12,6 @@ using PeterO;
 
 namespace PeterO {
     /// <include file='../docs.xml'
-    /// path='docs/doc[@name="T:PeterO.DisposableLists"]/*'/>
-  public static class DisposableLists {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.DisposableLists.Create"]/*'/>
-    public static DisposableList<IDisposable> Create() {
-      return new DisposableList<IDisposable>();
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.DisposableLists.Create``1(``0)"]/*'/>
-    public static DisposableList<T> Create<T>(T obj) where T : IDisposable {
-      var ret = new DisposableList<T>();
-      ret.Add(obj);
-      return ret;
-    }
-  }
-
-    /// <include file='../docs.xml'
     /// path='docs/doc[@name="T:PeterO.DisposableList`1"]/*'/>
   public sealed class DisposableList<T> : IList<T>, IDisposable
     where T : IDisposable {
