@@ -9,5 +9,6 @@
 *.userprefs
 .nuget/
 bin/
+encoding/
 obj/
 packages/
