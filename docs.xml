@@ -215,32 +215,25 @@
             than <paramref name='count'/>.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0})">
-
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+<summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
-
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
-
-             <summary>Not documented yet.</summary><param name='array'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+<summary>Not documented yet.</summary><param name='array'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='array'/> or <paramref name='comparer'/> is
             null.</exception>
-
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
-
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+<summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
             of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
             than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
-
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})">
-
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+<summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
             of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>An IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
@@ -249,7 +242,6 @@
             than <paramref name='count'/>.</exception><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception>
-
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0})">
 
@@ -645,7 +637,7 @@
             IDisposable.</typeparam>
 </doc>
 <doc name="M:PeterO.DisposableList`1.#ctor">
-<summary>Initializes a new instance of the <see cref='!:DisposableList'/> class.</summary>
+<summary>Initializes a new instance of the <see cref="DisposableList" /> class.</summary>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Add(`0)">
 <summary>Not documented yet.</summary>
@@ -1044,12 +1036,11 @@
             <typeparam name='T'>Any object type.</typeparam>
 </doc>
 <doc name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)">
-<summary>Initializes a new instance of the <see cref='!:ListSegment'/> class.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='start'>A 32-bit signed integer.</param>
-            <param name='count'>Another 32-bit signed integer.</param>
-            <exception cref='T:System.ArgumentNullException'>The parameter
-            <paramref name='list'/> is null.</exception>
+<summary>Initializes a new instance of the <see cref="ListSegment" /> class.</summary>
+             <param name='list'>An IList object.</param>
+             <param name='start'>A 32-bit signed integer.</param>
+             <param name='count'>Another 32-bit signed integer.</param>
+             <exception cref='T:System.ArgumentNullException'>The parameter <paramref name='list'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.ListSegment`1.Add(`0)">
 <summary>This method is not supported.</summary>
@@ -1157,9 +1148,9 @@
             pair.</typeparam>
 </doc>
 <doc name="M:PeterO.Pair`2.#ctor(`0,`1)">
-<summary>Initializes a new instance of the <see cref='!:Pair'/> class.</summary>
-            <param name='first'>A TFirst object.</param>
-            <param name='second'>A TSecond object.</param>
+<summary>Initializes a new instance of the <see cref="Pair" /> class.</summary>
+             <param name='first'>A TFirst object.</param>
+             <param name='second'>A TSecond object.</param>
 </doc>
 <doc name="M:PeterO.Pair`2.Equals(PeterO.Pair{`0,`1})">
 <summary>Not documented yet.</summary>

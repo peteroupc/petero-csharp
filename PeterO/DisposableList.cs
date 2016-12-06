@@ -28,8 +28,7 @@ namespace PeterO {
       this.list.Clear();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.DisposableList`1.#ctor"]/*'/>
+    public DisposableList() {
     public DisposableList() {
       this.list = new List<T>();
     }
