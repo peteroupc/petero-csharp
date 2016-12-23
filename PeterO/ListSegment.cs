@@ -26,12 +26,13 @@ namespace PeterO {
 
     private readonly EqualityComparer<T> comparer = EqualityComparer<T>.Default;
 
+    /// <summary>Initializes a new instance of the ListSegment
+    /// class.</summary>
     /// <param name='list'>An IList object.</param>
     /// <param name='start'>A 32-bit signed integer.</param>
     /// <param name='count'>Another 32-bit signed integer.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> or "array" is null.</exception>
-    public ListSegment(IList<T> list, int start, int count) {
     public ListSegment(IList<T> list, int start, int count) {
       if (list == null) {
         throw new ArgumentNullException("list");

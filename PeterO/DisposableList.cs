@@ -28,7 +28,8 @@ namespace PeterO {
       this.list.Clear();
     }
 
-    public DisposableList() {
+    /// <summary>Initializes a new instance of the DisposableList
+    /// class.</summary>
     public DisposableList() {
       this.list = new List<T>();
     }

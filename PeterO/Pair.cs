@@ -14,9 +14,9 @@ public sealed class Pair<TFirst, TSecond> : IEquatable<Pair<TFirst, TSecond>> {
     private readonly TFirst first;
     private readonly TSecond second;
 
+    /// <summary>Initializes a new instance of the Pair class.</summary>
     /// <param name='first'>A TFirst object.</param>
     /// <param name='second'>A TSecond object.</param>
-    public Pair(TFirst first, TSecond second) {
     public Pair(TFirst first, TSecond second) {
       this.first = first;
       this.second = second;
