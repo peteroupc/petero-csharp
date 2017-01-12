@@ -236,6 +236,7 @@ namespace PeterO {
 
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})"]/*'/>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     public static void StableSort<T>(IList<T> list, IComparer<T> comparer) {
       if (list == null) {
         throw new ArgumentNullException("list");

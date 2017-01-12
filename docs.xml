@@ -251,7 +251,7 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
 
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='comparer'>An IComparer object.</param><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception>
 
@@ -1040,7 +1040,7 @@
              <param name='list'>An IList object.</param>
              <param name='start'>A 32-bit signed integer.</param>
              <param name='count'>Another 32-bit signed integer.</param>
-             <exception cref='T:System.ArgumentNullException'>The parameter <paramref name='list'/> is null.</exception>
+             <exception cref='T:System.ArgumentNullException'>The parameter <paramref name='list'/> or "array" is null.</exception>
 </doc>
 <doc name="M:PeterO.ListSegment`1.Add(`0)">
 <summary>This method is not supported.</summary>
@@ -1292,7 +1292,7 @@
 </doc>
 <doc name="M:PeterO.Png.GetPixel(System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
             <param name='y'>A 32-bit signed integer. (2).</param>
             <returns>A byte array.</returns>
 </doc>
@@ -1314,24 +1314,24 @@
 </doc>
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
             <param name='y'>A 32-bit signed integer. (2).</param>
-            <param name='r'>A Byte object.</param>
-            <param name='g'>Another Byte object.</param>
-            <param name='b'>Another Byte object.</param>
+            <param name='r'>Red component of the pixel.</param>
+            <param name='g'>Green component of the pixel.</param>
+            <param name='b'>Blue component of the pixel.</param>
 </doc>
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
             <param name='y'>A 32-bit signed integer. (2).</param>
-            <param name='r'>A Byte object.</param>
-            <param name='g'>Another Byte object.</param>
-            <param name='b'>Another Byte object.</param>
+            <param name='r'>Red component of the pixel.</param>
+            <param name='g'>Green component of the pixel.</param>
+            <param name='b'>Blue component of the pixel.</param>
             <param name='a'>A Byte object. (3).</param>
 </doc>
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte[])">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
             <param name='y'>A 32-bit signed integer. (2).</param>
             <param name='pixel'>A byte array.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
@@ -1380,8 +1380,8 @@
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.SetPixel(System.Int32,System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
-            <param name='y'>Another 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
+            <param name='y'>Y coordinate within the image.</param>
             <param name='pixel'>A 32-bit signed integer. (3).</param>
 </doc>
 <doc name="P:PeterO.Png4BitIndexed.Transparent">
@@ -1441,8 +1441,8 @@
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.SetPixel(System.Int32,System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='x'>A 32-bit signed integer.</param>
-            <param name='y'>Another 32-bit signed integer.</param>
+            <param name='x'>X coordinate within the image.</param>
+            <param name='y'>Y coordinate within the image.</param>
             <param name='pixel'>A 32-bit signed integer. (3).</param>
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Transparent">
@@ -1485,7 +1485,7 @@
             value)</c>. If the object's class already has a
             AddIfMissing&lt;TKey, TValue&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary><param name='dict'>An IDictionary object.</param><param name='key'>A TKey object.</param><param name='value'>A TValue object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='dict'>An IDictionary object.</param><param name='key'>A TKey object.</param><param name='value'>A TValue object.</param><typeparam name='TKey'>Object type for keys.</typeparam><typeparam name='TValue'>Object type for values.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='dict'/> is null.</exception>
 
 </doc>
@@ -1843,7 +1843,7 @@
             TOutput&gt;(func)</c>. If the object's class already has a
             Transform&lt;TInput, TOutput&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>An IEnumerable(TOutput) object.</returns>
+            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='TOutput'>Output type.</typeparam><returns>An IEnumerable(TOutput) object.</returns>
 
 </doc>
 <doc name="M:PeterO.Util.UpToExcluding(System.Int32,System.Int32)">

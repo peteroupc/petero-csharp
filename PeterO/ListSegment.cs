@@ -174,10 +174,8 @@ NotSupportedException("Changing the size of a list segment is not supported.");
     }
 
     private sealed class ListSegmentEnumerator : IEnumerator<T> {
-      private int index = -1;
-
       private readonly ListSegment<T> list;
-
+      private int index = -1;
       private bool wasModified;
 
       private void OnContentsModified(object sender, EventArgs eventArgs) {

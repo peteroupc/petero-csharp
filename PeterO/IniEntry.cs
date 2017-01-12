@@ -1,5 +1,5 @@
 /*
-Written in 2009 by Peter O.
+Written by Peter O. in 2009.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
@@ -59,7 +59,7 @@ namespace PeterO {
         throw new ArgumentNullException("comment");
       }
       if (comment.IndexOfAny(new[] {
-        ';' // ,'#'
+        ';'  // ,'#'
       }) != 0) {
         throw new ArgumentException("Value is not a comment.");
       }

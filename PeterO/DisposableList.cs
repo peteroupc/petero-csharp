@@ -1,5 +1,5 @@
 /*
-Written in 2010 by Peter O.
+Written by Peter O. in 2010.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
@@ -28,8 +28,8 @@ namespace PeterO {
       this.list.Clear();
     }
 
-    /// <summary>Initializes a new instance of the DisposableList
-    /// class.</summary>
+    /// <summary>Initializes a new instance of the
+    /// <see cref='T:PeterO.DisposableList`1'/> class.</summary>
     public DisposableList() {
       this.list = new List<T>();
     }

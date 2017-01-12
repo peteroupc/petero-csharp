@@ -208,7 +208,7 @@ namespace PeterO {
       }
     }
 
-    private int height, realRowSize, blockSize;
+    private int height, realRowSize;
     private readonly int rowSize;
     private readonly int width;
 
@@ -260,7 +260,6 @@ this.subdata1 = new byte[] { 0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0,
       this.width = width;
       this.height = height;
       this.realRowSize = (this.width * ValueBytesPerPixel) + 1;
-      this.blockSize = this.realRowSize;
       this.rowSize = this.realRowSize;
       this.imageData = new byte[this.rowSize * this.height];
       this.data = this.imageData;

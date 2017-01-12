@@ -1,5 +1,5 @@
 /*
-Written in 2010 by Peter O.
+Written by Peter O. in 2010.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
@@ -15,9 +15,9 @@ namespace PeterO {
   {
     private readonly Stream stream;
     private readonly bool closeOnDispose;
-    private long position;
     private readonly long length;
     private readonly long start;
+    private long position;
     private bool isDisposed;
 
     /// <include file='../docs.xml'

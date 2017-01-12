@@ -14,18 +14,26 @@ namespace PeterO {
 public interface IStructure {
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.IStructure.Read(System.IO.Stream)"]/*'/>
+    /// <param name='stream'>The parameter <paramref name='stream'/> is not
+    /// documented yet.</param>
     void Read(Stream stream);
 
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.IStructure.Read(PeterO.BinaryIO)"]/*'/>
+    /// <param name='bio'>The parameter <paramref name='bio'/> is not
+    /// documented yet.</param>
     void Read(BinaryIO bio);
 
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.IStructure.Write(System.IO.Stream)"]/*'/>
+    /// <param name='stream'>The parameter <paramref name='stream'/> is not
+    /// documented yet.</param>
     void Write(Stream stream);
 
     /// <include file='../docs.xml'
     /// path='docs/doc[@name="M:PeterO.IStructure.Write(PeterO.BinaryIO)"]/*'/>
+    /// <param name='bio'>The parameter <paramref name='bio'/> is not
+    /// documented yet.</param>
     void Write(BinaryIO bio);
   }
 }
