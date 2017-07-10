@@ -28,7 +28,7 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayHashCode``1(System.Collections.Generic.IEnumerable{``0})">
 
-             <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+             <summary>Not documented yet.</summary><param name='array'>The parameter <paramref name='array'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
 
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Byte})">
@@ -45,12 +45,12 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToStringHex``1(System.Collections.Generic.IEnumerable{``0})">
 
-             <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+             <summary>Not documented yet.</summary><param name='array'>The parameter <paramref name='array'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
 
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArrayToString``1(System.Collections.Generic.IEnumerable{``0})">
 
-             <summary>Not documented yet.</summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+             <summary>Not documented yet.</summary><param name='array'>The parameter <paramref name='array'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
 
 </doc>
 <doc name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
@@ -95,12 +95,12 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
 
-             <summary>Not documented yet.</summary><param name='array1'>An IEnumerable object.</param><param name='array2'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+             <summary>Not documented yet.</summary><param name='array1'>The parameter <paramref name='array1'/> is an IEnumerable object.</param><param name='array2'>The parameter <paramref name='array2'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
 
 </doc>
 <doc name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
 
-             <summary>Not documented yet.</summary><param name='array1'>An IEnumerable object.</param><param name='array2'>An IEnumerable object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+             <summary>Not documented yet.</summary><param name='array1'>The parameter <paramref name='array1'/> is an IEnumerable object.</param><param name='array2'>The parameter <paramref name='array2'/> is an IEnumerable object.</param><param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='comparer'/> is null.</exception>
 
 </doc>
@@ -134,7 +134,7 @@
             <param name='list1'>The first list to compare. Can be null.</param>
             <param name='list2'>The second list of compare. Can be
             null.</param>
-            <param name='comparer'>An IComparer object.</param>
+            <param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param>
             <typeparam name='T'>Not documented yet.</typeparam>
             <returns>A 32-bit signed integer.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
@@ -144,7 +144,7 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},``0)">
 
-             <summary>Not documented yet.</summary><param name='items'>An IEnumerable object.</param><param name='func'>A Predicate object.</param><param name='defaultValue'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+             <summary>Not documented yet.</summary><param name='items'>The parameter <paramref name='items'/> is an IEnumerable object.</param><param name='func'>The parameter <paramref name='func'/> is a Predicate object.</param><param name='defaultValue'>The parameter <paramref name='defaultValue'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='items'/> or <paramref name='func'/> is
             null.</exception>
 
@@ -152,7 +152,7 @@
 <doc name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},``0,``0)">
 <summary>Finds an item or returns a default value if an item is not
             found.</summary>
-            <param name='items'>An IEnumerable object.</param>
+            <param name='items'>The parameter <paramref name='items'/> is an IEnumerable object.</param>
             <param name='itemToFind'>An item to compare with each item in the
             list.</param>
             <param name='defaultValue'>This value is returned if _itemToFind_
@@ -166,7 +166,7 @@
 <doc name="M:PeterO.ArrayUtil.Reverse``1(System.Collections.Generic.IList{``0})">
 <summary>Reverses the order of the elements in the given
             list.</summary>
-            <param name='list'>An IList object.</param>
+            <param name='list'>The parameter <paramref name='list'/> is an IList object.</param>
             <typeparam name='T'>Any object type.</typeparam>
             <exception cref='T:System.ArgumentNullException'>The parameter
             "array" is null.</exception>
@@ -188,8 +188,8 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)">
 <summary>Randomizes the order of a list's items.</summary>
-            <param name='list'>An IList object.</param>
-            <param name='random'>A Random object.</param>
+            <param name='list'>The parameter <paramref name='list'/> is an IList object.</param>
+            <param name='random'>The parameter <paramref name='random'/> is a Random object.</param>
             <typeparam name='T'>Any object type.</typeparam>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='random'/> or <paramref name='list'/> is
@@ -215,16 +215,16 @@
             than <paramref name='count'/>.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0})">
-<summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+<summary>Not documented yet.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary><param name='array'>An IList object.</param><param name='comparer'>An IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+<summary>Not documented yet.</summary><param name='array'>The parameter <paramref name='array'/> is an IList object.</param><param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='array'/> or <paramref name='comparer'/> is
             null.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
-<summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+<summary>Not documented yet.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
             of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
@@ -233,9 +233,9 @@
             <paramref name='list'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.ArrayUtil.Sort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})">
-<summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+<summary>Not documented yet.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
-            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>An IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+            of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
             greater than <paramref name='list'/> 's length, or <paramref name='list'/> ' s length minus <paramref name='offset'/> is less
@@ -245,21 +245,19 @@
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0})">
 
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+             <summary>Not documented yet.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})">
-
-             <summary>Not documented yet.</summary><param name='list'>An IList object.</param><param name='comparer'>An IComparer object.</param><exception cref='T:System.ArgumentNullException'>The parameter
+<summary>Not documented yet.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
             null.</exception>
-
 </doc>
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
 
              <summary>Sorts an array of objects using a sorting method that
-            preserves the order of equal elements.</summary><param name='list'>An IList object.</param><param name='offset'>A zero-based index showing where the desired
+            preserves the order of equal elements.</summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param><param name='count'>The number of elements in the desired portion
             of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param><typeparam name=' T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception><exception cref='T:System.ArgumentException'>Either <paramref name='offset'/> or <paramref name='count'/> is less than 0 or
@@ -271,12 +269,12 @@
 <doc name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})">
 <summary>Sorts an array of objects using a sorting method that
             preserves the order of equal elements.</summary>
-            <param name='list'>An IList object.</param>
+            <param name='list'>The parameter <paramref name='list'/> is an IList object.</param>
             <param name='offset'>A zero-based index showing where the desired
             portion of <paramref name='list'/> begins.</param>
             <param name='count'>The number of elements in the desired portion
             of <paramref name='list'/> (but not more than <paramref name='list'/> 's length).</param>
-            <param name='comparer'>An IComparer object.</param>
+            <param name='comparer'>The parameter <paramref name='comparer'/> is an IComparer object.</param>
             <typeparam name='T'>Any object type.</typeparam>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='comparer'/> is
@@ -303,7 +301,7 @@
 <doc name="M:PeterO.BinaryIO.#ctor(System.IO.Stream)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.BinaryIO'/> class. Initializes a new BinaryIO
             instance.</summary>
-            <param name='stream'>A Stream object.</param>
+            <param name='stream'>The parameter <paramref name='stream'/> is a Stream object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='stream'/> is null.</exception>
 </doc>
@@ -388,11 +386,11 @@
 </doc>
 <doc name="M:PeterO.BinaryIO.ReadByte">
 <summary>Not documented yet.</summary>
-            <returns>A Byte object.</returns>
+            <returns>A byte (from 0 to 255).</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.ReadBytes(System.Int32)">
 <summary>Reads data from a stream into a byte array.</summary>
-            <param name='size'>A 32-bit signed integer.</param>
+            <param name='size'>The parameter <paramref name='size'/> is a 32-bit signed integer.</param>
             <returns>A byte array containing the data read.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.ReadDoubleBE">
@@ -441,7 +439,7 @@
 </doc>
 <doc name="M:PeterO.BinaryIO.Write(System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A Byte object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write(System.Byte[])">
 <summary>Not documented yet.</summary>
@@ -464,81 +462,81 @@
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedInt32BE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>Another 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedInt32LE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>Another 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedInt64BE(System.Int64)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedInt64LE(System.Int64)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedUInt32BE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>Another 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.Write7BitEncodedUInt32LE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>Another 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A Byte object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Double)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit floating-point number.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Int16)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 16-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 16-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Int64)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteBE(System.Single)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 32-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit floating-point number.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A Byte object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Double)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit floating-point number.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Int16)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 16-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 16-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Int64)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.BinaryIO.WriteLE(System.Single)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 32-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit floating-point number.</param>
 </doc>
 <doc name="T:PeterO.CulturedText">
 <summary>Contains string processing operations that should be
@@ -553,81 +551,81 @@
 </doc>
 <doc name="M:PeterO.CulturedText.Compare(System.String,System.String)">
 <summary>Compares a text string with a string.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.CompareIgnoreCase(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.EndsWith(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='value1'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.CulturedText.Format(System.String,System.Object[])">
 <summary>Not documented yet.</summary>
-            <param name='formattedText'>Another string object.</param>
-            <param name='options'>A params object.</param>
+            <param name='formattedText'>The parameter <paramref name='formattedText'/> is a text string.</param>
+            <param name='options'>The parameter <paramref name='options'/> is a params object.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ParseInt32(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ParseInt32Hex(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.StartsWith(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='value1'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Byte)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A Byte object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a byte (from 0 to 255).</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Double)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 64-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit floating-point number.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Int16)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 16-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 16-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Int32)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Int64)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Object)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>An arbitrary object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is an arbitrary object.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.CulturedText.ToString(System.Single)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 32-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit floating-point number.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="T:PeterO.DisposableList`1">
@@ -637,18 +635,18 @@
             IDisposable.</typeparam>
 </doc>
 <doc name="M:PeterO.DisposableList`1.#ctor">
-<summary>Initializes a new instance of the <see cref="DisposableList" /> class.</summary>
+<summary>Initializes a new instance of the <see cref='T:PeterO.DisposableList`1'/> class.</summary>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Add(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Clear">
 <summary>Not documented yet.</summary>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Contains(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.DisposableList`1.CopyTo(`0[],System.Int32)">
@@ -671,13 +669,13 @@
 </doc>
 <doc name="M:PeterO.DisposableList`1.IndexOf(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Insert(System.Int32,`0)">
 <summary>Not documented yet.</summary>
             <param name='index'>Zero-based index into the list.</param>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
 </doc>
 <doc name="P:PeterO.DisposableList`1.IsReadOnly">
 <summary>Gets a value indicating whether this list is read
@@ -686,12 +684,12 @@
 </doc>
 <doc name="P:PeterO.DisposableList`1.Item(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A 32-bit signed integer.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a 32-bit signed integer.</param>
             <returns>A T object.</returns>
 </doc>
 <doc name="M:PeterO.DisposableList`1.Remove(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.DisposableList`1.RemoveAt(System.Int32)">
@@ -707,7 +705,7 @@
 </doc>
 <doc name="M:PeterO.DisposableLists.Create``1(``0)">
 <summary>Not documented yet.</summary>
-            <param name='obj'>A T object.</param>
+            <param name='obj'>The parameter <paramref name='obj'/> is a T object.</param>
             <typeparam name='T'>Any object type that implements
             IDisposable.</typeparam>
             <returns>A DisposableList(T) object.</returns>
@@ -738,20 +736,20 @@
 </doc>
 <doc name="M:PeterO.IniEntry.#ctor(PeterO.IniEntry)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniEntry'/> class.</summary>
-            <param name='entry'>An IniEntry object.</param>
+            <param name='entry'>The parameter <paramref name='entry'/> is an IniEntry object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='entry'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniEntry.#ctor(System.String)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniEntry'/> class.</summary>
-            <param name='comment'>A text string.</param>
+            <param name='comment'>The parameter <paramref name='comment'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='comment'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniEntry.#ctor(System.String,System.String)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniEntry'/> class.</summary>
-            <param name='key'>A text string.</param>
-            <param name='value'>Another string object.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='key'/> or <paramref name='value'/> is
             null.</exception>
@@ -783,24 +781,24 @@
 </doc>
 <doc name="M:PeterO.IniFile.#ctor(System.String)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniFile'/> class.</summary>
-            <param name='path'>A text string.</param>
+            <param name='path'>The parameter <paramref name='path'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.IniFile.#ctor(System.String,PeterO.IniMergeBehavior)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniFile'/> class.</summary>
-            <param name='path'>A text string.</param>
-            <param name='behavior'>An IniMergeBehavior object.</param>
+            <param name='path'>The parameter <paramref name='path'/> is a text string.</param>
+            <param name='behavior'>The parameter <paramref name='behavior'/> is an IniMergeBehavior object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='path'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniFile.AddSection(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>A text string.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
             <returns>An IniSection object.</returns>
 </doc>
 <doc name="M:PeterO.IniFile.AddSection(System.String,PeterO.IniMergeBehavior)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>A text string.</param>
-            <param name='behavior'>An IniMergeBehavior object.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
+            <param name='behavior'>The parameter <paramref name='behavior'/> is an IniMergeBehavior object.</param>
             <returns>An IniSection object.</returns>
 </doc>
 <doc name="P:PeterO.IniFile.Count">
@@ -810,32 +808,32 @@
 </doc>
 <doc name="M:PeterO.IniFile.GetSection(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>A text string.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
             <returns>An IniSection object.</returns>
 </doc>
 <doc name="M:PeterO.IniFile.GetValue(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>Another string object.</param>
-            <param name='keyName'>Another string object.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
+            <param name='keyName'>The parameter <paramref name='keyName'/> is a text string.</param>
             <returns>A text string.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='keyName'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniFile.RemoveSection(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>A text string.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.IniFile.Save(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='path'>A text string.</param>
+            <param name='path'>The parameter <paramref name='path'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='path'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniFile.SetValue(System.String,System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='sectionName'>A text string.</param>
-            <param name='keyName'>Another string object.</param>
-            <param name='value'>Another string object.</param>
+            <param name='sectionName'>The parameter <paramref name='sectionName'/> is a text string.</param>
+            <param name='keyName'>The parameter <paramref name='keyName'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='keyName'/> or <paramref name='value'/> is
             null.</exception>
@@ -846,7 +844,7 @@
 </doc>
 <doc name="M:PeterO.IniFile.WriteToStream(System.IO.StreamWriter)">
 <summary>Not documented yet.</summary>
-            <param name='writer'>A StreamWriter object.</param>
+            <param name='writer'>The parameter <paramref name='writer'/> is a StreamWriter object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='writer'/> is null.</exception>
 </doc>
@@ -864,39 +862,39 @@
 </doc>
 <doc name="M:PeterO.IniSection.#ctor(PeterO.IniSection)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniSection'/> class.</summary>
-            <param name='other'>An IniSection object.</param>
+            <param name='other'>The parameter <paramref name='other'/> is an IniSection object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='other'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniSection.#ctor(System.String)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.IniSection'/> class.</summary>
-            <param name='name'>A text string.</param>
+            <param name='name'>The parameter <paramref name='name'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.IniSection.Add(PeterO.IniEntry)">
 <summary>Not documented yet.</summary>
-            <param name='entry'>An IniEntry object.</param>
+            <param name='entry'>The parameter <paramref name='entry'/> is an IniEntry object.</param>
 </doc>
 <doc name="M:PeterO.IniSection.Add(PeterO.IniEntry,PeterO.IniMergeBehavior)">
 <summary>Adds two IniEntry objects.</summary>
-            <param name='entry'>An IniEntry object.</param>
-            <param name='behavior'>An IniMergeBehavior object.</param>
+            <param name='entry'>The parameter <paramref name='entry'/> is an IniEntry object.</param>
+            <param name='behavior'>The parameter <paramref name='behavior'/> is an IniMergeBehavior object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='entry'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.IniSection.AddComment(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='comment'>A text string.</param>
+            <param name='comment'>The parameter <paramref name='comment'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.IniSection.AddEntry(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='key'>A text string.</param>
-            <param name='value'>Another string object.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.IniSection.AddEntry(System.String,System.String,PeterO.IniMergeBehavior)">
 <summary>Not documented yet.</summary>
-            <param name='key'>A text string.</param>
-            <param name='value'>Another string object.</param>
-            <param name='behavior'>An IniMergeBehavior object.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
+            <param name='behavior'>The parameter <paramref name='behavior'/> is an IniMergeBehavior object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             "keyName" is null.</exception>
 </doc>
@@ -910,14 +908,14 @@
 </doc>
 <doc name="M:PeterO.IniSection.GetValue(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='keyName'>Another string object.</param>
+            <param name='keyName'>The parameter <paramref name='keyName'/> is a text string.</param>
             <returns>A text string.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='keyName'/> is null.</exception>
 </doc>
 <doc name="P:PeterO.IniSection.Item(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <returns>An IniEntry object.</returns>
 </doc>
 <doc name="P:PeterO.IniSection.Name">
@@ -927,14 +925,14 @@
 </doc>
 <doc name="M:PeterO.IniSection.RemoveEntry(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='key'>A text string.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             "keyName" is null.</exception>
 </doc>
 <doc name="M:PeterO.IniSection.SetValue(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='keyName'>A text string.</param>
-            <param name='value'>Another string object.</param>
+            <param name='keyName'>The parameter <paramref name='keyName'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='keyName'/> is null.</exception>
 </doc>
@@ -953,81 +951,81 @@
 </doc>
 <doc name="M:PeterO.InvariantText.Compare(System.String,System.String)">
 <summary>Compares a text string with a string.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.CompareIgnoreCase(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.EndsWith(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='value1'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.InvariantText.Format(System.String,System.Object[])">
 <summary>Not documented yet.</summary>
-            <param name='formattedText'>Another string object.</param>
-            <param name='options'>A params object.</param>
+            <param name='formattedText'>The parameter <paramref name='formattedText'/> is a text string.</param>
+            <param name='options'>The parameter <paramref name='options'/> is a params object.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ParseInt32(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ParseInt32Hex(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.StartsWith(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value1'>A text string.</param>
-            <param name='value2'>Another string object.</param>
+            <param name='value1'>The parameter <paramref name='value1'/> is a text string.</param>
+            <param name='value2'>The parameter <paramref name='value2'/> is a text string.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='value1'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Byte)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A Byte object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a byte (from 0 to 255).</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Double)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 64-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit floating-point number.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Int16)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 16-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 16-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Int32)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 32-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Int64)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Object)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>An arbitrary object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is an arbitrary object.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="M:PeterO.InvariantText.ToString(System.Single)">
 <summary>Converts this object to a text string.</summary>
-            <param name='value'>A 32-bit floating-point number.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 32-bit floating-point number.</param>
             <returns>A text string.</returns>
 </doc>
 <doc name="T:PeterO.ListSegment`1">
@@ -1036,10 +1034,10 @@
             <typeparam name='T'>Any object type.</typeparam>
 </doc>
 <doc name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)">
-<summary>Initializes a new instance of the <see cref="ListSegment" /> class.</summary>
-             <param name='list'>An IList object.</param>
-             <param name='start'>A 32-bit signed integer.</param>
-             <param name='count'>Another 32-bit signed integer.</param>
+<summary>Initializes a new instance of the <see cref='ListSegment'/> class.</summary>
+             <param name='list'>The parameter <paramref name='list'/> is an IList object.</param>
+             <param name='start'>The parameter <paramref name='start'/> is a 32-bit signed integer.</param>
+             <param name='count'>The parameter <paramref name='count'/> is a 32-bit signed integer.</param>
              <exception cref='T:System.ArgumentNullException'>The parameter <paramref name='list'/> or "array" is null.</exception>
 </doc>
 <doc name="M:PeterO.ListSegment`1.Add(`0)">
@@ -1058,13 +1056,13 @@
 </doc>
 <doc name="M:PeterO.ListSegment`1.Contains(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.ListSegment`1.CopyTo(`0[],System.Int32)">
 <summary>Not documented yet.</summary>
             <param name='array'>A T[] object.</param>
-            <param name='arrayIndex'>A 32-bit signed integer.</param>
+            <param name='arrayIndex'>The parameter <paramref name='arrayIndex'/> is a 32-bit signed integer.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='array'/> is null.</exception>
 </doc>
@@ -1079,13 +1077,13 @@
 </doc>
 <doc name="M:PeterO.ListSegment`1.IndexOf(`0)">
 <summary>Not documented yet.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.ListSegment`1.Insert(System.Int32,`0)">
 <summary>This method is not supported.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
-            <param name='item'>A T object.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <exception cref='T:System.NotSupportedException'>Always thrown,
             because changing the size of a list segment is not
             supported.</exception>
@@ -1101,7 +1099,7 @@
 </doc>
 <doc name="P:PeterO.ListSegment`1.Item(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <returns>A T object.</returns>
 </doc>
 <doc name="P:PeterO.ListSegment`1.ListSegmentEnumerator.Current">
@@ -1121,7 +1119,7 @@
 </doc>
 <doc name="M:PeterO.ListSegment`1.Remove(`0)">
 <summary>This method is not supported.</summary>
-            <param name='item'>A T object.</param>
+            <param name='item'>The parameter <paramref name='item'/> is a T object.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.NotSupportedException'>Always thrown,
             because changing the size of a list segment is not
@@ -1129,7 +1127,7 @@
 </doc>
 <doc name="M:PeterO.ListSegment`1.RemoveAt(System.Int32)">
 <summary>This method is not supported.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <exception cref='T:System.NotSupportedException'>Always thrown,
             because changing the size of a list segment is not
             supported.</exception>
@@ -1148,9 +1146,9 @@
             pair.</typeparam>
 </doc>
 <doc name="M:PeterO.Pair`2.#ctor(`0,`1)">
-<summary>Initializes a new instance of the <see cref="Pair" /> class.</summary>
-             <param name='first'>A TFirst object.</param>
-             <param name='second'>A TSecond object.</param>
+<summary>Initializes a new instance of the <see cref='Pair'/> class.</summary>
+             <param name='first'>The parameter <paramref name='first'/> is a TFirst object.</param>
+             <param name='second'>The parameter <paramref name='second'/> is a TSecond object.</param>
 </doc>
 <doc name="M:PeterO.Pair`2.Equals(PeterO.Pair{`0,`1})">
 <summary>Not documented yet.</summary>
@@ -1161,7 +1159,7 @@
 <doc name="M:PeterO.Pair`2.Equals(System.Object)">
 <summary>Determines whether this object and another object are
             equal.</summary>
-            <param name='obj'>An arbitrary object.</param>
+            <param name='obj'>The parameter <paramref name='obj'/> is an arbitrary object.</param>
             <returns><c>true</c> if this object and another object are equal; otherwise, <c>false</c>.</returns>
 </doc>
 <doc name="P:PeterO.Pair`2.First">
@@ -1188,13 +1186,13 @@
 </doc>
 <doc name="M:PeterO.PartialStream.#ctor(System.IO.Stream,System.Int64,System.Int64)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.PartialStream'/> class.</summary>
-            <param name='stream'>A Stream object.</param>
-            <param name='start'>A 64-bit signed integer.</param>
-            <param name='length'>A 64-bit signed integer. (2).</param>
+            <param name='stream'>The parameter <paramref name='stream'/> is a Stream object.</param>
+            <param name='start'>The parameter <paramref name='start'/> is a 64-bit signed integer.</param>
+            <param name='length'>The parameter <paramref name='length'/> is a 64-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.PartialStream.#ctor(System.IO.Stream,System.Int64,System.Int64,System.Boolean)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.PartialStream'/> class.</summary>
-            <param name='stream'>A Stream object.</param>
+            <param name='stream'>The parameter <paramref name='stream'/> is a Stream object.</param>
             <param name='start'>The start of the partial stream from the
             underlying stream.</param>
             <param name='length'>The length of the partial stream in
@@ -1227,7 +1225,7 @@
 </doc>
 <doc name="M:PeterO.PartialStream.Dispose(System.Boolean)">
 <summary>Not documented yet.</summary>
-            <param name='disposing'>A Boolean object.</param>
+            <param name='disposing'>The parameter <paramref name='disposing'/> is a Boolean object.</param>
 </doc>
 <doc name="M:PeterO.PartialStream.Flush">
 <summary>Not documented yet.</summary>
@@ -1256,13 +1254,13 @@
 </doc>
 <doc name="M:PeterO.PartialStream.Seek(System.Int64,System.IO.SeekOrigin)">
 <summary>Not documented yet.</summary>
-            <param name='offset'>A 64-bit signed integer. (2).</param>
-            <param name='origin'>A SeekOrigin object.</param>
+            <param name='offset'>The parameter <paramref name='offset'/> is a 64-bit signed integer.</param>
+            <param name='origin'>The parameter <paramref name='origin'/> is a SeekOrigin object.</param>
             <returns>A 64-bit signed integer.</returns>
 </doc>
 <doc name="M:PeterO.PartialStream.SetLength(System.Int64)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A 64-bit signed integer.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a 64-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.PartialStream.Write(System.Byte[],System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
@@ -1282,18 +1280,18 @@
 </doc>
 <doc name="M:PeterO.Png.#ctor(System.Int32,System.Int32)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.Png'/> class.</summary>
-            <param name='width'>A 32-bit signed integer.</param>
-            <param name='height'>A 32-bit signed integer. (2).</param>
+            <param name='width'>The parameter <paramref name='width'/> is a 32-bit signed integer.</param>
+            <param name='height'>The parameter <paramref name='height'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.Png.GetFilter(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='y'>A 32-bit signed integer.</param>
-            <returns>A Byte object.</returns>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
+            <returns>A byte (from 0 to 255).</returns>
 </doc>
 <doc name="M:PeterO.Png.GetPixel(System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
-            <param name='y'>A 32-bit signed integer. (2).</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <returns>A byte array.</returns>
 </doc>
 <doc name="P:PeterO.Png.Height">
@@ -1303,19 +1301,19 @@
 </doc>
 <doc name="M:PeterO.Png.Save(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='filename'>A text string.</param>
+            <param name='filename'>The parameter <paramref name='filename'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='filename'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Png.SetFilter(System.Int32,System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='y'>A 32-bit signed integer.</param>
-            <param name='filter'>A Byte object.</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
+            <param name='filter'>The parameter <paramref name='filter'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
-            <param name='y'>A 32-bit signed integer. (2).</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <param name='r'>Red component of the pixel.</param>
             <param name='g'>Green component of the pixel.</param>
             <param name='b'>Blue component of the pixel.</param>
@@ -1323,16 +1321,16 @@
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Byte)">
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
-            <param name='y'>A 32-bit signed integer. (2).</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <param name='r'>Red component of the pixel.</param>
             <param name='g'>Green component of the pixel.</param>
             <param name='b'>Blue component of the pixel.</param>
-            <param name='a'>A Byte object. (3).</param>
+            <param name='a'>The parameter <paramref name='a'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte[])">
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
-            <param name='y'>A 32-bit signed integer. (2).</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <param name='pixel'>A byte array.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='pixel'/> is null.</exception>
@@ -1347,18 +1345,18 @@
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.#ctor(System.Int32,System.Int32)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.Png4BitIndexed'/> class.</summary>
-            <param name='width'>A 32-bit signed integer.</param>
-            <param name='height'>Another 32-bit signed integer.</param>
+            <param name='width'>The parameter <paramref name='width'/> is a 32-bit signed integer.</param>
+            <param name='height'>The parameter <paramref name='height'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.GetColor(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <returns>A byte array.</returns>
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.GetPixel(System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='x'>Another 32-bit signed integer.</param>
-            <param name='y'>A 32-bit signed integer. (3).</param>
+            <param name='x'>The parameter <paramref name='x'/> is a 32-bit signed integer.</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="P:PeterO.Png4BitIndexed.Height">
@@ -1367,13 +1365,13 @@
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.Save(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='filename'>A text string.</param>
+            <param name='filename'>The parameter <paramref name='filename'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='filename'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Png4BitIndexed.SetColor(System.Int32,System.Byte[])">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <param name='color'>A byte array.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='color'/> is null.</exception>
@@ -1382,7 +1380,7 @@
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
             <param name='y'>Y coordinate within the image.</param>
-            <param name='pixel'>A 32-bit signed integer. (3).</param>
+            <param name='pixel'>The parameter <paramref name='pixel'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="P:PeterO.Png4BitIndexed.Transparent">
 <summary>Gets or sets the index of the transparent color.</summary>
@@ -1397,23 +1395,23 @@
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.#ctor(System.Int32,System.Int32)">
 <summary>Initializes a new instance of the <see cref='T:PeterO.Png8BitIndexed'/> class.</summary>
-            <param name='width'>A 32-bit signed integer.</param>
-            <param name='height'>Another 32-bit signed integer.</param>
+            <param name='width'>The parameter <paramref name='width'/> is a 32-bit signed integer.</param>
+            <param name='height'>The parameter <paramref name='height'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.GetColor(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <returns>A byte array.</returns>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.GetFilter(System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='y'>A 32-bit signed integer.</param>
-            <returns>A Byte object.</returns>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
+            <returns>A byte (from 0 to 255).</returns>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.GetPixel(System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
-            <param name='x'>Another 32-bit signed integer.</param>
-            <param name='y'>A 32-bit signed integer. (3).</param>
+            <param name='x'>The parameter <paramref name='x'/> is a 32-bit signed integer.</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
             <returns>A 32-bit signed integer.</returns>
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Height">
@@ -1423,27 +1421,27 @@
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.Save(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='filename'>A text string.</param>
+            <param name='filename'>The parameter <paramref name='filename'/> is a text string.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='filename'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.SetColor(System.Int32,System.Byte[])">
 <summary>Not documented yet.</summary>
-            <param name='index'>A 32-bit signed integer.</param>
+            <param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param>
             <param name='color'>A byte array.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='color'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.SetFilter(System.Int32,System.Byte)">
 <summary>Not documented yet.</summary>
-            <param name='y'>A 32-bit signed integer.</param>
-            <param name='filter'>A Byte object.</param>
+            <param name='y'>The parameter <paramref name='y'/> is a 32-bit signed integer.</param>
+            <param name='filter'>The parameter <paramref name='filter'/> is a byte (from 0 to 255).</param>
 </doc>
 <doc name="M:PeterO.Png8BitIndexed.SetPixel(System.Int32,System.Int32,System.Int32)">
 <summary>Not documented yet.</summary>
             <param name='x'>X coordinate within the image.</param>
             <param name='y'>Y coordinate within the image.</param>
-            <param name='pixel'>A 32-bit signed integer. (3).</param>
+            <param name='pixel'>The parameter <paramref name='pixel'/> is a 32-bit signed integer.</param>
 </doc>
 <doc name="P:PeterO.Png8BitIndexed.Transparent">
 
@@ -1472,22 +1470,20 @@
             as follows: <c>dict.AddIfMissing&lt;T&gt;(value)</c>. If the
             object's class already has a AddIfMissing&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='dict'>An IList object.</param><param name='value'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='dict'>The parameter <paramref name='dict'/> is an IList object.</param><param name='value'>The parameter <paramref name='value'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='dict'/> is null.</exception>
 
 </doc>
 <doc name="M:PeterO.Util.AddIfMissing``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
-
-             <summary>Not documented yet.
+<summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IDictionary and can be
             called as follows: <c>dict.AddIfMissing&lt;TKey, TValue&gt;(key,
             value)</c>. If the object's class already has a
             AddIfMissing&lt;TKey, TValue&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary><param name='dict'>An IDictionary object.</param><param name='key'>A TKey object.</param><param name='value'>A TValue object.</param><typeparam name='TKey'>Object type for keys.</typeparam><typeparam name='TValue'>Object type for values.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='dict'>The parameter <paramref name='dict'/> is an IDictionary object.</param><param name='key'>The parameter <paramref name='key'/> is a TKey object.</param><param name='value'>The parameter <paramref name='value'/> is a TValue object.</param><typeparam name='TKey'>Object type for keys.</typeparam><typeparam name='TValue'>Object type for values.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='dict'/> is null.</exception>
-
 </doc>
 <doc name="M:PeterO.Util.AddOverwrite``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
 <summary>Not documented yet.
@@ -1498,9 +1494,9 @@
             AddOverwrite&lt;TKey, TValue&gt; method with the same parameters,
             that method takes precedence over this extension
             method.</para></summary>
-            <param name='dict'>An IDictionary object.</param>
-            <param name='key'>A TKey object.</param>
-            <param name='value'>A TValue object.</param>
+            <param name='dict'>The parameter <paramref name='dict'/> is an IDictionary object.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a TKey object.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a TValue object.</param>
             <typeparam name='TKey'>Type parameter not documented
             yet.</typeparam>
             <exception cref='T:System.ArgumentNullException'>The parameter
@@ -1514,7 +1510,7 @@
             class already has a AllSame&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='col'>An IEnumerable object.</param>
+            <param name='col'>The parameter <paramref name='col'/> is an IEnumerable object.</param>
             <typeparam name='T'>Any object type.</typeparam>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
@@ -1529,8 +1525,8 @@
             AllSame&lt;TContainer, TItem&gt; method with the same parameters,
             that method takes precedence over this extension
             method.</para></summary>
-            <param name='containers'>An IEnumerable object.</param>
-            <param name='func'>A Func object.</param>
+            <param name='containers'>The parameter <paramref name='containers'/> is an IEnumerable object.</param>
+            <param name='func'>The parameter <paramref name='func'/> is a Func object.</param>
             <typeparam name='TContainer'>Object type representing containers of
             items. Can also be the same type as TItem.</typeparam>
             <typeparam name='TItem'>Object type representing items stored in
@@ -1548,7 +1544,7 @@
             called as follows: <c>array.ArrayToString&lt;T&gt;()</c>. If the
             object's class already has a ArrayToString&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='array'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
+            method.</para></summary><param name='array'>The parameter <paramref name='array'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns>
 
 </doc>
 <doc name="M:PeterO.Util.CopyStream(System.IO.Stream,System.IO.Stream)">
@@ -1559,8 +1555,8 @@
             object's class already has a CopyStream method with the same
             parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='input'>A Stream object.</param>
-            <param name='output'>Another Stream object.</param>
+            <param name='input'>The parameter <paramref name='input'/> is a Stream object.</param>
+            <param name='output'>The parameter <paramref name='output'/> is a Stream object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='input'/> or <paramref name='output'/> is
             null.</exception>
@@ -1574,9 +1570,9 @@
             object's class already has a CopyStream method with the same
             parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='input'>A Stream object.</param>
-            <param name='length'>A 32-bit signed integer.</param>
-            <param name='output'>Another Stream object.</param>
+            <param name='input'>The parameter <paramref name='input'/> is a Stream object.</param>
+            <param name='length'>The parameter <paramref name='length'/> is a 32-bit signed integer.</param>
+            <param name='output'>The parameter <paramref name='output'/> is a Stream object.</param>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='input'/> or <paramref name='output'/> is
             null.</exception>
@@ -1589,7 +1585,7 @@
             follows: <c>structure.CopyStructure&lt;T&gt;()</c>. If the
             object's class already has a CopyStructure&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='structure'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='structure'>The parameter <paramref name='structure'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='structure'/> is null.</exception>
 
 </doc>
@@ -1612,7 +1608,7 @@
             as follows: <c>list.GetSegment&lt;T&gt;(start)</c>. If the
             object's class already has a GetSegment&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='list'>An IList object.</param><param name='start'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A ListSegment(T) object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='start'>The parameter <paramref name='start'/> is a 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A ListSegment(T) object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1624,9 +1620,9 @@
             object's class already has a GetSegment&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='list'>An IList object.</param>
-            <param name='start'>A 32-bit signed integer.</param>
-            <param name='count'>Another 32-bit signed integer.</param>
+            <param name='list'>The parameter <paramref name='list'/> is an IList object.</param>
+            <param name='start'>The parameter <paramref name='start'/> is a 32-bit signed integer.</param>
+            <param name='count'>The parameter <paramref name='count'/> is a 32-bit signed integer.</param>
             <typeparam name='T'>Any object type.</typeparam>
             <returns>A ListSegment(T) object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
@@ -1640,7 +1636,7 @@
             called as follows: <c>col.HasUnique&lt;T&gt;()</c>. If the
             object's class already has a HasUnique&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='col'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A Boolean object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='col'>The parameter <paramref name='col'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A Boolean object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='col'/> is null.</exception>
 
 </doc>
@@ -1653,8 +1649,8 @@
             HasUnique&lt;TContainer, TItem&gt; method with the same parameters,
             that method takes precedence over this extension
             method.</para></summary>
-            <param name='containers'>An IEnumerable object.</param>
-            <param name='func'>A Func object.</param>
+            <param name='containers'>The parameter <paramref name='containers'/> is an IEnumerable object.</param>
+            <param name='func'>The parameter <paramref name='func'/> is a Func object.</param>
             <typeparam name='TContainer'>Object type representing containers of
             items. Can also be the same type as TItem.</typeparam>
             <typeparam name='TItem'>Object type representing items stored in
@@ -1672,7 +1668,7 @@
             called as follows: <c>col.Implode&lt;T&gt;(separator)</c>. If the
             object's class already has a Implode&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='col'>An IEnumerable object.</param><param name='separator'>Another string object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='col'>The parameter <paramref name='col'/> is an IEnumerable object.</param><param name='separator'>The parameter <paramref name='separator'/> is a text string.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A text string.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='col'/> or <paramref name='separator'/> is
             null.</exception>
 
@@ -1685,7 +1681,7 @@
             as follows: <c>list.IndexOf&lt;T&gt;(match)</c>. If the object's
             class already has a IndexOf&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='list'>An IList object.</param><param name='match'>A Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='match'>The parameter <paramref name='match'/> is a Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='match'/> is
             null.</exception>
 
@@ -1698,19 +1694,19 @@
             as follows: <c>list.IndexOf&lt;T&gt;(obj)</c>. If the object's
             class already has a IndexOf&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='list'>An IList object.</param><param name='obj'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='obj'>The parameter <paramref name='obj'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
 <doc name="M:PeterO.Util.MakeList``1(``0[])">
 
-             <summary>Not documented yet.</summary><param name='items'>A params object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>An IList(T) object.</returns>
+             <summary>Not documented yet.</summary><param name='items'>The parameter <paramref name='items'/> is a params object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>An IList(T) object.</returns>
 
 </doc>
 <doc name="M:PeterO.Util.MakePair``2(``0,``1)">
 <summary>Not documented yet.</summary>
-            <param name='f'>A TFirst object.</param>
-            <param name='s'>A TSecond object.</param>
+            <param name='f'>The parameter <paramref name='f'/> is a TFirst object.</param>
+            <param name='s'>The parameter <paramref name='s'/> is a TSecond object.</param>
             <typeparam name='TFirst'>Any object type.</typeparam>
             <typeparam name='TSecond'>Any object type.</typeparam>
             <returns>A Pair(TFirst, TSecond) object.</returns>
@@ -1723,7 +1719,7 @@
             object's class already has a MaxOrDefault&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='coll'>An IEnumerable object.</param>
+            <param name='coll'>The parameter <paramref name='coll'/> is an IEnumerable object.</param>
             <typeparam name='T'>Any object type that implements
             IComparable&lt;T&gt;.</typeparam>
             <returns>A T object.</returns>
@@ -1738,7 +1734,7 @@
             called as follows: <c>coll.MinOrDefault&lt;T&gt;()</c>. If the
             object's class already has a MinOrDefault&lt;T&gt; method with the
             same parameters, that method takes precedence over this extension
-            method.</para></summary><param name='coll'>An IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='coll'>The parameter <paramref name='coll'/> is an IEnumerable object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='coll'/> is null.</exception>
 
 </doc>
@@ -1757,7 +1753,7 @@
             as follows: <c>list.RemoveAll&lt;T&gt;(match)</c>. If the object's
             class already has a RemoveAll&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='list'>An IList object.</param><param name='match'>A Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='match'>The parameter <paramref name='match'/> is a Predicate object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> or <paramref name='match'/> is
             null.</exception>
 
@@ -1770,7 +1766,7 @@
             as follows: <c>list.SetIfMissing&lt;T&gt;(index, valuefunc)</c>.
             If the object's class already has a SetIfMissing&lt;T&gt; method
             with the same parameters, that method takes precedence over this
-            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='valuefunc'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param><param name='valuefunc'>The parameter <paramref name='valuefunc'/> is a Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1782,7 +1778,7 @@
             as follows: <c>list.SetIfMissing&lt;T&gt;(index, value)</c>. If
             the object's class already has a SetIfMissing&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='value'>Another T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param><param name='value'>The parameter <paramref name='value'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1794,7 +1790,7 @@
             as follows: <c>list.SetNewIfMissing&lt;T&gt;(index)</c>. If the
             object's class already has a SetNewIfMissing&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1806,7 +1802,7 @@
             as follows: <c>list.SetValue&lt;T&gt;(index, value)</c>. If the
             object's class already has a SetValue&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><param name='value'>A T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
+            method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param><param name='value'>The parameter <paramref name='value'/> is a T object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1818,7 +1814,7 @@
             already has a StructureSize method with the same parameters, that
             method takes precedence over this extension
             method.</para></summary>
-            <param name='s'>An IStructure object.</param>
+            <param name='s'>The parameter <paramref name='s'/> is an IStructure object.</param>
             <returns>A 32-bit signed integer.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='s'/> is null.</exception>
@@ -1831,20 +1827,18 @@
             called as follows: <c>containers.Sum&lt;T&gt;(func)</c>. If the
             object's class already has a Sum&lt;T&gt; method with the same
             parameters, that method takes precedence over this extension
-            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
+            method.</para></summary><param name='containers'>The parameter <paramref name='containers'/> is an IEnumerable object.</param><param name='func'>The parameter <paramref name='func'/> is a Func object.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A 32-bit signed integer.</returns>
 
 </doc>
 <doc name="M:PeterO.Util.Transform``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
-
-             <summary>Not documented yet.
+<summary>Not documented yet.
             <para>In the .NET implementation, this method is implemented as an
             extension method to any object implementing IEnumerable and can be
             called as follows: <c>containers.Transform&lt;TInput,
             TOutput&gt;(func)</c>. If the object's class already has a
             Transform&lt;TInput, TOutput&gt; method with the same parameters,
             that method takes precedence over this extension
-            method.</para></summary><param name='containers'>An IEnumerable object.</param><param name='func'>A Func object.</param><typeparam name='TOutput'>Output type.</typeparam><returns>An IEnumerable(TOutput) object.</returns>
-
+            method.</para></summary><param name='containers'>The parameter <paramref name='containers'/> is an IEnumerable object.</param><param name='func'>The parameter <paramref name='func'/> is a Func object.</param><typeparam name='TOutput'>Output type.</typeparam><returns>An IEnumerable(TOutput) object.</returns>
 </doc>
 <doc name="M:PeterO.Util.UpToExcluding(System.Int32,System.Int32)">
 <summary>Creates an iterator of integers starting at a minimum
@@ -1855,8 +1849,8 @@
             object's class already has a UpToExcluding method with the same
             parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='minValue'>A 32-bit signed integer.</param>
-            <param name='maxValue'>Another 32-bit signed integer.</param>
+            <param name='minValue'>The parameter <paramref name='minValue'/> is a 32-bit signed integer.</param>
+            <param name='maxValue'>The parameter <paramref name='maxValue'/> is a 32-bit signed integer.</param>
             <returns>An IEnumerable(int) object.</returns>
             <exception cref='T:System.ArgumentException'>The parameter
             _minValue_ is greater than _maxValue_.</exception>
@@ -1869,8 +1863,8 @@
             object's class already has a UpToIncluding method with the same
             parameters, that method takes precedence over this extension
             method.</para></summary>
-            <param name='minValue'>A 32-bit signed integer.</param>
-            <param name='maxValue'>Another 32-bit signed integer.</param>
+            <param name='minValue'>The parameter <paramref name='minValue'/> is a 32-bit signed integer.</param>
+            <param name='maxValue'>The parameter <paramref name='maxValue'/> is a 32-bit signed integer.</param>
             <returns>An IEnumerable(int) object.</returns>
 </doc>
 <doc name="M:PeterO.Util.ValueOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)">
@@ -1881,7 +1875,7 @@
             as follows: <c>list.ValueOrDefault&lt;T&gt;(index)</c>. If the
             object's class already has a ValueOrDefault&lt;T&gt; method with
             the same parameters, that method takes precedence over this
-            extension method.</para></summary><param name='list'>An IList object.</param><param name='index'>A 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
+            extension method.</para></summary><param name='list'>The parameter <paramref name='list'/> is an IList object.</param><param name='index'>The parameter <paramref name='index'/> is a 32-bit signed integer.</param><typeparam name='T'>Type parameter not documented yet.</typeparam><returns>A T object.</returns><exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='list'/> is null.</exception>
 
 </doc>
@@ -1890,14 +1884,14 @@
 </doc>
 <doc name="M:PeterO.XEReader.Create(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='file'>A text string.</param>
+            <param name='file'>The parameter <paramref name='file'/> is a text string.</param>
             <returns>A XEReader object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='file'/> is null.</exception>
 </doc>
 <doc name="M:PeterO.XEReader.Create(System.Xml.XmlReader)">
 <summary>Not documented yet.</summary>
-            <param name='reader'>A XmlReader object.</param>
+            <param name='reader'>The parameter <paramref name='reader'/> is a XmlReader object.</param>
             <returns>A XEReader object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='reader'/> is null.</exception>
@@ -1911,13 +1905,13 @@
 </doc>
 <doc name="M:PeterO.XEReader.IsElement(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.XEReader.IsElement(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
-            <param name='namespaceName'>Another string object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='namespaceName'>The parameter <paramref name='namespaceName'/> is a text string.</param>
             <returns>A Boolean object.</returns>
             <exception cref='T:System.InvalidOperationException'>This element's
             content was already read or being read.</exception>
@@ -1932,7 +1926,7 @@
 <doc name="P:PeterO.XEReader.Item(System.String)">
 <summary>Gets an attribute from the currently read
             element.</summary>
-            <param name='attribute'>Another string object.</param>
+            <param name='attribute'>The parameter <paramref name='attribute'/> is a text string.</param>
             <returns>A text string.</returns>
             <exception cref='T:System.InvalidOperationException'>This element's
             content was already read or being read.</exception>
@@ -1949,13 +1943,13 @@
 </doc>
 <doc name="M:PeterO.XEReader.MoveNext(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="M:PeterO.XEReader.MoveNext(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
-            <param name='namespaceName'>Another string object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='namespaceName'>The parameter <paramref name='namespaceName'/> is a text string.</param>
             <returns>A Boolean object.</returns>
 </doc>
 <doc name="P:PeterO.XEReader.Name">
@@ -1979,71 +1973,71 @@
 </doc>
 <doc name="M:PeterO.XEWriter.AddAttribute(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='key'>A text string.</param>
-            <param name='value'>Another string object.</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.XEWriter.AddAttribute(System.String,System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='key'>A text string.</param>
-            <param name='ns'>Another string object.</param>
-            <param name='value'>A text string. (3).</param>
+            <param name='key'>The parameter <paramref name='key'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.XEWriter.AddComment(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='value'>A text string.</param>
-</doc>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
+</doc>is a text string.
 <doc name="M:PeterO.XEWriter.AddContent(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='str'>A text string.</param>
+            <param name='str'>The parameter <paramref name='str'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.XEWriter.AddElement(System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.AddElement(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
-            <param name='ns'>Another string object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.AddSimpleElement(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
-            <param name='value'>Another string object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.XEWriter.AddSimpleElement(System.String,System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='localName'>A text string.</param>
-            <param name='ns'>Another string object.</param>
-            <param name='value'>A text string. (3).</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
+            <param name='value'>The parameter <paramref name='value'/> is a text string.</param>
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='file'>A text string.</param>
-            <param name='localName'>Another string object.</param>
+            <param name='file'>The parameter <paramref name='file'/> is a text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.String,System.String,System.Boolean)">
 <summary>Not documented yet.</summary>
-            <param name='file'>A text string.</param>
-            <param name='localName'>Another string object.</param>
-            <param name='indent'>A Boolean object.</param>
+            <param name='file'>The parameter <paramref name='file'/> is a text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='indent'>The parameter <paramref name='indent'/> is a Boolean object.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.String,System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='file'>A text string.</param>
-            <param name='localName'>Another string object.</param>
-            <param name='ns'>A text string. (3).</param>
+            <param name='file'>The parameter <paramref name='file'/> is a text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.String,System.String,System.String,System.Boolean)">
 <summary>Not documented yet.</summary>
-            <param name='file'>A text string.</param>
-            <param name='localName'>Another string object.</param>
-            <param name='ns'>A text string. (3).</param>
-            <param name='indent'>A Boolean object.</param>
+            <param name='file'>The parameter <paramref name='file'/> is a text string.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
+            <param name='indent'>The parameter <paramref name='indent'/> is a Boolean object.</param>
             <returns>A XEWriter object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='file'/> or <paramref name='localName'/> is
@@ -2051,15 +2045,15 @@
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.Xml.XmlWriter,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='writer'>A XmlWriter object.</param>
-            <param name='localName'>A text string.</param>
+            <param name='writer'>The parameter <paramref name='writer'/> is a XmlWriter object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
 </doc>
 <doc name="M:PeterO.XEWriter.Create(System.Xml.XmlWriter,System.String,System.String)">
 <summary>Not documented yet.</summary>
-            <param name='writer'>A XmlWriter object.</param>
-            <param name='localName'>A text string.</param>
-            <param name='ns'>Another string object.</param>
+            <param name='writer'>The parameter <paramref name='writer'/> is a XmlWriter object.</param>
+            <param name='localName'>The parameter <paramref name='localName'/> is a text string.</param>
+            <param name='ns'>The parameter <paramref name='ns'/> is a text string.</param>
             <returns>A XEWriter object.</returns>
             <exception cref='T:System.ArgumentNullException'>The parameter
             <paramref name='writer'/> or <paramref name='localName'/> is

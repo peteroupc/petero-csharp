@@ -28,8 +28,8 @@ namespace PeterO {
       this.list.Clear();
     }
 
-    /// <summary>Initializes a new instance of the
-    /// <see cref='T:PeterO.DisposableList`1'/> class.</summary>
+    /// <include file='../docs.xml'
+    /// path='docs/doc[@name="M:PeterO.DisposableList`1.#ctor"]/*'/>
     public DisposableList() {
       this.list = new List<T>();
     }
