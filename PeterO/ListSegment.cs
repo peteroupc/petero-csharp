@@ -26,13 +26,8 @@ namespace PeterO {
 
     private readonly EqualityComparer<T> comparer = EqualityComparer<T>.Default;
 
-    /// <summary>Initializes a new instance of the
-    /// <see cref='{T}'/> class.</summary>
-    /// <param name='list'>An IList object.</param>
-    /// <param name='start'>A 32-bit signed integer.</param>
-    /// <param name='count'>Another 32-bit signed integer.</param>
-    /// <exception cref='ArgumentNullException'>The parameter <paramref
-    /// name='list'/> is null.</exception>
+    /// <include file='../docs.xml'
+    /// path='docs/doc[@name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)"]/*'/>
     public ListSegment(IList<T> list, int start, int count) {
       if (list == null) {
         throw new ArgumentNullException("list");

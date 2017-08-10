@@ -14,10 +14,8 @@ public sealed class Pair<TFirst, TSecond> : IEquatable<Pair<TFirst, TSecond>> {
     private readonly TFirst first;
     private readonly TSecond second;
 
-    /// <summary>Initializes a new instance of the
-    /// <see cref='{TFirst,TSecond}'/> class.</summary>
-    /// <param name='first'>A TFirst object.</param>
-    /// <param name='second'>A TSecond object.</param>
+    /// <include file='../docs.xml'
+    /// path='docs/doc[@name="M:PeterO.Pair`2.#ctor(`0,`1)"]/*'/>
     public Pair(TFirst first, TSecond second) {
       this.first = first;
       this.second = second;

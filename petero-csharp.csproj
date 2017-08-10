@@ -34,7 +34,8 @@
     <DocumentationFile>bin\Release\PeterO.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>petero_csharp</RootNamespace>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+<RootNamespace>petero_csharp</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
