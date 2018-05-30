@@ -195,7 +195,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.XEReader.Create(System.String)"]/*'/>
     public static XEReader Create(string file) {
       if (file == null) {
-        throw new ArgumentNullException("file");
+        throw new ArgumentNullException(nameof(file));
       } if (file.Length == 0) {
         throw new ArgumentException("file" + " is empty.");
       }
@@ -206,7 +206,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.XEReader.Create(System.Xml.XmlReader)"]/*'/>
     public static XEReader Create(XmlReader reader) {
       if (reader == null) {
-        throw new ArgumentNullException("reader");
+        throw new ArgumentNullException(nameof(reader));
       }
       var w = new XEReader(reader, true);
       w.reader.MoveToContent();

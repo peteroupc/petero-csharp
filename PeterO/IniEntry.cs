@@ -21,7 +21,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniEntry.#ctor(PeterO.IniEntry)"]/*'/>
     public IniEntry(IniEntry entry) {
       if (entry == null) {
-        throw new ArgumentNullException("entry");
+        throw new ArgumentNullException(nameof(entry));
       }
       this.key = entry.key;
       this.value = entry.value;
@@ -31,10 +31,10 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniEntry.#ctor(System.String,System.String)"]/*'/>
     public IniEntry(string key, string value) {
       if (key == null) {
-        throw new ArgumentNullException("key");
+        throw new ArgumentNullException(nameof(key));
       }
       if (value == null) {
-        throw new ArgumentNullException("value");
+        throw new ArgumentNullException(nameof(value));
       }
       if (key.IndexOfAny(new[] {
         '\n',
@@ -56,7 +56,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniEntry.#ctor(System.String)"]/*'/>
     public IniEntry(string comment) {
       if (comment == null) {
-        throw new ArgumentNullException("comment");
+        throw new ArgumentNullException(nameof(comment));
       }
       if (comment.IndexOfAny(new[] {
         ';'  // ,'#'

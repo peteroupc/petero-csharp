@@ -40,7 +40,7 @@ namespace PeterO {
       this Stream s,
       string realPath) {
       if (realPath == null) {
-        throw new ArgumentNullException("realPath");
+        throw new ArgumentNullException(nameof(realPath));
       }
       if (realPath.Length == 0) {
         throw new ArgumentException("realPath" + " is empty.");

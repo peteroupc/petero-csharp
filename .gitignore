@@ -3,6 +3,7 @@
 *.exe
 *.jar
 *.map
+*.pyc
 *.sdsettings
 *.snk
 *.suo

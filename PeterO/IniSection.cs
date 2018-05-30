@@ -29,7 +29,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniSection.#ctor(PeterO.IniSection)"]/*'/>
     public IniSection(IniSection other) {
       if (other == null) {
-        throw new ArgumentNullException("other");
+        throw new ArgumentNullException(nameof(other));
       }
       this.name = other.name;
       this.entries = new List<IniEntry>(other.entries);
@@ -61,7 +61,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniSection.GetValue(System.String)"]/*'/>
     public string GetValue(string keyName) {
       if (keyName == null) {
-        throw new ArgumentNullException("keyName");
+        throw new ArgumentNullException(nameof(keyName));
       }
       foreach (IniEntry entry in this.entries) {
         if (Object.Equals(entry.Key, keyName)) {
@@ -103,7 +103,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniSection.SetValue(System.String,System.String)"]/*'/>
     public void SetValue(string keyName, string value) {
       if (keyName == null) {
-        throw new ArgumentNullException("keyName");
+        throw new ArgumentNullException(nameof(keyName));
       }
       this.AddEntry(keyName, value);
     }
@@ -112,7 +112,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.IniSection.RemoveEntry(System.String)"]/*'/>
     public void RemoveEntry(string key) {
       if (key == null) {
-        throw new ArgumentNullException("key");
+        throw new ArgumentNullException(nameof(key));
       }
       for (int i = 0; i < this.entries.Count; ++i) {
         if (Object.Equals(this.entries[i].Key, key)) {
@@ -140,7 +140,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniSection.AddEntry(System.String,System.String,PeterO.IniMergeBehavior)"]/*'/>
     public void AddEntry(string key, string value, IniMergeBehavior behavior) {
       if (key == null) {
-        throw new ArgumentNullException("key");
+        throw new ArgumentNullException(nameof(key));
       }
       this.Add(new IniEntry(key, value), behavior);
     }
@@ -161,7 +161,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniSection.Add(PeterO.IniEntry,PeterO.IniMergeBehavior)"]/*'/>
     public void Add(IniEntry entry, IniMergeBehavior behavior) {
       if (entry == null) {
-        throw new ArgumentNullException("entry");
+        throw new ArgumentNullException(nameof(entry));
       }
       if (!entry.IsComment) {
         var lastNonComment = -1;

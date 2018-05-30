@@ -121,13 +121,13 @@ namespace PeterO {
   string ns,
   bool indent) {
       if (file == null) {
-        throw new ArgumentNullException("file");
+        throw new ArgumentNullException(nameof(file));
       }
       if (file.Length == 0) {
         throw new ArgumentException("file" + " is empty.");
       }
       if (localName == null) {
-        throw new ArgumentNullException("localName");
+        throw new ArgumentNullException(nameof(localName));
       }
       if (localName.Length == 0) {
         throw new ArgumentException("localName" + " is empty.");
@@ -153,10 +153,10 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.XEWriter.Create(System.Xml.XmlWriter,System.String,System.String)"]/*'/>
  public static XEWriter Create(XmlWriter writer, string localName, string ns) {
       if (writer == null) {
-        throw new ArgumentNullException("writer");
+        throw new ArgumentNullException(nameof(writer));
       }
       if (localName == null) {
-        throw new ArgumentNullException("localName");
+        throw new ArgumentNullException(nameof(localName));
       } if (localName.Length == 0) {
         throw new ArgumentException("localName" + " is empty.");
       }

@@ -30,7 +30,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)"]/*'/>
     public ListSegment(IList<T> list, int start, int count) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (start < 0) {
         throw new ArgumentException("start (" + start + ") is less than 0");
@@ -144,7 +144,7 @@ NotSupportedException("Changing the size of a list segment is not supported.");
     /// path='docs/doc[@name="M:PeterO.ListSegment`1.CopyTo(`0[],System.Int32)"]/*'/>
     public void CopyTo(T[] array, int arrayIndex) {
       if (array == null) {
-        throw new ArgumentNullException("array");
+        throw new ArgumentNullException(nameof(array));
       }
       if (arrayIndex < 0) {
         throw new ArgumentException("arrayIndex less than " + "0 (" +

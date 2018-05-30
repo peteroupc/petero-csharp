@@ -76,7 +76,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.InvariantText.StartsWith(System.String,System.String)"]/*'/>
     public static bool StartsWith(string value1, string value2) {
       if (value1 == null) {
-        throw new ArgumentNullException("value1");
+        throw new ArgumentNullException(nameof(value1));
       }
       return value1.StartsWith(value2, StringComparison.Ordinal);
     }
@@ -85,7 +85,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.InvariantText.EndsWith(System.String,System.String)"]/*'/>
     public static bool EndsWith(string value1, string value2) {
       if (value1 == null) {
-        throw new ArgumentNullException("value1");
+        throw new ArgumentNullException(nameof(value1));
       }
       return value1.EndsWith(value2, StringComparison.OrdinalIgnoreCase);
     }

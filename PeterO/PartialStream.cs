@@ -34,13 +34,13 @@ namespace PeterO {
   long length,
   bool closeOnDispose) {
       if (stream == null) {
-        throw new ArgumentNullException("stream");
+        throw new ArgumentNullException(nameof(stream));
       }
       if (!stream.CanSeek) {
         throw new ArgumentException("Stream doesn't support seeking.");
       }
       if (stream == null) {
-        throw new ArgumentNullException("stream");
+        throw new ArgumentNullException(nameof(stream));
       }
       if (start < 0) {
         throw new ArgumentException("start (" + start +
@@ -183,7 +183,7 @@ namespace PeterO {
         throw new ObjectDisposedException("PartialStream");
       }
       if (buffer == null) {
-        throw new ArgumentNullException("buffer");
+        throw new ArgumentNullException(nameof(buffer));
       }
       if (offset < 0) {
         throw new ArgumentException("offset (" + offset +
@@ -229,7 +229,7 @@ namespace PeterO {
         throw new ObjectDisposedException("PartialStream");
       }
       if (buffer == null) {
-        throw new ArgumentNullException("buffer");
+        throw new ArgumentNullException(nameof(buffer));
       }
       if (offset < 0) {
         throw new ArgumentException("offset (" + offset +

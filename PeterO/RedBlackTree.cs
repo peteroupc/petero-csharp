@@ -109,7 +109,7 @@ namespace PeterO {
     // <param name='arrayIndex'>Starting index to copy to.</param>
     public void CopyTo(T[] array, int arrayIndex) {
       if (array == null) {
-        throw new ArgumentNullException("array");
+        throw new ArgumentNullException(nameof(array));
       }
       if (arrayIndex < 0) {
         throw new ArgumentException("arrayIndex (" + arrayIndex +

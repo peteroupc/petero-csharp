@@ -17,10 +17,10 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)"]/*'/>
     public static void Shuffle<T>(IList<T> list, Random random) {
       if (random == null) {
-        throw new ArgumentNullException("random");
+        throw new ArgumentNullException(nameof(random));
       }
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       for (int i = list.Count - 1; i >= 1; --i) {
         var other = random.Next(i + 1);
@@ -36,7 +36,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.Reverse``1(System.Collections.Generic.IList{``0})"]/*'/>
     public static void Reverse<T>(IList<T> list) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       var half = list.Count >> 1;
       var right = list.Count - 1;
@@ -51,7 +51,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.Reverse``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)"]/*'/>
     public static void Reverse<T>(IList<T> list, int index, int count) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
         throw new ArgumentException("index (" + index + ") is less than 0");
@@ -87,7 +87,7 @@ namespace PeterO {
       T itemToFind,
       T defaultValue) {
       if (items == null) {
-        throw new ArgumentNullException("items");
+        throw new ArgumentNullException(nameof(items));
       }
       var eqc = EqualityComparer<T>.Default;
       foreach (T item in items) {
@@ -105,10 +105,10 @@ namespace PeterO {
       Predicate<T> func,
       T defaultValue) {
       if (items == null) {
-        throw new ArgumentNullException("items");
+        throw new ArgumentNullException(nameof(items));
       }
       if (func == null) {
-        throw new ArgumentNullException("func");
+        throw new ArgumentNullException(nameof(func));
       }
       foreach (T item in items) {
         if (func(item)) {
@@ -122,7 +122,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.ToArray``1(System.Collections.Generic.IEnumerable{``0})"]/*'/>
     public static T[] ToArray<T>(IEnumerable<T> collection) {
       if (collection == null) {
-        throw new ArgumentNullException("collection");
+        throw new ArgumentNullException(nameof(collection));
       }
       var list = collection as List<T>;
     return (list != null) ? list.ToArray() : new List<T>(collection).ToArray();
@@ -143,7 +143,7 @@ namespace PeterO {
       IComparer<T> comparer) where T : IComparable<T> {
       var c = 0;
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
       if (list1 == list2) {
         return 0;
@@ -182,7 +182,7 @@ namespace PeterO {
       IEnumerable<T> array2,
       IComparer<T> comparer) where T : IComparable<T> {
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
       if (array1 == array2) {
         return 0;
@@ -223,7 +223,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0})"]/*'/>
     public static void StableSort<T>(IList<T> list) where T : IComparable<T> {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       var da = new DeferredArray<T>(list.Count);
       StableSortInternal(
@@ -239,10 +239,10 @@ namespace PeterO {
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     public static void StableSort<T>(IList<T> list, IComparer<T> comparer) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
       var da = new
         DeferredArray<T>(list.Count);
@@ -259,7 +259,7 @@ namespace PeterO {
     public static void StableSort<T>(IList<T> list, int offset, int count) where
       T : IComparable<T> {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (offset < 0) {
       throw new ArgumentException("offset (" + offset + ") is less than 0");
@@ -295,7 +295,7 @@ namespace PeterO {
       int count,
       IComparer<T> comparer) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (offset < 0) {
       throw new ArgumentException("offset (" + offset + ") is less than 0");
@@ -316,7 +316,7 @@ namespace PeterO {
                     (list.Count - offset) + ") is less than " + count);
       }
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
 StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
     }
@@ -349,7 +349,7 @@ StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
       DeferredArray<T> tempArray) {
       #if DEBUG
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (a < 0) {
         throw new ArgumentException("a (" + a + ") is less than 0");
@@ -368,7 +368,7 @@ StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
                     (list.Count - a) + ") is less than " + n);
       }
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
       #endif
       int pl, pm;
@@ -446,7 +446,7 @@ private static readonly DoubleComparer ValueDblComparer = new
       IEnumerable<T> array2,
       IEqualityComparer<T> comparer) {
       if (comparer == null) {
-        throw new ArgumentNullException("comparer");
+        throw new ArgumentNullException(nameof(comparer));
       }
       if (array1 == array2) {
         return true;

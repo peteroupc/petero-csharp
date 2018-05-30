@@ -18,7 +18,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.BinaryIO.#ctor(System.IO.Stream)"]/*'/>
     public BinaryIO(Stream stream) {
       if (stream == null) {
-        throw new ArgumentNullException("stream");
+        throw new ArgumentNullException(nameof(stream));
       }
       this.stream = stream;
     }
@@ -174,7 +174,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.BinaryIO.Read(System.Byte[],System.Int32,System.Int32)"]/*'/>
     public int Read(byte[] data, int offset, int length) {
       if (data == null) {
-        throw new ArgumentNullException("data");
+        throw new ArgumentNullException(nameof(data));
       }
       if (offset < 0) {
       throw new ArgumentException("offset (" + offset + ") is less than 0");
@@ -501,7 +501,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.BinaryIO.Write(System.Byte[])"]/*'/>
     public void Write(byte[] data) {
       if (data == null) {
-        throw new ArgumentNullException("data");
+        throw new ArgumentNullException(nameof(data));
       }
       this.stream.Write(data, 0, data.Length);
     }
@@ -510,7 +510,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.BinaryIO.Write(System.Byte[],System.Int32,System.Int32)"]/*'/>
     public void Write(byte[] data, int offset, int length) {
       if (data == null) {
-        throw new ArgumentNullException("data");
+        throw new ArgumentNullException(nameof(data));
       }
       if (offset < 0) {
       throw new ArgumentException("offset (" + offset + ") is less than 0");

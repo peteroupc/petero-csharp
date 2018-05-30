@@ -48,7 +48,7 @@ namespace PeterO {
       TKey key,
       TValue value) {
       if (dict == null) {
-        throw new ArgumentNullException("dict");
+        throw new ArgumentNullException(nameof(dict));
       }
       if (dict.ContainsKey(key)) {
         dict[key] = value;
@@ -65,7 +65,7 @@ namespace PeterO {
       TKey key,
       TValue value) {
       if (dict == null) {
-        throw new ArgumentNullException("dict");
+        throw new ArgumentNullException(nameof(dict));
       }
       if (!dict.ContainsKey(key)) {
         dict.Add(key, value);
@@ -78,7 +78,7 @@ namespace PeterO {
       this IList<T> dict,
       T value) {
       if (dict == null) {
-        throw new ArgumentNullException("dict");
+        throw new ArgumentNullException(nameof(dict));
       }
       if (!dict.Contains(value)) {
         dict.Add(value);
@@ -91,7 +91,7 @@ namespace PeterO {
       IComparable<T> {
       var i = 0;
       if (coll == null) {
-        throw new ArgumentNullException("coll");
+        throw new ArgumentNullException(nameof(coll));
       }
       var curr = default(T);
       foreach (T value in coll) {
@@ -109,7 +109,7 @@ namespace PeterO {
       IComparable<T> {
       var i = 0;
       if (coll == null) {
-        throw new ArgumentNullException("coll");
+        throw new ArgumentNullException(nameof(coll));
       }
       var curr = default(T);
       foreach (T value in coll) {
@@ -125,7 +125,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.Util.StructureSize(PeterO.IStructure)"]/*'/>
     public static int StructureSize(this IStructure s) {
       if (s == null) {
-        throw new ArgumentNullException("s");
+        throw new ArgumentNullException(nameof(s));
       }
       using (var ms = new MemoryStream()) {
         s.Write(ms);
@@ -162,10 +162,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.Implode``1(System.Collections.Generic.IEnumerable{``0},System.String)"]/*'/>
     public static string Implode<T>(this IEnumerable<T> col, string separator) {
       if (col == null) {
-        throw new ArgumentNullException("col");
+        throw new ArgumentNullException(nameof(col));
       }
       if (separator == null) {
-        throw new ArgumentNullException("separator");
+        throw new ArgumentNullException(nameof(separator));
       }
       var sb = new StringBuilder();
       var first = true;
@@ -184,7 +184,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.IndexOf``1(System.Collections.Generic.IList{``0},``0)"]/*'/>
     public static int IndexOf<T>(this IList<T> list, T obj) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       for (int i = 0; i < list.Count; ++i) {
         if (list[i].Equals(obj)) {
@@ -198,10 +198,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.IndexOf``1(System.Collections.Generic.IList{``0},System.Predicate{``0})"]/*'/>
     public static int IndexOf<T>(this IList<T> list, Predicate<T> match) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (match == null) {
-        throw new ArgumentNullException("match");
+        throw new ArgumentNullException(nameof(match));
       }
       for (int i = 0; i < list.Count; ++i) {
         if (match(list[i])) {
@@ -215,10 +215,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.RemoveAll``1(System.Collections.Generic.IList{``0},System.Predicate{``0})"]/*'/>
     public static int RemoveAll<T>(this IList<T> list, Predicate<T> match) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (match == null) {
-        throw new ArgumentNullException("match");
+        throw new ArgumentNullException(nameof(match));
       }
       var concreteList = list as List<T>;
       if (concreteList != null) {
@@ -244,7 +244,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     public static T CopyStructure<T>(this T structure)
       where T : IStructure, new() {
       if ((object)structure == (object)default(T)) {
-        throw new ArgumentNullException("structure");
+        throw new ArgumentNullException(nameof(structure));
       }
       using (var ms = new MemoryStream()) {
         structure.Write(ms);
@@ -272,7 +272,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     public static bool AllSame<T>(
       this IEnumerable<T> col) {
       if (col == null) {
-        throw new ArgumentNullException("col");
+        throw new ArgumentNullException(nameof(col));
       }
       var count = 0;
       var firstItem = default(T);
@@ -296,10 +296,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
       this IEnumerable<TContainer> containers,
       Func<TContainer, TItem> func) {
       if (containers == null) {
-        throw new ArgumentNullException("containers");
+        throw new ArgumentNullException(nameof(containers));
       }
       if (func == null) {
-        throw new ArgumentNullException("func");
+        throw new ArgumentNullException(nameof(func));
       }
       var count = 0;
       var firstItem = default(TItem);
@@ -344,7 +344,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     public static bool HasUnique<T>(
       this IEnumerable<T> col) {
       if (col == null) {
-        throw new ArgumentNullException("col");
+        throw new ArgumentNullException(nameof(col));
       }
       var items = new List<T>();
       foreach (T tc in col) {
@@ -362,10 +362,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
       this IEnumerable<TContainer> containers,
       Func<TContainer, TItem> func) {
       if (containers == null) {
-        throw new ArgumentNullException("containers");
+        throw new ArgumentNullException(nameof(containers));
       }
       if (func == null) {
-        throw new ArgumentNullException("func");
+        throw new ArgumentNullException(nameof(func));
       }
       var items = new List<TItem>();
       foreach (TContainer tc in containers) {
@@ -397,7 +397,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.GetSegment``1(System.Collections.Generic.IList{``0},System.Int32)"]/*'/>
     public static ListSegment<T> GetSegment<T>(this IList<T> list, int start) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       return new ListSegment<T>(list, start, list.Count - start);
     }
@@ -409,7 +409,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
       int start,
       int count) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       return new ListSegment<T>(list, start, count);
     }
@@ -418,7 +418,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.ValueOrDefault``1(System.Collections.Generic.IList{``0},System.Int32)"]/*'/>
     public static T ValueOrDefault<T>(this IList<T> list, int index) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
   throw new ArgumentException("index (" + index +
@@ -431,7 +431,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.SetIfMissing``1(System.Collections.Generic.IList{``0},System.Int32,``0)"]/*'/>
     public static T SetIfMissing<T>(this IList<T> list, int index, T value) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
         throw new ArgumentException("index less than " + "0 (" +
@@ -457,7 +457,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     public static T SetNewIfMissing<T>(this IList<T> list, int index) where T :
       new() {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
         throw new ArgumentException("index less than " + "0 (" +
@@ -487,7 +487,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
       int index,
       Func<T> valuefunc) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
         throw new ArgumentException("index less than " + "0 (" +
@@ -514,7 +514,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.SetValue``1(System.Collections.Generic.IList{``0},System.Int32,``0)"]/*'/>
     public static void SetValue<T>(this IList<T> list, int index, T value) {
       if (list == null) {
-        throw new ArgumentNullException("list");
+        throw new ArgumentNullException(nameof(list));
       }
       if (index < 0) {
         throw new ArgumentException("index less than " + "0 (" +
@@ -538,10 +538,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.CopyStream(System.IO.Stream,System.Int32,System.IO.Stream)"]/*'/>
   public static void CopyStream(this Stream input, int length, Stream output) {
       if (input == null) {
-  throw new ArgumentNullException("input");
+  throw new ArgumentNullException(nameof(input));
 }
       if (output == null) {
-  throw new ArgumentNullException("output");
+  throw new ArgumentNullException(nameof(output));
 }
       if (length < 0) {
   throw new ArgumentException("length (" + length +
@@ -570,10 +570,10 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     /// path='docs/doc[@name="M:PeterO.Util.CopyStream(System.IO.Stream,System.IO.Stream)"]/*'/>
     public static void CopyStream(this Stream input, Stream output) {
       if (input == null) {
-  throw new ArgumentNullException("input");
+  throw new ArgumentNullException(nameof(input));
 }
       if (output == null) {
-  throw new ArgumentNullException("output");
+  throw new ArgumentNullException(nameof(output));
 }
       var buffer = new byte[32768];
       while (true) {
@@ -597,7 +597,7 @@ public static IEnumerable<int> UpToIncluding(this int minValue, int maxValue) {
     public static IEnumerable<Pair<T, int>> EachWithIndex<T>(this IEnumerable<T>
                     arr) {
       if (arr == null) {
-        throw new ArgumentNullException("arr");
+        throw new ArgumentNullException(nameof(arr));
       }
       var i = 0;
       foreach (T o in arr) {

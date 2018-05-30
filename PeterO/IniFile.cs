@@ -56,7 +56,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniFile.WriteToStream(System.IO.StreamWriter)"]/*'/>
     public void WriteToStream(StreamWriter writer) {
       if (writer == null) {
-        throw new ArgumentNullException("writer");
+        throw new ArgumentNullException(nameof(writer));
       }
       foreach (IniSection section in this.sections) {
         writer.Write(section);
@@ -67,7 +67,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniFile.Save(System.String)"]/*'/>
     public void Save(string path) {
       if (path == null) {
-        throw new ArgumentNullException("path");
+        throw new ArgumentNullException(nameof(path));
       }
       using (var writer = new StreamWriter(path)) {
         this.WriteToStream(writer);
@@ -80,7 +80,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniFile.GetValue(System.String,System.String)"]/*'/>
     public string GetValue(string sectionName, string keyName) {
       if (keyName == null) {
-        throw new ArgumentNullException("keyName");
+        throw new ArgumentNullException(nameof(keyName));
       }
       foreach (IniSection section in this.sections) {
         if (Object.Equals(section.Name, sectionName)) {
@@ -95,10 +95,10 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniFile.SetValue(System.String,System.String,System.String)"]/*'/>
     public void SetValue(string sectionName, string keyName, string value) {
       if (keyName == null) {
-        throw new ArgumentNullException("keyName");
+        throw new ArgumentNullException(nameof(keyName));
       }
       if (value == null) {
-        throw new ArgumentNullException("value");
+        throw new ArgumentNullException(nameof(value));
       }
       this.AddSection(sectionName).SetValue(keyName, value);
     }
@@ -159,7 +159,7 @@ System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
     /// path='docs/doc[@name="M:PeterO.IniFile.#ctor(System.String,PeterO.IniMergeBehavior)"]/*'/>
     public IniFile(string path, IniMergeBehavior behavior) {
       if (path == null) {
-        throw new ArgumentNullException("path");
+        throw new ArgumentNullException(nameof(path));
       }
       // NOTE: Will merge sections with the same name into a single section
       this.sections = new List<IniSection>();

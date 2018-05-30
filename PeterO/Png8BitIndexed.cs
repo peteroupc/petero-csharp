@@ -107,7 +107,7 @@ if (index > 255) {
   throw new ArgumentException("index (" + index + ") is more than 255");
 }
       if (color == null) {
-        throw new ArgumentNullException("color");
+        throw new ArgumentNullException(nameof(color));
       }
       if (color.Length < 3) {
         throw new ArgumentException("'color' must have length 3 or more.");
@@ -128,7 +128,7 @@ if (index > 255) {
     /// path='docs/doc[@name="M:PeterO.Png8BitIndexed.Save(System.String)"]/*'/>
     public void Save(string filename) {
     if (filename == null) {
-  throw new ArgumentNullException("filename");
+  throw new ArgumentNullException(nameof(filename));
 }
 if (filename.Length == 0) {
   throw new ArgumentException("filename" + " is empty.");

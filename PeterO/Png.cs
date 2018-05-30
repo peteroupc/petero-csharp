@@ -96,7 +96,7 @@ namespace PeterO {
     /// path='docs/doc[@name="M:PeterO.Png.SetPixel(System.Int32,System.Int32,System.Byte[])"]/*'/>
     public void SetPixel(int x, int y, byte[] pixel) {
       if (pixel == null) {
-        throw new ArgumentNullException("pixel");
+        throw new ArgumentNullException(nameof(pixel));
       }
       if (pixel.Length >= 4) {
         this.SetPixel(x, y, pixel[0], pixel[1], pixel[2], pixel[3]);
