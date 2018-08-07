@@ -3,6 +3,7 @@
 *.exe
 *.jar
 *.map
+*.nupkg
 *.pyc
 *.sdsettings
 *.snk
@@ -10,6 +11,7 @@
 *.user
 *.userprefs
 .nuget/
+.vs/
 bin/
 encoding/
 encodingfldr/
