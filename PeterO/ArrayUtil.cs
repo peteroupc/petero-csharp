@@ -1,6 +1,8 @@
 /*
 Written by Peter O.
-Any copyright is dedicated to the Public Domain.
+Any copyright to this work is released to the Public Domain.
+In case this is not possible, this work is also
+licensed under Creative Commons Zero (CC0):
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
 at: http://peteroupc.github.io/
@@ -10,12 +12,17 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace PeterO {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="T:PeterO.ArrayUtil"]/*'/>
+  /// <summary>Not documented yet.</summary>
   public static class ArrayUtil {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)"]/*'/>
-    public static void Shuffle<T>(IList<T> list, Random random) {
+    /// <summary>Randomizes the order of a list's items.</summary>
+    /// <param name='list'>The parameter <paramref name='list'/> is an
+    /// IList object.</param>
+    /// <param name='random'>The parameter <paramref name='random'/> is a
+    /// Random object.</param>
+    /// <typeparam name='T'>Any object type.</typeparam>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='random'/> or <paramref name='list'/> is null.</exception>
+    public static void Shuffle<T> (IList<T> list, Random random) {
       if (random == null) {
         throw new ArgumentNullException(nameof(random));
       }
@@ -23,7 +30,7 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(list));
       }
       for (int i = list.Count - 1; i >= 1; --i) {
-        var other = random.Next(i + 1);
+        var other = random.Next (i + 1);
         if (i != other) {
           var obj = list[i];
           list[i] = list[other];
@@ -32,9 +39,14 @@ namespace PeterO {
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.Reverse``1(System.Collections.Generic.IList{``0})"]/*'/>
-    public static void Reverse<T>(IList<T> list) {
+    /// <summary>Reverses the order of the elements in the given
+    /// list.</summary>
+    /// <param name='list'>The parameter <paramref name='list'/> is an
+    /// IList object.</param>
+    /// <typeparam name='T'>Any object type.</typeparam>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='list'/> is null.</exception>
+    public static void Reverse<T> (IList<T> list) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -47,9 +59,24 @@ namespace PeterO {
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.Reverse``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)"]/*'/>
-    public static void Reverse<T>(IList<T> list, int index, int count) {
+    /// <summary>Reverses the order of the elements in the given list at
+    /// the specified index and length.</summary>
+    /// <param name='list'>The list where the order of elements should be
+    /// reversed.</param>
+    /// <param name='index'>An index starting at 0 showing where the
+    /// desired portion of <paramref name='list'/> begins.</param>
+    /// <param name='count'>The number of elements in the desired portion
+    /// of <paramref name='list'/> (but not more than <paramref
+    /// name='list'/> 's length).</param>
+    /// <typeparam name='T'>Any object type.</typeparam>
+    /// <exception cref='ArgumentException'>Either <paramref name='index'/>
+    /// or <paramref name='count'/> is less than 0 or greater than
+    /// <paramref name='list'/> 's length, or <paramref name='list'/> 's
+    /// length minus <paramref name='index'/> is less than <paramref
+    /// name='count'/>.</exception>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='list'/> is null.</exception>
+    public static void Reverse<T> (IList<T> list, int index, int count) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -58,18 +85,18 @@ namespace PeterO {
       }
       if (index > list.Count) {
         throw new ArgumentException("index (" + index + ") is more than " +
-                    list.Count);
+          list.Count);
       }
       if (count < 0) {
         throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
-                    list.Count);
+          list.Count);
       }
       if (list.Count - index < count) {
         throw new ArgumentException("list's length minus " + index + " (" +
-                    (list.Count - index) + ") is less than " + count);
+          (list.Count - index) + ") is less than " + count);
       }
       var half = index + (count >> 1);
       var right = index + count - 1;
@@ -80,9 +107,19 @@ namespace PeterO {
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},``0,``0)"]/*'/>
-    public static T FindItem<T>(
+    /// <summary>Finds an item or returns a default value if an item is not
+    /// found.</summary>
+    /// <param name='items'>The parameter <paramref name='items'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='itemToFind'>The parameter <paramref
+    /// name='itemToFind'/> is a ``0 object.</param>
+    /// <param name='defaultValue'>The parameter <paramref
+    /// name='defaultValue'/> is a ``0 object.</param>
+    /// <typeparam name='T'>Not documented yet.</typeparam>
+    /// <returns>A T object.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='items'/> is null.</exception>
+    public static T FindItem<T> (
       IEnumerable<T> items,
       T itemToFind,
       T defaultValue) {
@@ -91,16 +128,25 @@ namespace PeterO {
       }
       var eqc = EqualityComparer<T>.Default;
       foreach (T item in items) {
-        if (eqc.Equals(item, itemToFind)) {
+        if (eqc.Equals (item, itemToFind)) {
           return item;
         }
       }
       return defaultValue;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.FindItem``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},``0)"]/*'/>
-    public static T FindItem<T>(
+    /// <summary>Not documented yet.</summary>
+    /// <param name='items'>The parameter <paramref name='items'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='func'>The parameter <paramref name='func'/> is
+    /// a.Predicate{``0} object.</param>
+    /// <param name='defaultValue'>The parameter <paramref
+    /// name='defaultValue'/> is a ``0 object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A T object.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='items'/> or <paramref name='func'/> is null.</exception>
+    public static T FindItem<T> (
       IEnumerable<T> items,
       Predicate<T> func,
       T defaultValue) {
@@ -111,33 +157,54 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(func));
       }
       foreach (T item in items) {
-        if (func(item)) {
+        if (func (item)) {
           return item;
         }
       }
       return defaultValue;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ToArray``1(System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static T[] ToArray<T>(IEnumerable<T> collection) {
+    /// <summary>Converts an enumerable to an array.</summary>
+    /// <param name='collection'>The parameter <paramref
+    /// name='collection'/> is a.Collections.Generic.IEnumerable{``0}
+    /// object.</param>
+    /// <typeparam name='T'>Not documented yet.</typeparam>
+    /// <returns>A T[] object.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter _collection_
+    /// is null.</exception>
+    public static T[] ToArray<T> (IEnumerable<T> collection) {
       if (collection == null) {
         throw new ArgumentNullException(nameof(collection));
       }
       var list = collection as List<T>;
-    return (list != null) ? list.ToArray() : new List<T>(collection).ToArray();
+      return (list != null) ? list.ToArray() : new
+List<T>(collection).ToArray();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.CompareLists``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})"]/*'/>
-    public static int CompareLists<T>(IList<T> list1, IList<T> list2) where T :
+    /// <summary>Compares two lists with the same type of items.</summary>
+    /// <param name='list1'>The parameter <paramref name='list1'/> is
+    /// a.Collections.Generic.IList{``0} object.</param>
+    /// <param name='list2'>The parameter <paramref name='list2'/> is
+    /// a.Collections.Generic.IList{``0} object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int CompareLists<T> (IList<T> list1, IList<T> list2) where T :
       IComparable<T> {
-      return CompareLists(list1, list2, Comparer<T>.Default);
+      return CompareLists (list1, list2, Comparer<T>.Default);
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.CompareLists``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})"]/*'/>
-    public static int CompareLists<T>(
+    /// <summary>Compares two lists with the same type of items.</summary>
+    /// <param name='list1'>The parameter <paramref name='list1'/> is
+    /// a.Collections.Generic.IList{``0} object.</param>
+    /// <param name='list2'>The parameter <paramref name='list2'/> is
+    /// a.Collections.Generic.IList{``0} object.</param>
+    /// <param name='comparer'>The parameter <paramref name='comparer'/> is
+    /// a.Collections.Generic.IComparer{``0} object.</param>
+    /// <typeparam name='T'>Not documented yet.</typeparam>
+    /// <returns>A 32-bit signed integer.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='comparer'/> is null.</exception>
+    public static int CompareLists<T> (
       IList<T> list1,
       IList<T> list2,
       IComparer<T> comparer) where T : IComparable<T> {
@@ -154,9 +221,9 @@ namespace PeterO {
       if (list2 == null) {
         return 1;
       }
-      var len = Math.Min(list1.Count, list2.Count);
+      var len = Math.Min (list1.Count, list2.Count);
       for (int i = 0; i < len; ++i) {
-        c = comparer.Compare(list1[i], list2[i]);
+        c = comparer.Compare (list1[i], list2[i]);
         if (c != 0) {
           break;
         }
@@ -167,17 +234,31 @@ namespace PeterO {
       return c;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static int CompareArrays<T>(
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array1'>The parameter <paramref name='array1'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='array2'>The parameter <paramref name='array2'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int CompareArrays<T> (
       IEnumerable<T> array1,
       IEnumerable<T> array2) where T : IComparable<T> {
-      return CompareArrays(array1, array2, Comparer<T>.Default);
+      return CompareArrays (array1, array2, Comparer<T>.Default);
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.CompareArrays``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})"]/*'/>
-    public static int CompareArrays<T>(
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array1'>The parameter <paramref name='array1'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='array2'>The parameter <paramref name='array2'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='comparer'>The parameter <paramref name='comparer'/> is
+    /// a.Collections.Generic.IComparer{``0} object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A 32-bit signed integer.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='comparer'/> is null.</exception>
+    public static int CompareArrays<T> (
       IEnumerable<T> array1,
       IEnumerable<T> array2,
       IComparer<T> comparer) where T : IComparable<T> {
@@ -210,7 +291,7 @@ namespace PeterO {
               // both have no items left
               return 0;
             }
-            var c = comparer.Compare(enumA.Current, enumB.Current);
+            var c = comparer.Compare (enumA.Current, enumB.Current);
             if (c != 0) {
               return c;
             }
@@ -219,229 +300,34 @@ namespace PeterO {
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0})"]/*'/>
-    public static void StableSort<T>(IList<T> list) where T : IComparable<T> {
-      if (list == null) {
-        throw new ArgumentNullException(nameof(list));
-      }
-      var da = new DeferredArray<T>(list.Count);
-      StableSortInternal(
-        list,
- 0,
- list.Count,
-        Comparer<T>.Default,
-        da);
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IComparer{``0})"]/*'/>
-    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
-    public static void StableSort<T>(IList<T> list, IComparer<T> comparer) {
-      if (list == null) {
-        throw new ArgumentNullException(nameof(list));
-      }
-      if (comparer == null) {
-        throw new ArgumentNullException(nameof(comparer));
-      }
-      var da = new
-        DeferredArray<T>(list.Count);
-      StableSortInternal(
-        list,
-        0,
-        list.Count,
-        comparer,
-        da);
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)"]/*'/>
-    public static void StableSort<T>(IList<T> list, int offset, int count) where
-      T : IComparable<T> {
-      if (list == null) {
-        throw new ArgumentNullException(nameof(list));
-      }
-      if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than 0");
-      }
-      if (offset > list.Count) {
-        throw new ArgumentException("offset (" + offset + ") is more than " +
-                    list.Count);
-      }
-      if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than 0");
-      }
-      if (count > list.Count) {
-        throw new ArgumentException("count (" + count + ") is more than " +
-                    list.Count);
-      }
-      if (list.Count - offset < count) {
-        throw new ArgumentException("list's length minus " + offset + " (" +
-                    (list.Count - offset) + ") is less than " + count);
-      }
-      StableSortInternal(
-        list,
-        offset,
-        count,
-        Comparer<T>.Default,
-        new DeferredArray<T>(count));
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.StableSort``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,System.Collections.Generic.IComparer{``0})"]/*'/>
-    public static void StableSort<T>(
-      IList<T> list,
-      int offset,
-      int count,
-      IComparer<T> comparer) {
-      if (list == null) {
-        throw new ArgumentNullException(nameof(list));
-      }
-      if (offset < 0) {
-      throw new ArgumentException("offset (" + offset + ") is less than 0");
-      }
-      if (offset > list.Count) {
-        throw new ArgumentException("offset (" + offset + ") is more than " +
-                    list.Count);
-      }
-      if (count < 0) {
-        throw new ArgumentException("count (" + count + ") is less than 0");
-      }
-      if (count > list.Count) {
-        throw new ArgumentException("count (" + count + ") is more than " +
-                    list.Count);
-      }
-      if (list.Count - offset < count) {
-        throw new ArgumentException("list's length minus " + offset + " (" +
-                    (list.Count - offset) + ") is less than " + count);
-      }
-      if (comparer == null) {
-        throw new ArgumentNullException(nameof(comparer));
-      }
-StableSortInternal(list, offset, count, comparer, new DeferredArray<T>(count));
-    }
-
-    private class DeferredArray<T> {
-      private readonly int arrayLen;
-
-      private T[] array;
-
-      public DeferredArray(int length) {
-        #if DEBUG
-        if (length < 0) {
-      throw new ArgumentException("length (" + length + ") is less than 0");
-        }
-        #endif
-        this.arrayLen = length;
-      }
-
-      public T[] GetArray() {
-        this.array = this.array ?? (new T[this.arrayLen]);
-        return this.array;
-      }
-    }
-
-    private static void StableSortInternal<T>(
-      IList<T> list,
-      int a,
-      int n,
-      IComparer<T> comparer,
-      DeferredArray<T> tempArray) {
-      #if DEBUG
-      if (list == null) {
-        throw new ArgumentNullException(nameof(list));
-      }
-      if (a < 0) {
-        throw new ArgumentException("a (" + a + ") is less than 0");
-      }
-      if (a > list.Count) {
-        throw new ArgumentException("a (" + a + ") is more than " + list.Count);
-      }
-      if (n < 0) {
-        throw new ArgumentException("n (" + n + ") is less than 0");
-      }
-      if (n > list.Count) {
-        throw new ArgumentException("n (" + n + ") is more than " + list.Count);
-      }
-      if (list.Count - a < n) {
-        throw new ArgumentException("list's length minus " + a + " (" +
-                    (list.Count - a) + ") is less than " + n);
-      }
-      if (comparer == null) {
-        throw new ArgumentNullException(nameof(comparer));
-      }
-      #endif
-      int pl, pm;
-      T tmp;
-      if (n < 7) {
-        // Use insertion sort (already a stable sort)
-        for (pm = a + 1; pm < a + n; ++pm) {
-  for (pl = pm; pl > a && comparer.Compare(list[pl - 1], list[pl]) > 0; --pl) {
-            tmp = list[pl];
-            list[pl] = list[pl - 1];
-            list[pl - 1] = tmp;
-          }
-        }
-        return;
-      }
-      var middle = n >> 1;
-      StableSortInternal(list, a, middle, comparer, tempArray);
-      StableSortInternal(list, a + middle, n - middle, comparer, tempArray);
-      if (comparer.Compare(list[a + middle - 1], list[a + middle]) <= 0) {
-        return;
-      }
-      var right = a + n;
-      middle = a + middle;
-      var temp = tempArray.GetArray();
-      var i = a;
-      var j = a;
-      var k = middle;
-      while (j < middle && k < right) {
-        // "<=" ensures stable sort
-        var leq = comparer.Compare(list[j], list[k]) <= 0;
-        temp[i++] = leq ? list[j++] : list[k++];
-      }
-      while (j < middle) {
-        temp[i++] = list[j++];
-      }
-      for (i = a; i < k; ++i) {
-        list[i] = temp[i];
-      }
-    }
-
-private static readonly SingleComparer ValueSglComparer = new
-      SingleComparer();
-
-private static readonly DoubleComparer ValueDblComparer = new
-      DoubleComparer();
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static bool ArraysEqual<T>(
+    /// <summary>Determines whether two enumerable objects are
+    /// equal.</summary>
+    /// <param name='array1'>First enumerable to compare.</param>
+    /// <param name='array2'>Second enumerable to compare.</param>
+    /// <typeparam name='T'>Any object type.</typeparam>
+    /// <returns><c>true</c> if both enumerable objects are null or both
+    /// enumerable objects have the same elements and number of elements in
+    /// the same order; otherwise, <c>false</c>.</returns>
+    public static bool ArraysEqual<T> (
       IEnumerable<T> array1,
       IEnumerable<T> array2) {
-      return ArraysEqual(array1, array2, EqualityComparer<T>.Default);
+      return ArraysEqual (array1, array2, EqualityComparer<T>.Default);
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Single})"]/*'/>
-    public static bool ArraysEqual(
-      IEnumerable<float> array1,
-      IEnumerable<float> array2) {
-      return ArraysEqual(array1, array2, ValueSglComparer);
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})"]/*'/>
-    public static bool ArraysEqual(
-      IEnumerable<double> array1,
-      IEnumerable<double> array2) {
-      return ArraysEqual(array1, array2, ValueDblComparer);
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArraysEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})"]/*'/>
-    public static bool ArraysEqual<T>(
+    /// <summary>Determines whether two enumerable objects are
+    /// equal.</summary>
+    /// <param name='array1'>The parameter <paramref name='array1'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='array2'>The parameter <paramref name='array2'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <param name='comparer'>The parameter <paramref name='comparer'/> is
+    /// a.Collections.Generic.IEqualityComparer{``0} object.</param>
+    /// <typeparam name='T'>Not documented yet.</typeparam>
+    /// <returns><c>true</c> if two enumerable objects are equal;
+    /// otherwise, <c>false</c>.</returns>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='comparer'/> is null.</exception>
+    public static bool ArraysEqual<T> (
       IEnumerable<T> array1,
       IEnumerable<T> array2,
       IEqualityComparer<T> comparer) {
@@ -468,7 +354,7 @@ private static readonly DoubleComparer ValueDblComparer = new
               ret = true;
               break;
             }
-            if (!comparer.Equals(enumA.Current, enumB.Current)) {
+            if (!comparer.Equals (enumA.Current, enumB.Current)) {
               ret = false;
               break;
             }
@@ -478,89 +364,88 @@ private static readonly DoubleComparer ValueDblComparer = new
       return ret;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Byte})"]/*'/>
-    public static string ArrayToStringHex(IEnumerable<byte> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Byte} object.</param>
+    /// <returns>A text string.</returns>
+    public static string ArrayToStringHex (IEnumerable<byte> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append("{");
+      b.Append ("{");
       var first = true;
+      string hex = "0123456789ABCDEF";
       foreach (byte value in array) {
         if (!first) {
-          b.Append(", ");
+          b.Append (", ");
         }
-        b.Append(InvariantText.Format("0x" + "{0:X2}", value));
+        b.Append (hex[ (int)((value >> 4) & 15)]);
+        b.Append (hex[ (int)(value & 15)]);
         first = false;
       }
-      b.Append("}");
+      b.Append ("}");
       return b.ToString();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex(System.Collections.Generic.IEnumerable{System.Int32})"]/*'/>
-    public static string ArrayToStringHex(IEnumerable<int> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Int32} object.</param>
+    /// <returns>A text string.</returns>
+    public static string ArrayToStringHex (IEnumerable<int> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append("{");
+      b.Append ("{");
       var first = true;
+      string hex = "0123456789ABCDEF";
       foreach (int value in array) {
         if (!first) {
-          b.Append(", ");
+          b.Append (", ");
         }
-        b.Append(InvariantText.Format("0x" + "{0:X}", value));
+        b.Append (hex[ (int)((value >> 28) & 15)]);
+        b.Append (hex[ (int)((value >> 24) & 15)]);
+        b.Append (hex[ (int)((value >> 20) & 15)]);
+        b.Append (hex[ (int)((value >> 16) & 15)]);
+        b.Append (hex[ (int)((value >> 12) & 15)]);
+        b.Append (hex[ (int)((value >> 8) & 15)]);
+        b.Append (hex[ (int)((value >> 4) & 15)]);
+        b.Append (hex[ (int)(value & 15)]);
         first = false;
       }
-      b.Append("}");
+      b.Append ("}");
       return b.ToString();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToStringHex``1(System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static string ArrayToStringHex<T>(IEnumerable<T> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A text string.</returns>
+    public static string ArrayToString<T> (IEnumerable<T> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append("{");
+      b.Append ("{");
       var first = true;
       foreach (T value in array) {
         if (!first) {
-          b.Append(", ");
+          b.Append (", ");
         }
-        b.Append(InvariantText.Format("0x" + "{0:X}", value));
+        b.Append (String.Empty + value);
         first = false;
       }
-      b.Append("}");
+      b.Append ("}");
       return b.ToString();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayToString``1(System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static string ArrayToString<T>(IEnumerable<T> array) {
-      if (array == null) {
-        return "null";
-      }
-      var b = new StringBuilder();
-      b.Append("{");
-      var first = true;
-      foreach (T value in array) {
-        if (!first) {
-          b.Append(", ");
-        }
-        b.Append(InvariantText.Format(String.Empty + value));
-        first = false;
-      }
-      b.Append("}");
-      return b.ToString();
-    }
-
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Byte})"]/*'/>
-    public static int ArrayHashCode(IEnumerable<byte> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Byte} object.</param>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int ArrayHashCode (IEnumerable<byte> array) {
       var ret = 17;
       if (array != null) {
         foreach (byte value in array) {
@@ -570,9 +455,11 @@ private static readonly DoubleComparer ValueDblComparer = new
       return ret;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Int32})"]/*'/>
-    public static int ArrayHashCode(IEnumerable<int> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Int32} object.</param>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int ArrayHashCode (IEnumerable<int> array) {
       var ret = 17;
       if (array != null) {
         foreach (int value in array) {
@@ -582,42 +469,50 @@ private static readonly DoubleComparer ValueDblComparer = new
       return ret;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Single})"]/*'/>
-    public static int ArrayHashCode(IEnumerable<float> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Single} object.</param>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int ArrayHashCode (IEnumerable<float> array) {
       var ret = 17;
       if (array != null) {
         foreach (float value in array) {
-ret += (
-  37 * ret) + BitConverter.ToInt32(
-  BitConverter.GetBytes((float)value),
-  0);
+          ret += (
+              37 * ret) + BitConverter.ToInt32(
+              BitConverter.GetBytes ((float)value),
+              0);
         }
       }
       return ret;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode(System.Collections.Generic.IEnumerable{System.Double})"]/*'/>
-    public static int ArrayHashCode(IEnumerable<double> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{System.Double} object.</param>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int ArrayHashCode (IEnumerable<double> array) {
       var ret = 17;
       if (array != null) {
         foreach (double value in array) {
-     var code = BitConverter.ToInt64(BitConverter.GetBytes((double)value), 0);
+          var code = BitConverter.ToInt64 (BitConverter.GetBytes
+((double)value), 0);
           ret += (37 * ret) + (int)(code ^ (code >> 32));
         }
       }
       return ret;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ArrayUtil.ArrayHashCode``1(System.Collections.Generic.IEnumerable{``0})"]/*'/>
-    public static int ArrayHashCode<T>(IEnumerable<T> array) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is
+    /// a.Collections.Generic.IEnumerable{``0} object.</param>
+    /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
+    /// <returns>A 32-bit signed integer.</returns>
+    public static int ArrayHashCode<T> (IEnumerable<T> array) {
       var ret = 17;
       if (array != null) {
         foreach (T value in array) {
           ret *= 37;
-          if ((object)value != (object)default(T)) {
+          if ((object)value != (object)default (T)) {
             ret += value.GetHashCode();
           }
         }

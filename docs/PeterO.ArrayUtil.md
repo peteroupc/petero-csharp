@@ -4,6 +4,25 @@
 
 Not documented yet.
 
+### Member Summary
+* <code>[ArrayHashCode(System.Collections.Generic.IEnumerable)](#ArrayHashCode_System_Collections_Generic_IEnumerable)</code> - Not documented yet. Not documented yet. Not documented yet. Not documented yet.
+* <code>[ArrayHashCode&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;)](#ArrayHashCode_T_System_Collections_Generic_IEnumerable_T)</code> - Not documented yet.
+* <code>[ArraysEqual&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;)](#ArraysEqual_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T)</code> - Determines whether two enumerable objects are equal.
+* <code>[ArraysEqual&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IEqualityComparer&lt;T&gt;)](#ArraysEqual_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEqualityComparer_T)</code> - Determines whether two enumerable objects are equal.
+* <code>[ArrayToString&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;)](#ArrayToString_T_System_Collections_Generic_IEnumerable_T)</code> - Not documented yet.
+* <code>[ArrayToStringHex(System.Collections.Generic.IEnumerable)](#ArrayToStringHex_System_Collections_Generic_IEnumerable)</code> - Not documented yet. Not documented yet.
+* <code>[CompareArrays&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IComparer&lt;T&gt;) where T : System.IComparable&lt;T&gt;T](#CompareArrays_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IComparer_T_where_T_System_IComparable_T_T)</code> - Not documented yet.
+* <code>[CompareArrays&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;) where T : System.IComparable&lt;T&gt;T](#CompareArrays_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_where_T_System_IComparable_T_T)</code> - Not documented yet.
+* <code>[CompareLists&lt;T&gt;(System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IComparer&lt;T&gt;) where T : System.IComparable&lt;T&gt;T](#CompareLists_T_System_Collections_Generic_IList_T_System_Collections_Generic_IList_T_System_Collections_Generic_IComparer_T_where_T_System_IComparable_T_T)</code> - Compares two lists with the same type of items.
+* <code>[CompareLists&lt;T&gt;(System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;) where T : System.IComparable&lt;T&gt;T](#CompareLists_T_System_Collections_Generic_IList_T_System_Collections_Generic_IList_T_where_T_System_IComparable_T_T)</code> - Compares two lists with the same type of items.
+* <code>[FindItem&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, System.Predicate&lt;T&gt;, T)](#FindItem_T_System_Collections_Generic_IEnumerable_T_System_Predicate_T_T)</code> - Not documented yet.
+* <code>[FindItem&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;, T, T)](#FindItem_T_System_Collections_Generic_IEnumerable_T_T_T)</code> - Finds an item or returns a default value if an item is not found.
+* <code>[Reverse&lt;T&gt;(System.Collections.Generic.IList&lt;T&gt;)](#Reverse_T_System_Collections_Generic_IList_T)</code> - Reverses the order of the elements in the given list.
+* <code>[Reverse&lt;T&gt;(System.Collections.Generic.IList&lt;T&gt;, int, int)](#Reverse_T_System_Collections_Generic_IList_T_int_int)</code> - Reverses the order of the elements in the given list at the specified index and length.
+* <code>[Shuffle&lt;T&gt;(System.Collections.Generic.IList&lt;T&gt;, System.Random)](#Shuffle_T_System_Collections_Generic_IList_T_System_Random)</code> - Randomizes the order of a list's items.
+* <code>[ToArray&lt;T&gt;(System.Collections.Generic.IEnumerable&lt;T&gt;)](#ToArray_T_System_Collections_Generic_IEnumerable_T)</code> - Converts an enumerable to an array.
+
+<a id="ArrayHashCode_System_Collections_Generic_IEnumerable"></a>
 ### ArrayHashCode
 
     public static int ArrayHashCode(
@@ -14,12 +33,13 @@ Not documented yet.
 <b>Parameters:</b>
 
  * <i>array</i>: The parameter  <i>array</i>
- is not documented yet.
+ is a.Collections.Generic.IEnumerable{System.Double} object.
 
 <b>Return Value:</b>
 
 A 32-bit signed integer.
 
+<a id="ArrayHashCode_T_System_Collections_Generic_IEnumerable_T"></a>
 ### ArrayHashCode
 
     public static int ArrayHashCode<T>(
@@ -29,7 +49,8 @@ Not documented yet.
 
 <b>Parameters:</b>
 
- * <i>array</i>: An IEnumerable object.
+ * <i>array</i>: The parameter  <i>array</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
@@ -37,26 +58,7 @@ Not documented yet.
 
 A 32-bit signed integer.
 
-### ArraysEqual
-
-    public static bool ArraysEqual(
-        System.Collections.Generic.IEnumerable array1,
-        System.Collections.Generic.IEnumerable array2);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>array1</i>: The parameter  <i>array1</i>
- is not documented yet.
-
- * <i>array2</i>: The parameter  <i>array2</i>
- is not documented yet.
-
-<b>Return Value:</b>
-
-A Boolean object.
-
+<a id="ArraysEqual_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T"></a>
 ### ArraysEqual
 
     public static bool ArraysEqual<T>(
@@ -75,8 +77,9 @@ Determines whether two enumerable objects are equal.
 
 <b>Return Value:</b>
 
- `true`  if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false .
+ `true`  if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise,  `false` .
 
+<a id="ArraysEqual_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEqualityComparer_T"></a>
 ### ArraysEqual
 
     public static bool ArraysEqual<T>(
@@ -88,24 +91,28 @@ Determines whether two enumerable objects are equal.
 
 <b>Parameters:</b>
 
- * <i>array1</i>: First enumerable to compare.
+ * <i>array1</i>: The parameter  <i>array1</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>array2</i>: Second enumerable to compare.
+ * <i>array2</i>: The parameter  <i>array2</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>comparer</i>: Equality comparer for comparing each element in the enumerable objects.
+ * <i>comparer</i>: The parameter  <i>comparer</i>
+ is a.Collections.Generic.IEqualityComparer{``0} object.
 
  * &lt;T&gt;: Not documented yet.
 
 <b>Return Value:</b>
 
- `true`  if both enumerable objects are null or both enumerable objects have the same elements and number of elements in the same order; otherwise, false .
+ `true`  if two enumerable objects are equal; otherwise,  `false` .
 
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>comparer</i>
+The parameter  <i>comparer</i>
  is null.
 
+<a id="ArrayToString_T_System_Collections_Generic_IEnumerable_T"></a>
 ### ArrayToString
 
     public static string ArrayToString<T>(
@@ -115,7 +122,8 @@ Not documented yet.
 
 <b>Parameters:</b>
 
- * <i>array</i>: An IEnumerable object.
+ * <i>array</i>: The parameter  <i>array</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
@@ -123,6 +131,7 @@ Not documented yet.
 
 A text string.
 
+<a id="ArrayToStringHex_System_Collections_Generic_IEnumerable"></a>
 ### ArrayToStringHex
 
     public static string ArrayToStringHex(
@@ -133,29 +142,13 @@ Not documented yet.
 <b>Parameters:</b>
 
  * <i>array</i>: The parameter  <i>array</i>
- is not documented yet.
+ is a.Collections.Generic.IEnumerable{System.Int32} object.
 
 <b>Return Value:</b>
 
 A text string.
 
-### ArrayToStringHex
-
-    public static string ArrayToStringHex<T>(
-        System.Collections.Generic.IEnumerable<T> array);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>array</i>: An IEnumerable object.
-
- * &lt;T&gt;: Type parameter not documented yet.
-
-<b>Return Value:</b>
-
-A text string.
-
+<a id="CompareArrays_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_where_T_System_IComparable_T_T"></a>
 ### CompareArrays
 
     public static int CompareArrays<T>(
@@ -167,9 +160,11 @@ Not documented yet.
 
 <b>Parameters:</b>
 
- * <i>array1</i>: An IEnumerable object.
+ * <i>array1</i>: The parameter  <i>array1</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>array2</i>: An IEnumerable object.
+ * <i>array2</i>: The parameter  <i>array2</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
@@ -177,6 +172,7 @@ Not documented yet.
 
 A 32-bit signed integer.
 
+<a id="CompareArrays_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IEnumerable_T_System_Collections_Generic_IComparer_T_where_T_System_IComparable_T_T"></a>
 ### CompareArrays
 
     public static int CompareArrays<T>(
@@ -189,11 +185,14 @@ Not documented yet.
 
 <b>Parameters:</b>
 
- * <i>array1</i>: An IEnumerable object.
+ * <i>array1</i>: The parameter  <i>array1</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>array2</i>: An IEnumerable object.
+ * <i>array2</i>: The parameter  <i>array2</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>comparer</i>: An IComparer object.
+ * <i>comparer</i>: The parameter  <i>comparer</i>
+ is a.Collections.Generic.IComparer{``0} object.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
@@ -204,9 +203,10 @@ A 32-bit signed integer.
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>comparer</i>
+The parameter  <i>comparer</i>
  is null.
 
+<a id="CompareLists_T_System_Collections_Generic_IList_T_System_Collections_Generic_IList_T_where_T_System_IComparable_T_T"></a>
 ### CompareLists
 
     public static int CompareLists<T>(
@@ -216,42 +216,21 @@ The parameter <i>comparer</i>
 
 Compares two lists with the same type of items.
 
-The examples below will clarify the comparison rules used in this method. In the examples below, this method would return -1 if it were passed the following pairs of lists, since list 1 is less than list 2:
-
-list1 = {0, 2, 5, 1}
-
-list2 = {2, 2, 5, 1}
-
-list1 = {0, 2, 5, 3}
-
-list2 = {0, 2, 7, 1}
-
-list1 = {0, 2, 5, 3, 0, 5, 6}
-
-list2 = {0, 2, 7, 1}
-
-list1 = null
-
-list2 = {0}
-
-list1 = {0, 2, 5}
-
-list2 = {0, 2, 5, 0}
-
-If instead, list1 and list2 were switched, the method would return 1, since list1 is now greater than list2.
-
 <b>Parameters:</b>
 
- * <i>list1</i>: The first list to compare. Can be null.
+ * <i>list1</i>: The parameter  <i>list1</i>
+ is a.Collections.Generic.IList{``0} object.
 
- * <i>list2</i>: The second list of compare. Can be null.
+ * <i>list2</i>: The parameter  <i>list2</i>
+ is a.Collections.Generic.IList{``0} object.
 
- * &lt;T&gt;: Not documented yet.
+ * &lt;T&gt;: Type parameter not documented yet.
 
 <b>Return Value:</b>
 
 A 32-bit signed integer.
 
+<a id="CompareLists_T_System_Collections_Generic_IList_T_System_Collections_Generic_IList_T_System_Collections_Generic_IComparer_T_where_T_System_IComparable_T_T"></a>
 ### CompareLists
 
     public static int CompareLists<T>(
@@ -262,15 +241,16 @@ A 32-bit signed integer.
 
 Compares two lists with the same type of items.
 
-See CompareLists(IList, IList) for an example of the comparison rules.
-
 <b>Parameters:</b>
 
- * <i>list1</i>: The first list to compare. Can be null.
+ * <i>list1</i>: The parameter  <i>list1</i>
+ is a.Collections.Generic.IList{``0} object.
 
- * <i>list2</i>: The second list of compare. Can be null.
+ * <i>list2</i>: The parameter  <i>list2</i>
+ is a.Collections.Generic.IList{``0} object.
 
- * <i>comparer</i>: An IComparer object.
+ * <i>comparer</i>: The parameter  <i>comparer</i>
+ is a.Collections.Generic.IComparer{``0} object.
 
  * &lt;T&gt;: Not documented yet.
 
@@ -281,9 +261,10 @@ A 32-bit signed integer.
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>comparer</i>
+The parameter  <i>comparer</i>
  is null.
 
+<a id="FindItem_T_System_Collections_Generic_IEnumerable_T_System_Predicate_T_T"></a>
 ### FindItem
 
     public static T FindItem<T>(
@@ -295,11 +276,14 @@ Not documented yet.
 
 <b>Parameters:</b>
 
- * <i>items</i>: An IEnumerable object.
+ * <i>items</i>: The parameter  <i>items</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>func</i>: A Predicate object.
+ * <i>func</i>: The parameter  <i>func</i>
+ is a.Predicate{``0} object.
 
- * <i>defaultValue</i>: Another T object.
+ * <i>defaultValue</i>: The parameter  <i>defaultValue</i>
+ is a ``0 object.
 
  * &lt;T&gt;: Type parameter not documented yet.
 
@@ -310,10 +294,11 @@ A T object.
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>items</i>
+The parameter  <i>items</i>
  or  <i>func</i>
  is null.
 
+<a id="FindItem_T_System_Collections_Generic_IEnumerable_T_T_T"></a>
 ### FindItem
 
     public static T FindItem<T>(
@@ -325,24 +310,28 @@ Finds an item or returns a default value if an item is not found.
 
 <b>Parameters:</b>
 
- * <i>items</i>: An IEnumerable object.
+ * <i>items</i>: The parameter  <i>items</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
- * <i>itemToFind</i>: An item to compare with each item in the list.
+ * <i>itemToFind</i>: The parameter  <i>itemToFind</i>
+ is a ``0 object.
 
- * <i>defaultValue</i>: This value is returned if _itemToFind_ is not found.
+ * <i>defaultValue</i>: The parameter  <i>defaultValue</i>
+ is a ``0 object.
 
  * &lt;T&gt;: Not documented yet.
 
 <b>Return Value:</b>
 
-The item within the list that equals _itemToFind_, or _defaultValue_ if the item is not found.
+A T object.
 
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>items</i>
+The parameter  <i>items</i>
  is null.
 
+<a id="Reverse_T_System_Collections_Generic_IList_T"></a>
 ### Reverse
 
     public static void Reverse<T>(
@@ -352,15 +341,18 @@ Reverses the order of the elements in the given list.
 
 <b>Parameters:</b>
 
- * <i>list</i>: An IList object.
+ * <i>list</i>: The parameter  <i>list</i>
+ is an IList object.
 
  * &lt;T&gt;: Any object type.
 
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter "array" is null.
+The parameter  <i>list</i>
+ is null.
 
+<a id="Reverse_T_System_Collections_Generic_IList_T_int_int"></a>
 ### Reverse
 
     public static void Reverse<T>(
@@ -374,27 +366,31 @@ Reverses the order of the elements in the given list at the specified index and 
 
  * <i>list</i>: The list where the order of elements should be reversed.
 
- * <i>index</i>: Starting index in the list.
+ * <i>index</i>: An index starting at 0 showing where the desired portion of  <i>list</i>
+ begins.
 
- * <i>count</i>: Number of elements in the list to reverse.
+ * <i>count</i>: The number of elements in the desired portion of  <i>list</i>
+ (but not more than  <i>list</i>
+ 's length).
 
  * &lt;T&gt;: Any object type.
 
 <b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>list</i>
- is null.
 
  * System.ArgumentException:
 Either  <i>index</i>
  or  <i>count</i>
  is less than 0 or greater than  <i>list</i>
  's length, or  <i>list</i>
- ' s length minus  <i>index</i>
+ 's length minus  <i>index</i>
  is less than  <i>count</i>
 .
 
+ * System.ArgumentNullException:
+The parameter  <i>list</i>
+ is null.
+
+<a id="Shuffle_T_System_Collections_Generic_IList_T_System_Random"></a>
 ### Shuffle
 
     public static void Shuffle<T>(
@@ -405,328 +401,22 @@ Randomizes the order of a list's items.
 
 <b>Parameters:</b>
 
- * <i>list</i>: An IList object.
+ * <i>list</i>: The parameter  <i>list</i>
+ is an IList object.
 
- * <i>random</i>: A Random object.
+ * <i>random</i>: The parameter  <i>random</i>
+ is a Random object.
 
  * &lt;T&gt;: Any object type.
 
 <b>Exceptions:</b>
 
  * System.ArgumentNullException:
-The parameter <i>random</i>
+The parameter  <i>random</i>
  or  <i>list</i>
  is null.
 
-### Sort
-
-    public static void Sort(
-        int[] array);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>array</i>: An array of 32-bit unsigned integers.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>array</i>
- is null.
-
-### Sort
-
-    public static void Sort(
-        int[] array,
-        int offset,
-        int count);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>array</i>: An array of 32-bit unsigned integers.
-
- * <i>offset</i>: A zero-based index showing where the desired portion of  <i>array</i>
- begins.
-
- * <i>count</i>: The number of elements in the desired portion of  <i>array</i>
- (but not more than  <i>array</i>
- 's length).
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>array</i>
- is null.
-
- * System.ArgumentException:
-Either  <i>offset</i>
- or  <i>count</i>
- is less than 0 or greater than  <i>array</i>
- 's length, or  <i>array</i>
- ' s length minus  <i>offset</i>
- is less than  <i>count</i>
-.
-
-### Sort
-
-    public static void Sort<T>(
-        System.Collections.Generic.IList<T> array,
-        System.Collections.Generic.IComparer<T> comparer);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>array</i>: An IList object.
-
- * <i>comparer</i>: An IComparer object.
-
- * &lt;T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>array</i>
- or  <i>comparer</i>
- is null.
-
-### Sort
-
-    public static void Sort<T>(
-        System.Collections.Generic.IList<T> list)
-        where T : System.IComparable<T>T;
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * &lt;T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>list</i>
- is null.
-
-### Sort
-
-    public static void Sort<T>(
-        System.Collections.Generic.IList<T> list,
-        int offset,
-        int count)
-        where T : System.IComparable<T>T;
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * <i>offset</i>: A zero-based index showing where the desired portion of  <i>list</i>
- begins.
-
- * <i>count</i>: The number of elements in the desired portion of  <i>list</i>
- (but not more than  <i>list</i>
- 's length).
-
- * &lt; T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * !: T:System.ArgumentNullException:
-The parameter <i>list</i>
- is null.
-
- * System.ArgumentException:
-Either  <i>offset</i>
- or  <i>count</i>
- is less than 0 or greater than  <i>list</i>
- 's length, or  <i>list</i>
- ' s length minus  <i>offset</i>
- is less than  <i>count</i>
-.
-
- * System.ArgumentNullException:
-The parameter  <i>list</i>
- is null.
-
-### Sort
-
-    public static void Sort<T>(
-        System.Collections.Generic.IList<T> list,
-        int offset,
-        int count,
-        System.Collections.Generic.IComparer<T> comparer);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * <i>offset</i>: A zero-based index showing where the desired portion of  <i>list</i>
- begins.
-
- * <i>count</i>: The number of elements in the desired portion of  <i>list</i>
- (but not more than  <i>list</i>
- 's length).
-
- * <i>comparer</i>: An IComparer object.
-
- * &lt; T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * !: T:System.ArgumentNullException:
-The parameter <i>list</i>
- or  <i>comparer</i>
- is null.
-
- * System.ArgumentException:
-Either  <i>offset</i>
- or  <i>count</i>
- is less than 0 or greater than  <i>list</i>
- 's length, or  <i>list</i>
- ' s length minus  <i>offset</i>
- is less than  <i>count</i>
-.
-
- * System.ArgumentNullException:
-The parameter  <i>list</i>
- or  <i>comparer</i>
- is null.
-
-### StableSort
-
-    public static void StableSort<T>(
-        System.Collections.Generic.IList<T> list)
-        where T : System.IComparable<T>T;
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * &lt;T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>list</i>
- is null.
-
-### StableSort
-
-    public static void StableSort<T>(
-        System.Collections.Generic.IList<T> list,
-        int offset,
-        int count)
-        where T : System.IComparable<T>T;
-
-Sorts an array of objects using a sorting method that preserves the order of equal elements.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * <i>offset</i>: A zero-based index showing where the desired portion of  <i>list</i>
- begins.
-
- * <i>count</i>: The number of elements in the desired portion of  <i>list</i>
- (but not more than  <i>list</i>
- 's length).
-
- * &lt; T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * !: T:System.ArgumentNullException:
-The parameter <i>list</i>
- is null.
-
- * System.ArgumentException:
-Either  <i>offset</i>
- or  <i>count</i>
- is less than 0 or greater than  <i>list</i>
- 's length, or  <i>list</i>
- ' s length minus  <i>offset</i>
- is less than  <i>count</i>
-.
-
- * System.ArgumentNullException:
-The parameter  <i>list</i>
- is null.
-
-### StableSort
-
-    public static void StableSort<T>(
-        System.Collections.Generic.IList<T> list,
-        int offset,
-        int count,
-        System.Collections.Generic.IComparer<T> comparer);
-
-Sorts an array of objects using a sorting method that preserves the order of equal elements.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * <i>offset</i>: A zero-based index showing where the desired portion of  <i>list</i>
- begins.
-
- * <i>count</i>: The number of elements in the desired portion of  <i>list</i>
- (but not more than  <i>list</i>
- 's length).
-
- * <i>comparer</i>: An IComparer object.
-
- * &lt;T&gt;: Any object type.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>list</i>
- or  <i>comparer</i>
- is null.
-
- * System.ArgumentException:
-Either  <i>offset</i>
- or  <i>count</i>
- is less than 0 or greater than  <i>list</i>
- 's length, or  <i>list</i>
- ' s length minus  <i>offset</i>
- is less than  <i>count</i>
-.
-
-### StableSort
-
-    public static void StableSort<T>(
-        System.Collections.Generic.IList<T> list,
-        System.Collections.Generic.IComparer<T> comparer);
-
-Not documented yet.
-
-<b>Parameters:</b>
-
- * <i>list</i>: An IList object.
-
- * <i>comparer</i>: An IComparer object.
-
- * &lt;T&gt;: Type parameter not documented yet.
-
-<b>Exceptions:</b>
-
- * System.ArgumentNullException:
-The parameter <i>list</i>
- or  <i>comparer</i>
- is null.
-
+<a id="ToArray_T_System_Collections_Generic_IEnumerable_T"></a>
 ### ToArray
 
     public static PeterO.T<>[] ToArray<T>(
@@ -736,13 +426,14 @@ Converts an enumerable to an array.
 
 <b>Parameters:</b>
 
- * <i>collection</i>: An enumerable converted to an array.
+ * <i>collection</i>: The parameter  <i>collection</i>
+ is a.Collections.Generic.IEnumerable{``0} object.
 
  * &lt;T&gt;: Not documented yet.
 
 <b>Return Value:</b>
 
-An array generated from the specified enumerable. Note that the order of elements is not guaranteed if the enumerable does not implement IList.
+A T[] object.
 
 <b>Exceptions:</b>
 

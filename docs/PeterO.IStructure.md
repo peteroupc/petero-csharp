@@ -4,13 +4,11 @@
 
 Not documented yet.
 
-### Read
+### Member Summary
+* <code>[Read(System.IO.Stream)](#Read_System_IO_Stream)</code> - Not documented yet.
+* <code>[Write(System.IO.Stream)](#Write_System_IO_Stream)</code> - Not documented yet.
 
-    void Read(
-        PeterO.BinaryIO bio);
-
-Not documented yet.
-
+<a id="Read_System_IO_Stream"></a>
 ### Read
 
     void Read(
@@ -18,16 +16,20 @@ Not documented yet.
 
 Not documented yet.
 
-### Write
+<b>Parameters:</b>
 
-    void Write(
-        PeterO.BinaryIO bio);
+ * <i>stream</i>: The parameter  <i>stream</i>
+ is a.IO.Stream object.
 
-Not documented yet.
-
+<a id="Write_System_IO_Stream"></a>
 ### Write
 
     void Write(
         System.IO.Stream stream);
 
 Not documented yet.
+
+<b>Parameters:</b>
+
+ * <i>stream</i>: The parameter  <i>stream</i>
+ is a.IO.Stream object.

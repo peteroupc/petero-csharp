@@ -1,6 +1,8 @@
 /*
-Written by Peter O. in 2010.
-Any copyright is dedicated to the Public Domain.
+Written by Peter O.
+Any copyright to this work is released to the Public Domain.
+In case this is not possible, this work is also
+licensed under Creative Commons Zero (CC0):
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
 at: http://peteroupc.github.io/
@@ -11,20 +13,23 @@ using System.Linq;
 using PeterO;
 
 namespace PeterO {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="T:PeterO.DisposableLists"]/*'/>
+  /// <summary>Not documented yet.</summary>
   public static class DisposableLists {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.DisposableLists.Create"]/*'/>
+    /// <summary>Not documented yet.</summary>
+    /// <returns>A DisposableList(IDisposable) object.</returns>
     public static DisposableList<IDisposable> Create() {
       return new DisposableList<IDisposable>();
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.DisposableLists.Create``1(``0)"]/*'/>
-    public static DisposableList<T> Create<T>(T obj) where T : IDisposable {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='obj'>The parameter <paramref name='obj'/> is a T
+    /// object.</param>
+    /// <typeparam name='T'>Any object type that implements
+    /// IDisposable.</typeparam>
+    /// <returns>A DisposableList(T) object.</returns>
+    public static DisposableList<T> Create<T> (T obj) where T : IDisposable {
       var ret = new DisposableList<T>();
-      ret.Add(obj);
+      ret.Add (obj);
       return ret;
     }
   }

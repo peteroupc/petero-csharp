@@ -1,3 +1,1 @@
-Written by Peter O. in 2012.  In the public domain.
-
-Public domain dedication: [http://creativecommons.org/publicdomain/zero/1.0/legalcode](http://creativecommons.org/publicdomain/zero/1.0/legalcode)
+Written by Peter O.  Any copyright to this work is released to the Public Domain.  In case this is not possible, this work is also licensed under Creative Commons Zero (CC0): [http://creativecommons.org/publicdomain/zero/1.0/legalcode](http://creativecommons.org/publicdomain/zero/1.0/legalcode)

@@ -1,6 +1,8 @@
 /*
 Written by Peter O.
-Any copyright is dedicated to the Public Domain.
+Any copyright to this work is released to the Public Domain.
+In case this is not possible, this work is also
+licensed under Creative Commons Zero (CC0):
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
 at: http://peteroupc.github.io/
@@ -9,14 +11,15 @@ using System;
 using System.Collections.Generic;
 
 namespace PeterO {
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="T:PeterO.ListSegment`1"]/*'/>
-#if CODE_ANALYSIS
+  /// <summary>Specifies a segment of a list defined by an offset and
+  /// length. This class cannot be inherited.</summary>
+  /// <typeparam name='T'>Any object type.</typeparam>
+  #if CODE_ANALYSIS
   [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(
     "Microsoft.Naming",
     "CA1710:IdentifiersShouldHaveCorrectSuffix",
-    Justification="This is a part of a list and not just a collection.")]
-#endif
+    Justification = "This is a part of a list and not just a collection.")]
+  #endif
   public sealed class ListSegment<T> : IList<T> {
     private readonly int start;
 
@@ -26,9 +29,17 @@ namespace PeterO {
 
     private readonly EqualityComparer<T> comparer = EqualityComparer<T>.Default;
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)"]/*'/>
-    public ListSegment(IList<T> list, int start, int count) {
+    /// <summary>Initializes a new instance of the
+    /// <see cref='ListSegment'/> class.</summary>
+    /// <param name='list'>The parameter <paramref name='list'/> is an
+    /// IList object.</param>
+    /// <param name='start'>The parameter <paramref name='start'/> is a
+    /// 32-bit signed integer.</param>
+    /// <param name='count'>The parameter <paramref name='count'/> is a
+    /// 32-bit signed integer.</param>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='list'/> is null.</exception>
+    public ListSegment (IList<T> list, int start, int count) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -37,26 +48,28 @@ namespace PeterO {
       }
       if (start > list.Count) {
         throw new ArgumentException("start (" + start + ") is more than " +
-                    list.Count);
+          list.Count);
       }
       if (count < 0) {
         throw new ArgumentException("count (" + count + ") is less than 0");
       }
       if (count > list.Count) {
         throw new ArgumentException("count (" + count + ") is more than " +
-                    list.Count);
+          list.Count);
       }
       if (list.Count - start < count) {
         throw new ArgumentException("list's length minus " + start + " (" +
-                    (list.Count - start) + ") is less than " + count);
+          (list.Count - start) + ") is less than " + count);
       }
       this.list = list;
       this.start = start;
       this.count = count;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="P:PeterO.ListSegment`1.StartIndex"]/*'/>
+    /// <summary>Gets the starting index within the underlying list for
+    /// this list segment.</summary>
+    /// <value>The starting index within the underlying list for this list
+    /// segment.</value>
     public int StartIndex {
       get {
         return this.start;
@@ -66,8 +79,10 @@ namespace PeterO {
     private event EventHandler ContentsModified = delegate {
     };
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="P:PeterO.ListSegment`1.Item(System.Int32)"]/*'/>
+    /// <summary>Not documented yet.</summary>
+    /// <param name='index'>The parameter <paramref name='index'/> is a
+    /// 32-bit signed integer.</param>
+    /// <returns>A T object.</returns>
     public T this[int index] {
       get {
         return this.list[this.start + index];
@@ -75,97 +90,128 @@ namespace PeterO {
 
       set {
         this.list[this.start + index] = value;
-        this.ContentsModified(this, null);
+        this.ContentsModified (this, null);
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="P:PeterO.ListSegment`1.Count"]/*'/>
+    /// <summary>Gets a value not documented yet.</summary>
+    /// <value>A value not documented yet.</value>
     public int Count {
       get {
         return this.count;
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="P:PeterO.ListSegment`1.IsReadOnly"]/*'/>
+    /// <summary>Gets a value indicating whether this list segment is read
+    /// only.</summary>
+    /// <value><c>true</c> if this list segment is read only; otherwise,
+    /// <c>false</c>.</value>
+    /// <remarks>The read-only status of the list segment is the same as
+    /// that of the underlying list. However, operations that would change
+    /// the list segment's size, such as adding and removing items, are not
+    /// supported.</remarks>
     public bool IsReadOnly {
       get {
         return this.list.IsReadOnly;
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.IndexOf(`0)"]/*'/>
-    public int IndexOf(T item) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='item'>The parameter <paramref name='item'/> is a `0
+    /// object.</param>
+    /// <returns>A 32-bit signed integer.</returns>
+    public int IndexOf (T item) {
       for (int i = 0; i < this.count; ++i) {
-        if (this.comparer.Equals(this.list[this.start + i], item)) {
+        if (this.comparer.Equals (this.list[this.start + i], item)) {
           return this.start + i;
         }
       }
       return -1;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.Insert(System.Int32,`0)"]/*'/>
-    public void Insert(int index, T item) {
-      throw new
-NotSupportedException("Changing the size of a list segment is not supported.");
+    /// <summary>This method is not supported.</summary>
+    /// <param name='index'>The parameter <paramref name='index'/> is a
+    /// 32-bit signed integer.</param>
+    /// <param name='item'>The parameter <paramref name='item'/> is a T
+    /// object.</param>
+    public void Insert (int index, T item) {
+      throw new NotSupportedException("Changing the size of a list segment" +
+"\u0020is not" +
+"\u0020supported.");
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.RemoveAt(System.Int32)"]/*'/>
-    public void RemoveAt(int index) {
-      throw new
-NotSupportedException("Changing the size of a list segment is not supported.");
+    /// <summary>This method is not supported.</summary>
+    /// <param name='index'>The parameter <paramref name='index'/> is a
+    /// 32-bit signed integer.</param>
+    public void RemoveAt (int index) {
+      throw new NotSupportedException("Changing the size of a list segment" +
+"\u0020is not" +
+"\u0020supported.");
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.Add(`0)"]/*'/>
-    public void Add(T item) {
-      throw new
-NotSupportedException("Changing the size of a list segment is not supported.");
+    /// <summary>This method is not supported.</summary>
+    /// <param name='item'>The parameter <paramref name='item'/> is a `0
+    /// object.</param>
+    /// <exception cref='NotSupportedException'>Always thrown, because
+    /// changing the size of a list segment is not supported.</exception>
+    public void Add (T item) {
+      throw new NotSupportedException("Changing the size of a list segment" +
+"\u0020is not" +
+"\u0020supported.");
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.Clear"]/*'/>
+    /// <summary>This method is not supported.</summary>
     public void Clear() {
-      throw new
-NotSupportedException("Changing the size of a list segment is not supported.");
+      throw new NotSupportedException("Changing the size of a list segment" +
+"\u0020is not" +
+"\u0020supported.");
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.Contains(`0)"]/*'/>
-    public bool Contains(T item) {
-      return this.IndexOf(item) >= 0;
+    /// <summary>Not documented yet.</summary>
+    /// <param name='item'>The parameter <paramref name='item'/> is a `0
+    /// object.</param>
+    /// <returns>Either <c>true</c> or <c>false</c>.</returns>
+    public bool Contains (T item) {
+      return this.IndexOf (item) >= 0;
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.CopyTo(`0[],System.Int32)"]/*'/>
-    public void CopyTo(T[] array, int arrayIndex) {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='array'>The parameter <paramref name='array'/> is a
+    /// `0[] object.</param>
+    /// <param name='arrayIndex'>The parameter <paramref
+    /// name='arrayIndex'/> is a 32-bit signed integer.</param>
+    /// <exception cref='ArgumentNullException'>The parameter <paramref
+    /// name='array'/> is null.</exception>
+    /// <exception cref='ArgumentException'>Array index and count must fit
+    /// the bounds of the array.</exception>
+    public void CopyTo (T[] array, int arrayIndex) {
       if (array == null) {
         throw new ArgumentNullException(nameof(array));
       }
       if (arrayIndex < 0) {
         throw new ArgumentException("arrayIndex less than " + "0 (" +
-                    Convert.ToString(
-                    arrayIndex,
-                    System.Globalization.CultureInfo.InvariantCulture) + ")");
+          Convert.ToString(
+            arrayIndex,
+            System.Globalization.CultureInfo.InvariantCulture) + ")");
       }
       if (arrayIndex + this.count > array.Length) {
-        throw new
-  ArgumentException("Array index and count must fit the bounds of the array.");
+        throw new ArgumentException("Array index and count must fit the" +
+"\u0020bounds of the" +
+"\u0020array.");
       }
       for (int i = 0; i < this.count; ++i) {
         array[arrayIndex + i] = this.list[this.start + i];
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.Remove(`0)"]/*'/>
-    public bool Remove(T item) {
-      throw new
-NotSupportedException("Changing the size of a list segment is not supported.");
+    /// <summary>This method is not supported.</summary>
+    /// <param name='item'>The parameter <paramref name='item'/> is a T
+    /// object.</param>
+    /// <returns>Either <c>true</c> or <c>false</c>.</returns>
+    public bool Remove (T item) {
+      throw new NotSupportedException("Changing the size of a list segment" +
+"\u0020is not" +
+"\u0020supported.");
     }
 
     private sealed class ListSegmentEnumerator : IEnumerator<T> {
@@ -173,25 +219,27 @@ NotSupportedException("Changing the size of a list segment is not supported.");
       private int index = -1;
       private bool wasModified;
 
-      private void OnContentsModified(object sender, EventArgs eventArgs) {
+      private void OnContentsModified (object sender, EventArgs eventArgs) {
         this.wasModified = true;
       }
 
-      public ListSegmentEnumerator(ListSegment<T> list) {
+      public ListSegmentEnumerator (ListSegment<T> list) {
         this.list = list;
         this.list.ContentsModified += this.OnContentsModified;
       }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="P:PeterO.ListSegment`1.ListSegmentEnumerator.Current"]/*'/>
+      /// <summary>Gets a value not documented yet.</summary>
+      /// <value>A value not documented yet.</value>
       public T Current {
         get {
           if (this.wasModified) {
-            throw new
-    InvalidOperationException("The list was modified during the enumeration.");
+            throw new InvalidOperationException("The list was modified" +
+"\u0020during the" +
+"\u0020enumeration.");
           }
           if (this.index < 0 || this.index >= this.list.Count) {
-         throw new InvalidOperationException("The enumerator is out of range");
+            throw new InvalidOperationException("The enumerator is out of" +
+"\u0020range");
           }
           return this.list[this.index];
         }
@@ -203,41 +251,42 @@ NotSupportedException("Changing the size of a list segment is not supported.");
         }
       }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.ListSegmentEnumerator.MoveNext"]/*'/>
+      /// <summary>Not documented yet.</summary>
+      /// <returns>Either <c>true</c> or <c>false</c>.</returns>
       public bool MoveNext() {
         if (this.wasModified) {
-          throw new
-    InvalidOperationException("The list was modified during the enumeration.");
+          throw new InvalidOperationException("The list was modified during" +
+"\u0020the" +
+"\u0020enumeration.");
         }
         ++this.index;
         return this.index < this.list.Count;
       }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.ListSegmentEnumerator.Dispose"]/*'/>
+      /// <summary>Not documented yet.</summary>
       public void Dispose() {
         this.list.ContentsModified -= this.OnContentsModified;
       }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.ListSegmentEnumerator.Reset"]/*'/>
+      /// <summary>Not documented yet.</summary>
       public void Reset() {
         if (this.wasModified) {
-          throw new
-    InvalidOperationException("The list was modified during the enumeration.");
+          throw new InvalidOperationException("The list was modified during" +
+"\u0020the" +
+"\u0020enumeration.");
         }
         this.index = -1;
       }
     }
 
-    /// <include file='../docs.xml'
-    /// path='docs/doc[@name="M:PeterO.ListSegment`1.GetEnumerator"]/*'/>
+    /// <summary>Not documented yet.</summary>
+    /// <returns>An IEnumerator(T) object.</returns>
     public IEnumerator<T> GetEnumerator() {
       return new ListSegmentEnumerator(this);
     }
 
-System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
+    System.Collections.IEnumerator
+    System.Collections.IEnumerable.GetEnumerator() {
       return new ListSegmentEnumerator(this);
     }
   }

@@ -10,7 +10,8 @@ namespace PeterO {
     /// them.</summary>
     /// <param name='paths'>A params object.</param>
     /// <returns>A string object.</returns>
-    public static string PathCombine(params string[] paths) {
+    /// <exception cref='ArgumentException'>Paths[0] is null.</exception>
+    public static string PathCombine (params string[] paths) {
       if (paths.Length == 0) {
         return String.Empty;
       }
@@ -19,14 +20,14 @@ namespace PeterO {
       }
       string ret = paths[0];
       for (int i = 1; i < paths.Length; ++i) {
-        ret = Path.Combine(ret, paths[i]);
+        ret = Path.Combine (ret, paths[i]);
       }
       return ret;
     }
 
     /// <summary>Reads from a stream until it runs out and writes the data
     /// read to a file.
-    /// <para>In the .NET implementation, this method is implemented as an
+    /// <para>In the.NET implementation, this method is implemented as an
     /// extension method to any object implementing Stream and can be
     /// called as follows: <c>s.SaveStream(realPath)</c>. If the object's
     /// class already has a SaveStream method with the same parameters,
@@ -46,7 +47,7 @@ namespace PeterO {
         throw new ArgumentException("realPath" + " is empty.");
       }
       using (var ws = new FileStream(realPath, FileMode.Create)) {
-        CopyStream(s, ws);
+        CopyStream (s, ws);
       }
     }
   }

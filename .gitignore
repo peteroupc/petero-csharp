@@ -1,5 +1,6 @@
 *.Cache
 *.bat
+*.cache
 *.exe
 *.jar
 *.map
