@@ -7,7 +7,6 @@
 *.nupkg
 *.pyc
 *.sdsettings
-*.snk
 *.suo
 *.user
 *.userprefs
