@@ -20,11 +20,11 @@ namespace PeterO {
       var ofs = offset;
       var chunk = 0;
       while (len > 0) {
-        chunk = Math.Min (3854, len);
+        chunk = Math.Min(3854, len);
         len -= chunk;
         while (chunk > 0) {
-          v1 = unchecked ((int)v1 + array[ofs]);
-          v2 = unchecked ((int)v1 + v2);
+          v1 = unchecked((int)v1 + array[ofs]);
+          v2 = unchecked((int)v1 + v2);
           --chunk;
           ++ofs;
         }
@@ -35,14 +35,14 @@ namespace PeterO {
         (byte)(v2 >> 8),
         (byte)(v2 & 255),
         (byte)(v1 >> 8),
-        (byte)(v1 & 255)
+        (byte)(v1 & 255),
       };
     }
 
     private readonly byte[] subdata1;
     private static int[] crcTable;
 
-    internal static int Crc32 (byte[] stream, int offset, int length, int crc) {
+    internal static int Crc32(byte[] stream, int offset, int length, int crc) {
       int c;
       int[] table = null;
       lock (crcTable) {
@@ -51,7 +51,7 @@ namespace PeterO {
           for (int n = 0; n <= 255; ++n) {
             c = n;
             for (var k = 0; k <= 7; ++k) {
-              c = ((c & 1) == 1) ? (unchecked ((int)0xedb88320) ^ ((c >> 1) &
+              c = ((c & 1) == 1) ? (unchecked((int)0xedb88320) ^ ((c >> 1) &
                     0x7fffffff)) : ((c >> 1) & 0x7fffffff);
             }
             crcTable[n] = c;
@@ -62,7 +62,7 @@ namespace PeterO {
       c = crc ^ -1;
       var endOffset = offset + length;
       for (var i = offset; i < endOffset; ++i) {
-        c = table[ (c ^ stream[i]) & 255] ^ ((c >> 8) & 0xffffff);
+        c = table[(c ^ stream[i]) & 255] ^ ((c >> 8) & 0xffffff);
       }
       return c ^ -1;
     }
@@ -72,7 +72,7 @@ namespace PeterO {
     /// signed integer.</param>
     /// <param name='filter'>The parameter <paramref name='filter'/> is a
     /// byte (from 0 to 255).</param>
-    public void SetFilter (int y, byte filter) {
+    public void SetFilter(int y, byte filter) {
       if (y < 0) {
         throw new ArgumentException("y (" + y + ") is less than 0");
       }
@@ -87,7 +87,7 @@ namespace PeterO {
     /// <param name='y'>The parameter <paramref name='y'/> is a 32-bit
     /// signed integer.</param>
     /// <returns>A byte (from 0 to 255).</returns>
-    public byte GetFilter (int y) {
+    public byte GetFilter(int y) {
       if (y < 0) {
         throw new ArgumentException("y (" + y + ") is less than 0");
       }
@@ -107,14 +107,14 @@ namespace PeterO {
     /// name='pixel'/> is null.</exception>
     /// <exception cref='ArgumentException'>The parameter <paramref
     /// name='pixel'/> has an improper length.</exception>
-    public void SetPixel (int x, int y, byte[] pixel) {
+    public void SetPixel(int x, int y, byte[] pixel) {
       if (pixel == null) {
         throw new ArgumentNullException(nameof(pixel));
       }
       if (pixel.Length >= 4) {
-        this.SetPixel (x, y, pixel[0], pixel[1], pixel[2], pixel[3]);
+        this.SetPixel(x, y, pixel[0], pixel[1], pixel[2], pixel[3]);
       } else if (pixel.Length == 3) {
-        this.SetPixel (x, y, pixel[0], pixel[1], pixel[2], (byte)255);
+        this.SetPixel(x, y, pixel[0], pixel[1], pixel[2], (byte)255);
       } else {
         throw new ArgumentException("'pixel' has an improper length");
       }
@@ -133,8 +133,8 @@ namespace PeterO {
     /// 0 to 255).</param>
     /// <param name='b'>The parameter <paramref name='b'/> is a byte (from
     /// 0 to 255).</param>
-    public void SetPixel (int x, int y, byte r, byte g, byte b) {
-      this.SetPixel (x, y, r, g, b, (byte)255);
+    public void SetPixel(int x, int y, byte r, byte g, byte b) {
+      this.SetPixel(x, y, r, g, b, (byte)255);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -150,7 +150,7 @@ namespace PeterO {
     /// 0 to 255).</param>
     /// <param name='a'>The parameter <paramref name='a'/> is a byte (from
     /// 0 to 255).</param>
-    public void SetPixel (int x, int y, byte r, byte g, byte b, byte a) {
+    public void SetPixel(int x, int y, byte r, byte g, byte b, byte a) {
       if (x < 0) {
         throw new ArgumentException("x (" + x + ") is less than 0");
       }
@@ -180,7 +180,7 @@ namespace PeterO {
     /// <param name='y'>The parameter <paramref name='y'/> is a 32-bit
     /// signed integer.</param>
     /// <returns>A byte array.</returns>
-    public byte[] GetPixel (int x, int y) {
+    public byte[] GetPixel(int x, int y) {
       if (x < 0) {
         throw new ArgumentException("x (" + x + ") is less than 0");
       }
@@ -200,16 +200,16 @@ namespace PeterO {
         this.data[offset],
         this.data[offset + 1],
         this.data[offset + 2],
-        (byte)this.data[offset + 3]
+        (byte)this.data[offset + 3],
       };
     }
 
-    private byte[] GetBE (int crc) {
+    private byte[] GetBE(int crc) {
       return new[] {
         (byte)((crc >> 24) & 255),
         (byte)((crc >> 16) & 255),
         (byte)((crc >> 8) & 255),
-        (byte)((crc >> 0) & 255)
+        (byte)((crc >> 0) & 255),
       };
     }
 
@@ -218,39 +218,39 @@ namespace PeterO {
     /// a text string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='filename'/> is null.</exception>
-    public void Save (string filename) {
+    public void Save(string filename) {
       using (var fs = new FileStream(filename, FileMode.Create)) {
-        fs.Write (this.subdata1, 0, this.subdata1.Length);
-        var crc32 = Crc32 (this.subdata1, 12, 17, 0);
+        fs.Write(this.subdata1, 0, this.subdata1.Length);
+        var crc32 = Crc32(this.subdata1, 12, 17, 0);
         byte[] deflated = null;
-        fs.Write (this.GetBE (crc32), 0, 4);
+        fs.Write(this.GetBE(crc32), 0, 4);
         using (var ms = new MemoryStream()) {
           // PNG compression uses a ZLIB stream not a DEFLATE stream
-          ms.WriteByte (0x78);
-          ms.WriteByte (0x9c);
+          ms.WriteByte(0x78);
+          ms.WriteByte(0x9c);
           using (
             var ds = new DeflateStream(
               ms,
               CompressionMode.Compress,
               true)) {
-            ds.Write (this.data, 0, this.data.Length);
+            ds.Write(this.data, 0, this.data.Length);
           }
-          ms.Write (Adler32 (this.data, 0, this.data.Length), 0, 4);
+          ms.Write(Adler32(this.data, 0, this.data.Length), 0, 4);
           deflated = ms.ToArray();
         }
         var defLength = new[] {
           (byte)((deflated.Length >> 24) & 255),
           (byte)((deflated.Length >> 16) & 255),
           (byte)((deflated.Length >> 8) & 255),
-          (byte)((deflated.Length >> 0) & 255)
+          (byte)((deflated.Length >> 0) & 255),
         };
-        fs.Write (defLength, 0, defLength.Length);
-        fs.Write (new byte[] { 0x49, 0x44, 0x41, 0x54 }, 0, 4);
-        fs.Write (deflated, 0, deflated.Length);
-        var crc = Crc32 (deflated, 0, deflated.Length, this.idatCrc);
-        var subdcrc = this.GetBE (crc);
-        fs.Write (subdcrc, 0, subdcrc.Length);
-        fs.Write (this.subdata2, 0, this.subdata2.Length);
+        fs.Write(defLength, 0, defLength.Length);
+        fs.Write(new byte[] { 0x49, 0x44, 0x41, 0x54 }, 0, 4);
+        fs.Write(deflated, 0, deflated.Length);
+        var crc = Crc32(deflated, 0, deflated.Length, this.idatCrc);
+        var subdcrc = this.GetBE(crc);
+        fs.Write(subdcrc, 0, subdcrc.Length);
+        fs.Write(this.subdata2, 0, this.subdata2.Length);
       }
     }
 
@@ -284,7 +284,7 @@ namespace PeterO {
     /// 32-bit signed integer.</param>
     /// <param name='height'>The parameter <paramref name='height'/> is a
     /// 32-bit signed integer.</param>
-    public Png (int width, int height) {
+    public Png(int width, int height) {
       if (width < 1) {
         throw new ArgumentException("width (" + width +
           ") is less than 1");
@@ -308,7 +308,7 @@ namespace PeterO {
         0x49, 0x48, 0x44, 0x52,
         0, 0, (byte)(width >> 8), (byte)(width & 255),
         0, 0, (byte)(height >> 8), (byte)(height & 255),
-        8, (byte)6, 0, 0, 0
+        8, (byte)6, 0, 0, 0,
       };
       this.width = width;
       this.height = height;
@@ -324,7 +324,7 @@ namespace PeterO {
       this.subdata2 = new byte[] {
         0, 0, 0, 0, 0x49, 0x45, 0x4e, 0x44, 0xae,
         0x42,
-        0x60, 0x82
+        0x60, 0x82,
       };
     }
   }

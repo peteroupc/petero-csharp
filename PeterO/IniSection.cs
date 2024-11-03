@@ -20,7 +20,7 @@ namespace PeterO {
     /// <see cref='PeterO.IniSection'/> class.</summary>
     /// <param name='name'>The parameter <paramref name='name'/> is a text
     /// string.</param>
-    public IniSection (string name) {
+    public IniSection(string name) {
       // Can be null
       this.name = name;
       this.entries = new List<IniEntry>();
@@ -32,7 +32,7 @@ namespace PeterO {
     /// IniSection object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='other'/> is null.</exception>
-    public IniSection (IniSection other) {
+    public IniSection(IniSection other) {
       if (other == null) {
         throw new ArgumentNullException(nameof(other));
       }
@@ -67,12 +67,12 @@ namespace PeterO {
     /// <returns>A text string.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='keyName'/> is null.</exception>
-    public string GetValue (string keyName) {
+    public string GetValue(string keyName) {
       if (keyName == null) {
         throw new ArgumentNullException(nameof(keyName));
       }
       foreach (IniEntry entry in this.entries) {
-        if (Object.Equals (entry.Key, keyName)) {
+        if (Object.Equals(entry.Key, keyName)) {
           return entry.Value;
         }
       }
@@ -116,11 +116,11 @@ namespace PeterO {
     /// text string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='keyName'/> is null.</exception>
-    public void SetValue (string keyName, string value) {
+    public void SetValue(string keyName, string value) {
       if (keyName == null) {
         throw new ArgumentNullException(nameof(keyName));
       }
-      this.AddEntry (keyName, value);
+      this.AddEntry(keyName, value);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -128,13 +128,13 @@ namespace PeterO {
     /// string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='key'/> is null.</exception>
-    public void RemoveEntry (string key) {
+    public void RemoveEntry(string key) {
       if (key == null) {
         throw new ArgumentNullException(nameof(key));
       }
       for (int i = 0; i < this.entries.Count; ++i) {
-        if (Object.Equals (this.entries[i].Key, key)) {
-          this.entries.RemoveAt (i);
+        if (Object.Equals(this.entries[i].Key, key)) {
+          this.entries.RemoveAt(i);
           break;
         }
       }
@@ -154,8 +154,8 @@ namespace PeterO {
     /// string.</param>
     /// <param name='value'>The parameter <paramref name='value'/> is a
     /// text string.</param>
-    public void AddEntry (string key, string value) {
-      this.AddEntry (key, value, IniMergeBehavior.Merge);
+    public void AddEntry(string key, string value) {
+      this.AddEntry(key, value, IniFile.IniMergeBehavior.Merge);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -164,46 +164,47 @@ namespace PeterO {
     /// <param name='value'>The parameter <paramref name='value'/> is a
     /// text string.</param>
     /// <param name='behavior'>The parameter <paramref name='behavior'/> is
-    /// a IniMergeBehavior object.</param>
+    /// a IniFile.IniMergeBehavior object.</param>
     /// <exception cref='ArgumentNullException'>The parameter "keyName" is
     /// null.</exception>
-    public void AddEntry (string key, string value, IniMergeBehavior behavior) {
+    public void AddEntry(string key, string value, IniFile.IniMergeBehavior
+behavior) {
       if (key == null) {
         throw new ArgumentNullException(nameof(key));
       }
-      this.Add (new IniEntry(key, value), behavior);
+      this.Add(new IniEntry(key, value), behavior);
     }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='comment'>The parameter <paramref name='comment'/> is a
     /// text string.</param>
-    public void AddComment (string comment) {
-      this.Add (new IniEntry(comment));
+    public void AddComment(string comment) {
+      this.Add(new IniEntry(comment));
     }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='entry'>The parameter <paramref name='entry'/> is a
     /// IniEntry object.</param>
-    public void Add (IniEntry entry) {
-      this.Add (entry, IniMergeBehavior.Merge);
+    public void Add(IniEntry entry) {
+      this.Add(entry, IniFile.IniMergeBehavior.Merge);
     }
 
     /// <summary>Adds two IniEntry objects.</summary>
     /// <param name='entry'>The parameter <paramref name='entry'/> is an
     /// IniEntry object.</param>
     /// <param name='behavior'>The parameter <paramref name='behavior'/> is
-    /// an IniMergeBehavior object.</param>
+    /// an IniFile.IniMergeBehavior object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='entry'/> is null.</exception>
-    public void Add (IniEntry entry, IniMergeBehavior behavior) {
+    public void Add(IniEntry entry, IniFile.IniMergeBehavior behavior) {
       if (entry == null) {
         throw new ArgumentNullException(nameof(entry));
       }
       if (!entry.IsComment) {
         var lastNonComment = -1;
         for (int i = 0; i < this.entries.Count; ++i) {
-          if (behavior == IniMergeBehavior.Merge) {
-            if (Object.Equals (this.entries[i].Key, entry.Key)) {
+          if (behavior == IniFile.IniMergeBehavior.Merge) {
+            if (Object.Equals(this.entries[i].Key, entry.Key)) {
               this.entries[i] = entry;
               return;
             }
@@ -213,9 +214,9 @@ namespace PeterO {
           }
         }
         // Insert after the last non-comment
-        this.entries.Insert (lastNonComment + 1, entry);
+        this.entries.Insert(lastNonComment + 1, entry);
       } else {
-        this.entries.Add (entry);
+        this.entries.Add(entry);
       }
     }
 
@@ -224,12 +225,12 @@ namespace PeterO {
     public override string ToString() {
       var builder = new StringBuilder();
       if (this.name != null) {
-        builder.Append ("[").Append (this.name).Append ("]")
-        .Append (Environment.NewLine);
+        builder.Append("[").Append(this.name).Append("]")
+        .Append(Environment.NewLine);
       }
       foreach (IniEntry entry in this.entries) {
-        builder.Append (entry);
-        builder.Append (Environment.NewLine);
+        builder.Append(entry);
+        builder.Append(Environment.NewLine);
       }
       return builder.ToString();
     }

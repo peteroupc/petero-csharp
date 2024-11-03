@@ -28,8 +28,8 @@ namespace PeterO {
     /// 64-bit signed integer.</param>
     /// <param name='length'>The parameter <paramref name='length'/> is a
     /// 64-bit signed integer.</param>
-    public PartialStream (Stream stream, long start, long length):
-      this (stream, start, length, false) {
+    public PartialStream(Stream stream, long start, long length)
+      : this(stream, start, length, false) {
     }
 
     /// <summary>Initializes a new instance of the
@@ -178,7 +178,7 @@ namespace PeterO {
     /// <param name='origin'>The parameter <paramref name='origin'/> is
     /// a.IO.SeekOrigin object.</param>
     /// <returns>A 64-bit signed integer.</returns>
-    public override long Seek (long offset, SeekOrigin origin) {
+    public override long Seek(long offset, SeekOrigin origin) {
       if (this.isDisposed) {
         throw new ObjectDisposedException("PartialStream");
       }
@@ -191,15 +191,15 @@ namespace PeterO {
       if (origin == SeekOrigin.End) {
         this.position = this.length - offset;
       }
-      this.position = Math.Max (0, this.position);
-      this.position = Math.Min (this.position, this.length);
+      this.position = Math.Max(0, this.position);
+      this.position = Math.Min(this.position, this.length);
       return this.position;
     }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='value'>The parameter <paramref name='value'/> is a
     /// 64-bit signed integer.</param>
-    public override void SetLength (long value) {
+    public override void SetLength(long value) {
       if (this.isDisposed) {
         throw new ObjectDisposedException("PartialStream");
       }
@@ -227,7 +227,7 @@ namespace PeterO {
     /// greater than <paramref name='buffer'/> 's length, or <paramref
     /// name='buffer'/> 's length minus <paramref name='offset'/> is less
     /// than <paramref name='count'/>.</exception>
-    public override int Read (byte[] buffer, int offset, int count) {
+    public override int Read(byte[] buffer, int offset, int count) {
       if (this.isDisposed) {
         throw new ObjectDisposedException("PartialStream");
       }
@@ -256,7 +256,7 @@ namespace PeterO {
       }
       this.stream.Position = this.start + this.position;
       if (this.length - this.position > Int32.MaxValue) {
-        var c = this.stream.Read (buffer, offset, count);
+        var c = this.stream.Read(buffer, offset, count);
         checked { this.position += c;
         }
         return c;
@@ -264,7 +264,7 @@ namespace PeterO {
         var c = this.stream.Read(
             buffer,
             offset,
-            Math.Min (count, (int)(this.length - this.position)));
+            Math.Min(count, (int)(this.length - this.position)));
         checked { this.position += c;
         }
         return c;
@@ -286,7 +286,7 @@ namespace PeterO {
     /// than <paramref name='count'/>.</exception>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='buffer'/> is null.</exception>
-    public override void Write (byte[] buffer, int offset, int count) {
+    public override void Write(byte[] buffer, int offset, int count) {
       if (this.isDisposed) {
         throw new ObjectDisposedException("PartialStream");
       }
@@ -315,10 +315,10 @@ namespace PeterO {
       }
       this.stream.Position = this.start + this.position;
       if (this.length - this.position <= Int32.MaxValue) {
-        count = Math.Min (count, (int)(this.length - this.position));
+        count = Math.Min(count, (int)(this.length - this.position));
       }
       if (count > 0) {
-        this.stream.Write (buffer, offset, count);
+        this.stream.Write(buffer, offset, count);
         checked { this.position += count;
         }
       }
@@ -327,7 +327,7 @@ namespace PeterO {
     /// <summary>Not documented yet.</summary>
     /// <param name='disposing'>The parameter <paramref name='disposing'/>
     /// is either <c>true</c> or <c>false</c>.</param>
-    protected override void Dispose (bool disposing) {
+    protected override void Dispose(bool disposing) {
       if (this.isDisposed) {
         return;
       }
@@ -335,7 +335,7 @@ namespace PeterO {
         this.stream.Dispose();
       }
       this.isDisposed = true;
-      base.Dispose (disposing);
+      base.Dispose(disposing);
     }
   }
 }

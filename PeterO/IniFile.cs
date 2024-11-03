@@ -13,9 +13,13 @@ using System.Text;
 namespace PeterO {
   /// <summary>Not documented yet.</summary>
   public sealed class IniFile : IEnumerable<IniSection> {
+    public enum IniMergeBehavior {
+ Merge,
+ NoMerge, }
+
     private readonly List<IniSection> sections;
 
-    private bool StartsWith (string value, char prefix) {
+    private bool StartsWith(string value, char prefix) {
       return value.Length > 0 && value[0] == prefix;
     }
 
@@ -47,7 +51,7 @@ namespace PeterO {
     public override string ToString() {
       var builder = new StringBuilder();
       foreach (IniSection section in this.sections) {
-        builder.Append (section.ToString());
+        builder.Append(section.ToString());
       }
       return builder.ToString();
     }
@@ -57,12 +61,12 @@ namespace PeterO {
     /// StreamWriter object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='writer'/> is null.</exception>
-    public void WriteToStream (StreamWriter writer) {
+    public void WriteToStream(StreamWriter writer) {
       if (writer == null) {
         throw new ArgumentNullException(nameof(writer));
       }
       foreach (IniSection section in this.sections) {
-        writer.Write (section);
+        writer.Write(section);
       }
     }
 
@@ -71,12 +75,12 @@ namespace PeterO {
     /// string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='path'/> is null.</exception>
-    public void Save (string path) {
+    public void Save(string path) {
       if (path == null) {
         throw new ArgumentNullException(nameof(path));
       }
       using (var writer = new StreamWriter(path)) {
-        this.WriteToStream (writer);
+        this.WriteToStream(writer);
       }
     }
     // <remarks>Section names can be null (null refers to the
@@ -90,13 +94,13 @@ namespace PeterO {
     /// <returns>A text string.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='keyName'/> is null.</exception>
-    public string GetValue (string sectionName, string keyName) {
+    public string GetValue(string sectionName, string keyName) {
       if (keyName == null) {
         throw new ArgumentNullException(nameof(keyName));
       }
       foreach (IniSection section in this.sections) {
-        if (Object.Equals (section.Name, sectionName)) {
-          return section.GetValue (keyName);
+        if (Object.Equals(section.Name, sectionName)) {
+          return section.GetValue(keyName);
         }
       }
       // Value not found
@@ -112,22 +116,22 @@ namespace PeterO {
     /// text string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='keyName'/> or <paramref name='value'/> is null.</exception>
-    public void SetValue (string sectionName, string keyName, string value) {
+    public void SetValue(string sectionName, string keyName, string value) {
       if (keyName == null) {
         throw new ArgumentNullException(nameof(keyName));
       }
       if (value == null) {
         throw new ArgumentNullException(nameof(value));
       }
-      this.AddSection (sectionName).SetValue (keyName, value);
+      this.AddSection(sectionName).SetValue(keyName, value);
     }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='sectionName'>The parameter <paramref
     /// name='sectionName'/> is a text string.</param>
     /// <returns>An IniSection object.</returns>
-    public IniSection AddSection (string sectionName) {
-      return this.AddSection (sectionName, IniMergeBehavior.Merge);
+    public IniSection AddSection(string sectionName) {
+      return this.AddSection(sectionName, IniMergeBehavior.Merge);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -136,20 +140,20 @@ namespace PeterO {
     /// <param name='behavior'>The parameter <paramref name='behavior'/> is
     /// an IniMergeBehavior object.</param>
     /// <returns>An IniSection object.</returns>
-    public IniSection AddSection (string sectionName,
+    public IniSection AddSection(string sectionName,
       IniMergeBehavior behavior) {
       if (behavior == IniMergeBehavior.Merge) {
         foreach (IniSection section in this.sections) {
-          if (Object.Equals (section.Name, sectionName)) {
+          if (Object.Equals(section.Name, sectionName)) {
             return section;
           }
         }
       }
       var newSection = new IniSection(sectionName);
       if (newSection == null) {
-        this.sections.Insert (0, newSection);
+        this.sections.Insert(0, newSection);
       } else {
-        this.sections.Add (newSection);
+        this.sections.Add(newSection);
       }
       return newSection;
     }
@@ -157,10 +161,10 @@ namespace PeterO {
     /// <summary>Not documented yet.</summary>
     /// <param name='sectionName'>The parameter <paramref
     /// name='sectionName'/> is a text string.</param>
-    public void RemoveSection (string sectionName) {
+    public void RemoveSection(string sectionName) {
       for (int i = 0; i < this.sections.Count; ++i) {
-        if (Object.Equals (this.sections[i].Name, sectionName)) {
-          this.sections.RemoveAt (i);
+        if (Object.Equals(this.sections[i].Name, sectionName)) {
+          this.sections.RemoveAt(i);
           break;
         }
       }
@@ -170,9 +174,9 @@ namespace PeterO {
     /// <param name='sectionName'>The parameter <paramref
     /// name='sectionName'/> is a text string.</param>
     /// <returns>An IniSection object.</returns>
-    public IniSection GetSection (string sectionName) {
+    public IniSection GetSection(string sectionName) {
       foreach (IniSection section in this.sections) {
-        if (Object.Equals (section.Name, sectionName)) {
+        if (Object.Equals(section.Name, sectionName)) {
           return section;
         }
       }
@@ -183,7 +187,7 @@ namespace PeterO {
     /// <see cref='PeterO.IniFile'/> class.</summary>
     /// <param name='path'>The parameter <paramref name='path'/> is a text
     /// string.</param>
-    public IniFile (string path) : this (path, IniMergeBehavior.Merge) {
+    public IniFile(string path) : this(path, IniMergeBehavior.Merge) {
     }
 
     /// <summary>Initializes a new instance of the
@@ -194,35 +198,35 @@ namespace PeterO {
     /// an IniMergeBehavior object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='path'/> is null.</exception>
-    public IniFile (string path, IniMergeBehavior behavior) {
+    public IniFile(string path, IniMergeBehavior behavior) {
       if (path == null) {
         throw new ArgumentNullException(nameof(path));
       }
       // NOTE: Will merge sections with the same name into a single section
       this.sections = new List<IniSection>();
-      var currentSection = this.AddSection (null, behavior);
+      var currentSection = this.AddSection(null, behavior);
       using (var reader = new StreamReader(path)) {
         string line;
         while ((line = reader.ReadLine()) != null) {
-          if (this.StartsWith (line, ';') || this.StartsWith (line, '#')) {
+          if (this.StartsWith(line, ';') || this.StartsWith(line, '#')) {
             // Found a comment
-            currentSection.AddComment (line);
+            currentSection.AddComment(line);
             continue;
           }
-          if (this.StartsWith (line, '[')) {
-            var endBracket = line.LastIndexOf (']');
+          if (this.StartsWith(line, '[')) {
+            var endBracket = line.LastIndexOf(']');
             if (endBracket > 0) {
               // Found new section
-              var secName = line.Substring (1, endBracket - 1);
-              currentSection = this.AddSection (secName, behavior);
+              var secName = line.Substring(1, endBracket - 1);
+              currentSection = this.AddSection(secName, behavior);
             }
           }
-          var equalSign = line.IndexOf ('=');
+          var equalSign = line.IndexOf('=');
           if (equalSign > 0) {
             // Found an entry
-            var key = line.Substring (0, equalSign);
-            var value = line.Substring (equalSign + 1);
-            currentSection.AddEntry (key, value, behavior);
+            var key = line.Substring(0, equalSign);
+            var value = line.Substring(equalSign + 1);
+            currentSection.AddEntry(key, value, behavior);
           }
         }
       }

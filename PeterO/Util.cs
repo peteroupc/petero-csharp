@@ -23,7 +23,7 @@ namespace PeterO {
     public static Pair<TFirst, TSecond> MakePair<TFirst, TSecond>(
       TFirst f,
       TSecond s) {
-      return new Pair<TFirst, TSecond> (f, s);
+      return new Pair<TFirst, TSecond>(f, s);
     }
 
     /// <summary>Not documented yet.
@@ -43,21 +43,21 @@ namespace PeterO {
     /// a.Collections.Generic.IEnumerable{``0} object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A text string.</returns>
-    public static string ArrayToString<T> (this IEnumerable<T> array) {
+    public static string ArrayToString<T>(this IEnumerable<T> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append ("{");
+      b.Append("{");
       var first = true;
       foreach (T value in array) {
         if (!first) {
-          b.Append (", ");
+          b.Append(", ");
         }
-        b.Append (String.Empty + value);
+        b.Append(String.Empty + value);
         first = false;
       }
-      b.Append ("}");
+      b.Append("}");
       return b.ToString();
     }
 
@@ -79,17 +79,17 @@ namespace PeterO {
     /// <typeparam name='TValue'>The 2nd type parameter.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='dict'/> is null.</exception>
-    public static void AddOverwrite<TKey, TValue> (
+    public static void AddOverwrite<TKey, TValue>(
       this IDictionary<TKey, TValue> dict,
       TKey key,
       TValue value) {
       if (dict == null) {
         throw new ArgumentNullException(nameof(dict));
       }
-      if (dict.ContainsKey (key)) {
+      if (dict.ContainsKey(key)) {
         dict[key] = value;
       } else {
-        dict.Add (key, value);
+        dict.Add(key, value);
       }
     }
 
@@ -111,15 +111,15 @@ namespace PeterO {
     /// <typeparam name='TValue'>The 2nd type parameter.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='dict'/> is null.</exception>
-    public static void AddIfMissing<TKey, TValue> (
+    public static void AddIfMissing<TKey, TValue>(
       this IDictionary<TKey, TValue> dict,
       TKey key,
       TValue value) {
       if (dict == null) {
         throw new ArgumentNullException(nameof(dict));
       }
-      if (!dict.ContainsKey (key)) {
-        dict.Add (key, value);
+      if (!dict.ContainsKey(key)) {
+        dict.Add(key, value);
       }
     }
 
@@ -143,14 +143,14 @@ namespace PeterO {
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='dict'/> is null.</exception>
-    public static void AddIfMissing<T> (
+    public static void AddIfMissing<T>(
       this IList<T> dict,
       T value) {
       if (dict == null) {
         throw new ArgumentNullException(nameof(dict));
       }
-      if (!dict.Contains (value)) {
-        dict.Add (value);
+      if (!dict.Contains(value)) {
+        dict.Add(value);
       }
     }
 
@@ -174,15 +174,15 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='coll'/> is null.</exception>
-    public static T MaxOrDefault<T> (this IEnumerable<T> coll) where T :
+    public static T MaxOrDefault<T>(this IEnumerable<T> coll) where T :
       IComparable<T> {
       var i = 0;
       if (coll == null) {
         throw new ArgumentNullException(nameof(coll));
       }
-      var curr = default (T);
+      var curr = default(T);
       foreach (T value in coll) {
-        if (i == 0 || value.CompareTo (curr) > 0) {
+        if (i == 0 || value.CompareTo(curr) > 0) {
           curr = value;
         }
         i = 1;
@@ -209,15 +209,15 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='coll'/> is null.</exception>
-    public static T MinOrDefault<T> (this IEnumerable<T> coll) where T :
+    public static T MinOrDefault<T>(this IEnumerable<T> coll) where T :
       IComparable<T> {
       var i = 0;
       if (coll == null) {
         throw new ArgumentNullException(nameof(coll));
       }
-      var curr = default (T);
+      var curr = default(T);
       foreach (T value in coll) {
-        if (i == 0 || value.CompareTo (curr) < 0) {
+        if (i == 0 || value.CompareTo(curr) < 0) {
           curr = value;
         }
         i = 1;
@@ -242,12 +242,12 @@ namespace PeterO {
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='s'/> is null.</exception>
-    public static int StructureSize (this IStructure s) {
+    public static int StructureSize(this IStructure s) {
       if (s == null) {
         throw new ArgumentNullException(nameof(s));
       }
       using (var ms = new MemoryStream()) {
-        s.Write (ms);
+        s.Write(ms);
         return (int)ms.Position;
       }
     }
@@ -273,7 +273,7 @@ namespace PeterO {
     /// <returns>An IEnumerable(int) object.</returns>
     /// <exception cref='ArgumentException'>The parameter _minValue_ is
     /// greater than _maxValue_.</exception>
-    public static IEnumerable<int> UpToExcluding (this int minValue,
+    public static IEnumerable<int> UpToExcluding(this int minValue,
       int maxValue) {
       if (minValue > maxValue) {
         throw new ArgumentException("minValue (" + minValue +
@@ -302,7 +302,7 @@ namespace PeterO {
     /// <param name='maxValue'>The parameter <paramref name='maxValue'/> is
     /// a 32-bit signed integer.</param>
     /// <returns>An IEnumerable(int) object.</returns>
-    public static IEnumerable<int> UpToIncluding (this int minValue,
+    public static IEnumerable<int> UpToIncluding(this int minValue,
       int maxValue) {
       if (minValue > maxValue) {
         throw new ArgumentException("minValue (" + minValue +
@@ -335,7 +335,7 @@ namespace PeterO {
     /// <returns>A text string.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='col'/> or <paramref name='separator'/> is null.</exception>
-    public static string Implode<T> (this IEnumerable<T> col,
+    public static string Implode<T>(this IEnumerable<T> col,
       string separator) {
       if (col == null) {
         throw new ArgumentNullException(nameof(col));
@@ -347,11 +347,11 @@ namespace PeterO {
       var first = true;
       foreach (T i in col) {
         if (!first) {
-          sb.Append (separator);
+          sb.Append(separator);
         } else {
           first = false;
         }
-        sb.Append (i);
+        sb.Append(i);
       }
       return sb.ToString();
     }
@@ -377,12 +377,12 @@ namespace PeterO {
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static int IndexOf<T> (this IList<T> list, T obj) {
+    public static int IndexOf<T>(this IList<T> list, T obj) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
       for (int i = 0; i < list.Count; ++i) {
-        if (list[i].Equals (obj)) {
+        if (list[i].Equals(obj)) {
           return i;
         }
       }
@@ -410,7 +410,7 @@ namespace PeterO {
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> or <paramref name='match'/> is null.</exception>
-    public static int IndexOf<T> (this IList<T> list, Predicate<T> match) {
+    public static int IndexOf<T>(this IList<T> list, Predicate<T> match) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -418,7 +418,7 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(match));
       }
       for (int i = 0; i < list.Count; ++i) {
-        if (match (list[i])) {
+        if (match(list[i])) {
           return i;
         }
       }
@@ -446,7 +446,7 @@ namespace PeterO {
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> or <paramref name='match'/> is null.</exception>
-    public static int RemoveAll<T> (this IList<T> list, Predicate<T> match) {
+    public static int RemoveAll<T>(this IList<T> list, Predicate<T> match) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -455,11 +455,11 @@ namespace PeterO {
       }
       var concreteList = list as List<T>;
       if (concreteList != null) {
-        return concreteList.RemoveAll (match);
+        return concreteList.RemoveAll(match);
       }
       var offset = 0;
       for (int i = 0; i < list.Count; ++i) {
-        if (match (list[i])) {
+        if (match(list[i])) {
           ++offset;
         } else if (offset != 0) {
           list[i - offset] = list[i];
@@ -467,7 +467,7 @@ namespace PeterO {
       }
       var newCount = list.Count - offset;
       while (list.Count > newCount) {
-        list.RemoveAt (newCount);
+        list.RemoveAt(newCount);
       }
       return offset;
     }
@@ -491,24 +491,24 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='structure'/> is null.</exception>
-    public static T CopyStructure<T> (this T structure)
-    where T : IStructure, new () {
-      if ((object)structure == (object)default (T)) {
+    public static T CopyStructure<T>(this T structure)
+    where T : IStructure, new() {
+      if ((object)structure == (object)default(T)) {
         throw new ArgumentNullException(nameof(structure));
       }
       using (var ms = new MemoryStream()) {
-        structure.Write (ms);
+        structure.Write(ms);
         T retval;
         try {
           retval = new T();
           ms.Position = 0;
-          retval.Read (ms);
+          retval.Read(ms);
         } catch (NotSupportedException) {
           try {
             // Try to run the copy constructor
             // for immutable structures
             ms.Position = 0;
-            retval = (T)Activator.CreateInstance (typeof(T), ms);
+            retval = (T)Activator.CreateInstance(typeof(T), ms);
           } catch (MissingMethodException e2) {
             throw new NotSupportedException(String.Empty, e2);
           }
@@ -536,20 +536,20 @@ namespace PeterO {
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='col'/> is null.</exception>
-    public static bool AllSame<T> (
+    public static bool AllSame<T>(
       this IEnumerable<T> col) {
       if (col == null) {
         throw new ArgumentNullException(nameof(col));
       }
       var count = 0;
-      var firstItem = default (T);
+      var firstItem = default(T);
       foreach (T tc in col) {
         var i = tc;
         if (count == 0) {
           firstItem = i;
           ++count;
         } else {
-          if (!Object.Equals (i, firstItem)) {
+          if (!Object.Equals(i, firstItem)) {
             return false;
           }
         }
@@ -578,7 +578,7 @@ namespace PeterO {
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='containers'/> or <paramref name='func'/> is null.</exception>
-    public static bool AllSame<TContainer, TItem> (
+    public static bool AllSame<TContainer, TItem>(
       this IEnumerable<TContainer> containers,
       Func<TContainer, TItem> func) {
       if (containers == null) {
@@ -588,14 +588,14 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(func));
       }
       var count = 0;
-      var firstItem = default (TItem);
+      var firstItem = default(TItem);
       foreach (TContainer tc in containers) {
-        var i = func (tc);
+        var i = func(tc);
         if (count == 0) {
           firstItem = i;
           ++count;
         } else {
-          if (!Object.Equals (i, firstItem)) {
+          if (!Object.Equals(i, firstItem)) {
             return false;
           }
         }
@@ -619,11 +619,11 @@ namespace PeterO {
     /// <typeparam name='TInput'>The 1st type parameter.</typeparam>
     /// <typeparam name='TOutput'>The 2nd type parameter.</typeparam>
     /// <returns>The transform.</returns>
-    public static IEnumerable<TOutput> Transform<TInput, TOutput> (
+    public static IEnumerable<TOutput> Transform<TInput, TOutput>(
       this IEnumerable<TInput> containers,
       Func<TInput, TOutput> func) {
       foreach (TInput item in containers) {
-        yield return func (item);
+        yield return func(item);
       }
     }
 
@@ -641,12 +641,12 @@ namespace PeterO {
     /// a.Func{``0 object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int Sum<T> (
+    public static int Sum<T>(
       this IEnumerable<T> containers,
       Func<T, int> func) {
       var value = 0;
       foreach (var item in containers) {
-        value += func (item);
+        value += func(item);
       }
       return value;
     }
@@ -670,17 +670,17 @@ namespace PeterO {
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='col'/> is null.</exception>
-    public static bool HasUnique<T> (
+    public static bool HasUnique<T>(
       this IEnumerable<T> col) {
       if (col == null) {
         throw new ArgumentNullException(nameof(col));
       }
       var items = new List<T>();
       foreach (T tc in col) {
-        if (items.Contains (tc)) {
+        if (items.Contains(tc)) {
           return false;
         }
-        items.Add (tc);
+        items.Add(tc);
       }
       return true;
     }
@@ -706,7 +706,7 @@ namespace PeterO {
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='containers'/> or <paramref name='func'/> is null.</exception>
-    public static bool HasUnique<TContainer, TItem> (
+    public static bool HasUnique<TContainer, TItem>(
       this IEnumerable<TContainer> containers,
       Func<TContainer, TItem> func) {
       if (containers == null) {
@@ -717,11 +717,11 @@ namespace PeterO {
       }
       var items = new List<TItem>();
       foreach (TContainer tc in containers) {
-        var i = func (tc);
-        if (items.Contains (i)) {
+        var i = func(tc);
+        if (items.Contains(i)) {
           return false;
         }
-        items.Add (i);
+        items.Add(i);
       }
       return true;
     }
@@ -734,7 +734,7 @@ namespace PeterO {
 
     /// <summary>An IDisposable object that does nothing when
     /// disposed.</summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage ("Usage",
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage",
         "CC0033:Dispose Fields Properly",
         Justification = "This object's dispose method does nothing.")]
     public static readonly IDisposable NullDisposable = new
@@ -761,7 +761,7 @@ namespace PeterO {
     /// <returns>A ListSegment(T) object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static ListSegment<T> GetSegment<T> (this IList<T> list, int start) {
+    public static ListSegment<T> GetSegment<T>(this IList<T> list, int start) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -791,7 +791,7 @@ namespace PeterO {
     /// <returns>A ListSegment(T) object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static ListSegment<T> GetSegment<T> (
+    public static ListSegment<T> GetSegment<T>(
       this IList<T> list,
       int start,
       int count) {
@@ -816,7 +816,7 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static T ValueOrDefault<T> (this IList<T> list, int index) {
+    public static T ValueOrDefault<T>(this IList<T> list, int index) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -824,7 +824,7 @@ namespace PeterO {
         throw new ArgumentException("index (" + index +
           ") is less than 0");
       }
-      return (index >= list.Count) ? default (T) : list[index];
+      return (index >= list.Count) ? default(T) : list[index];
     }
 
     /// <summary>Not documented yet.
@@ -850,7 +850,7 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static T SetIfMissing<T> (this IList<T> list, int index, T value) {
+    public static T SetIfMissing<T>(this IList<T> list, int index, T value) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -861,11 +861,11 @@ namespace PeterO {
             System.Globalization.CultureInfo.InvariantCulture) + ")");
       }
       if (index >= list.Count) {
-        list.SetValue (index, value);
+        list.SetValue(index, value);
         return value;
       } else {
         var v = list[index];
-        if (Object.Equals (v, default (T))) {
+        if (Object.Equals(v, default(T))) {
           list[index] = value;
           return value;
         }
@@ -888,8 +888,8 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static T SetNewIfMissing<T> (this IList<T> list, int index) where T :
-      new () {
+    public static T SetNewIfMissing<T>(this IList<T> list, int index) where T :
+      new() {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -901,11 +901,11 @@ namespace PeterO {
       }
       if (index >= list.Count) {
         var value = new T();
-        list.SetValue (index, value);
+        list.SetValue(index, value);
         return value;
       } else {
         var v = list[index];
-        if (Object.Equals (v, default (T))) {
+        if (Object.Equals(v, default(T))) {
           var value = new T();
           list[index] = value;
           return value;
@@ -937,7 +937,7 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static T SetIfMissing<T> (
+    public static T SetIfMissing<T>(
       this IList<T> list,
       int index,
       Func<T> valuefunc) {
@@ -952,11 +952,11 @@ namespace PeterO {
       }
       if (index >= list.Count) {
         var value = valuefunc();
-        list.SetValue (index, value);
+        list.SetValue(index, value);
         return value;
       } else {
         var v = list[index];
-        if (Object.Equals (v, default (T))) {
+        if (Object.Equals(v, default(T))) {
           var value = valuefunc();
           list[index] = value;
           return value;
@@ -987,7 +987,7 @@ namespace PeterO {
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static void SetValue<T> (this IList<T> list, int index, T value) {
+    public static void SetValue<T>(this IList<T> list, int index, T value) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -998,7 +998,7 @@ namespace PeterO {
             System.Globalization.CultureInfo.InvariantCulture) + ")");
       }
       while (index >= list.Count) {
-        list.Add (default (T));
+        list.Add(default(T));
       }
       list[index] = value;
     }
@@ -1019,7 +1019,9 @@ namespace PeterO {
     /// Stream object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='input'/> or <paramref name='output'/> is null.</exception>
-    public static void CopyStream (this Stream input, int length,
+    public static void CopyStream(
+      this Stream input,
+      int length,
       Stream output) {
       if (input == null) {
         throw new ArgumentNullException(nameof(input));
@@ -1034,19 +1036,19 @@ namespace PeterO {
       var buffer = new byte[32768];
       var totalLength = length;
       while (totalLength > 0 && length > 0) {
-        var readLength = Math.Min (buffer.Length, totalLength);
+        var readLength = Math.Min(buffer.Length, totalLength);
         if (input.CanSeek) {
-          readLength = (int)Math.Min (input.Length - input.Position,
+          readLength = (int)Math.Min(input.Length - input.Position,
   readLength);
         }
         if (readLength <= 0) {
           return;
         }
-        var read = input.Read (buffer, 0, readLength);
+        var read = input.Read(buffer, 0, readLength);
         if (read <= 0) {
           return;
         }
-        output.Write (buffer, 0, read);
+        output.Write(buffer, 0, read);
         totalLength -= readLength;
       }
     }
@@ -1064,7 +1066,7 @@ namespace PeterO {
     /// Stream object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='input'/> or <paramref name='output'/> is null.</exception>
-    public static void CopyStream (this Stream input, Stream output) {
+    public static void CopyStream(this Stream input, Stream output) {
       if (input == null) {
         throw new ArgumentNullException(nameof(input));
       }
@@ -1075,17 +1077,17 @@ namespace PeterO {
       while (true) {
         var readLength = buffer.Length;
         if (input.CanSeek) {
-          readLength = (int)Math.Min (input.Length - input.Position,
+          readLength = (int)Math.Min(input.Length - input.Position,
   readLength);
         }
         if (readLength <= 0) {
           return;
         }
-        var read = input.Read (buffer, 0, readLength);
+        var read = input.Read(buffer, 0, readLength);
         if (read <= 0) {
           return;
         }
-        output.Write (buffer, 0, read);
+        output.Write(buffer, 0, read);
       }
     }
 
@@ -1096,14 +1098,14 @@ namespace PeterO {
     /// enumerated.</typeparam>
     /// <returns>When enumerated, outputs the item and its index (starting
     /// at 0), in that order.</returns>
-    public static IEnumerable<Pair<T, int>> EachWithIndex<T> (
+    public static IEnumerable<Pair<T, int>> EachWithIndex<T>(
       this IEnumerable<T> arr) {
       if (arr == null) {
         throw new ArgumentNullException(nameof(arr));
       }
       var i = 0;
       foreach (T o in arr) {
-        yield return new Pair<T, int> (o, i);
+        yield return new Pair<T, int>(o, i);
         ++i;
       }
     }

@@ -17,7 +17,7 @@ namespace PeterO {
     /// signed integer.</param>
     /// <param name='filter'>The parameter <paramref name='filter'/> is a
     /// byte (from 0 to 255).</param>
-    public void SetFilter (int y, byte filter) {
+    public void SetFilter(int y, byte filter) {
       if (y < 0) {
         throw new ArgumentException("y (" + y + ") is less than 0");
       }
@@ -32,7 +32,7 @@ namespace PeterO {
     /// <param name='y'>The parameter <paramref name='y'/> is a 32-bit
     /// signed integer.</param>
     /// <returns>A byte (from 0 to 255).</returns>
-    public byte GetFilter (int y) {
+    public byte GetFilter(int y) {
       if (y < 0) {
         throw new ArgumentException("y (" + y + ") is less than 0");
       }
@@ -50,7 +50,7 @@ namespace PeterO {
     /// signed integer.</param>
     /// <param name='pixel'>The parameter <paramref name='pixel'/> is a
     /// 32-bit signed integer.</param>
-    public void SetPixel (int x, int y, int pixel) {
+    public void SetPixel(int x, int y, int pixel) {
       if (x < 0) {
         throw new ArgumentException("x (" + x + ") is less than 0");
       }
@@ -75,7 +75,7 @@ namespace PeterO {
     /// <param name='y'>The parameter <paramref name='y'/> is a 32-bit
     /// signed integer.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public int GetPixel (int x, int y) {
+    public int GetPixel(int x, int y) {
       if (x < 0) {
         throw new ArgumentException("x (" + x + ") is less than 0");
       }
@@ -98,7 +98,7 @@ namespace PeterO {
     /// <param name='index'>The parameter <paramref name='index'/> is a
     /// 32-bit signed integer.</param>
     /// <returns>A byte array.</returns>
-    public byte[] GetColor (int index) {
+    public byte[] GetColor(int index) {
       if (index < 0) {
         throw new ArgumentException("index (" + index +
           ") is less than 0");
@@ -108,8 +108,8 @@ namespace PeterO {
       }
       return new byte[] {
         this.colors[index * 3],
-        this.colors[ (index * 3) + 1],
-        this.colors[ (index * 3) + 2], 255
+        this.colors[(index * 3) + 1],
+        this.colors[(index * 3) + 2], 255,
       };
     }
 
@@ -122,7 +122,7 @@ namespace PeterO {
     /// name='color'/> is null.</exception>
     /// <exception cref='ArgumentException'>The parameter <paramref
     /// name='color'/> must have length 3 or more.</exception>
-    public void SetColor (int index, byte[] color) {
+    public void SetColor(int index, byte[] color) {
       if (index < 0) {
         throw new ArgumentException("index (" + index +
           ") is less than 0");
@@ -137,16 +137,16 @@ namespace PeterO {
         throw new ArgumentException("'color' must have length 3 or more.");
       }
       this.colors[index * 3] = color[0];
-      this.colors[ (index * 3) + 1] = color[1];
-      this.colors[ (index * 3) + 2] = color[2];
+      this.colors[(index * 3) + 1] = color[1];
+      this.colors[(index * 3) + 2] = color[2];
     }
 
-    private byte[] GetBE (int crc) {
+    private byte[] GetBE(int crc) {
       return new[] {
         (byte)((crc >> 24) & 255),
         (byte)((crc >> 16) & 255),
         (byte)((crc >> 8) & 255),
-        (byte)((crc >> 0) & 255)
+        (byte)((crc >> 0) & 255),
       };
     }
 
@@ -155,7 +155,7 @@ namespace PeterO {
     /// a text string.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='filename'/> is null.</exception>
-    public void Save (string filename) {
+    public void Save(string filename) {
       if (filename == null) {
         throw new ArgumentNullException(nameof(filename));
       }
@@ -163,54 +163,54 @@ namespace PeterO {
         throw new ArgumentException("filename" + " is empty.");
       }
       using (var fs = new FileStream(filename, FileMode.Create)) {
-        fs.Write (this.subdata1, 0, this.subdata1.Length);
-        var crc32 = Png.Crc32 (this.subdata1, 12, 17, 0);
+        fs.Write(this.subdata1, 0, this.subdata1.Length);
+        var crc32 = Png.Crc32(this.subdata1, 12, 17, 0);
         byte[] deflated = null;
-        fs.Write (this.GetBE (crc32), 0, 4);
+        fs.Write(this.GetBE(crc32), 0, 4);
         // Write the color data
-        fs.Write (this.GetBE ((int)this.colors.Length), 0, 4);
-        fs.Write (new byte[] { 0x50, 0x4c, 0x54, 0x45 }, 0, 4);
-        crc32 = Png.Crc32 (new byte[] { 0x50, 0x4c, 0x54, 0x45 }, 0, 4, 0);
-        crc32 = Png.Crc32 (this.colors, 0, this.colors.Length, crc32);
-        fs.Write (this.colors, 0, this.colors.Length);
-        fs.Write (this.GetBE (crc32), 0, 4);
+        fs.Write(this.GetBE((int)this.colors.Length), 0, 4);
+        fs.Write(new byte[] { 0x50, 0x4c, 0x54, 0x45 }, 0, 4);
+        crc32 = Png.Crc32(new byte[] { 0x50, 0x4c, 0x54, 0x45 }, 0, 4, 0);
+        crc32 = Png.Crc32(this.colors, 0, this.colors.Length, crc32);
+        fs.Write(this.colors, 0, this.colors.Length);
+        fs.Write(this.GetBE(crc32), 0, 4);
         // Write the transparent color
         if (this.transparent >= 0 && this.transparent < 256) {
-          fs.Write (this.GetBE (1), 0, 4);
-          fs.Write (new byte[] { 0x74, 0x52, 0x4e, 0x53 }, 0, 4);
-          crc32 = Png.Crc32 (new byte[] { 0x74, 0x52, 0x4e, 0x53 }, 0, 4, 0);
-          crc32 = Png.Crc32 (new[] { (byte)this.transparent }, 0, 1, crc32);
-          fs.Write (new[] { (byte)this.transparent }, 0, 1);
-          fs.Write (this.GetBE (crc32), 0, 4);
+          fs.Write(this.GetBE(1), 0, 4);
+          fs.Write(new byte[] { 0x74, 0x52, 0x4e, 0x53 }, 0, 4);
+          crc32 = Png.Crc32(new byte[] { 0x74, 0x52, 0x4e, 0x53 }, 0, 4, 0);
+          crc32 = Png.Crc32(new[] { (byte)this.transparent }, 0, 1, crc32);
+          fs.Write(new[] { (byte)this.transparent }, 0, 1);
+          fs.Write(this.GetBE(crc32), 0, 4);
         }
         // Write the image data
         using (var ms = new MemoryStream()) {
           // PNG compression uses a ZLIB stream not a DEFLATE stream
-          ms.WriteByte (0x78);
-          ms.WriteByte (0x9c);
+          ms.WriteByte(0x78);
+          ms.WriteByte(0x9c);
           using (
             var ds = new DeflateStream(
               ms,
               CompressionMode.Compress,
               true)) {
-            ds.Write (this.data, 0, this.data.Length);
+            ds.Write(this.data, 0, this.data.Length);
           }
-          ms.Write (Png.Adler32 (this.data, 0, this.data.Length), 0, 4);
+          ms.Write(Png.Adler32(this.data, 0, this.data.Length), 0, 4);
           deflated = ms.ToArray();
         }
         var defLength = new[] {
           (byte)((deflated.Length >> 24) & 255),
           (byte)((deflated.Length >> 16) & 255),
           (byte)((deflated.Length >> 8) & 255),
-          (byte)((deflated.Length >> 0) & 255)
+          (byte)((deflated.Length >> 0) & 255),
         };
-        fs.Write (defLength, 0, defLength.Length);
-        fs.Write (new byte[] { 0x49, 0x44, 0x41, 0x54 }, 0, 4);
-        fs.Write (deflated, 0, deflated.Length);
-        var crc = Png.Crc32 (deflated, 0, deflated.Length, this.idatCrc);
-        var subdcrc = this.GetBE (crc);
-        fs.Write (subdcrc, 0, subdcrc.Length);
-        fs.Write (this.subdata2, 0, this.subdata2.Length);
+        fs.Write(defLength, 0, defLength.Length);
+        fs.Write(new byte[] { 0x49, 0x44, 0x41, 0x54 }, 0, 4);
+        fs.Write(deflated, 0, deflated.Length);
+        var crc = Png.Crc32(deflated, 0, deflated.Length, this.idatCrc);
+        var subdcrc = this.GetBE(crc);
+        fs.Write(subdcrc, 0, subdcrc.Length);
+        fs.Write(this.subdata2, 0, this.subdata2.Length);
       }
     }
 
@@ -240,7 +240,7 @@ namespace PeterO {
     private readonly byte[] colors;
     private readonly byte[] imageData;
     private readonly int idatCrc;
-    [System.Diagnostics.CodeAnalysis.SuppressMessage ("Usage",
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage",
         "CC0052:Make field readonly",
         Justification = "False positive")]
     private int transparent;
@@ -266,7 +266,7 @@ namespace PeterO {
     /// 32-bit signed integer.</param>
     /// <param name='height'>The parameter <paramref name='height'/> is a
     /// 32-bit signed integer.</param>
-    public Png8BitIndexed (int width, int height) {
+    public Png8BitIndexed(int width, int height) {
       if (width < 1) {
         throw new ArgumentException("width (" + width +
           ") is less than 1");
@@ -292,7 +292,7 @@ namespace PeterO {
         0x49, 0x48, 0x44, 0x52,
         0, 0, (byte)(width >> 8), (byte)(width & 255),
         0, 0, (byte)(height >> 8), (byte)(height & 255),
-        8, 3, 0, 0, 0
+        8, 3, 0, 0, 0,
       };
       this.width = width;
       this.height = height;
@@ -308,7 +308,7 @@ namespace PeterO {
       this.subdata2 = new byte[] {
         0, 0, 0, 0, 0x49, 0x45, 0x4e, 0x44, 0xae,
         0x42,
-        0x60, 0x82
+        0x60, 0x82,
       };
     }
   }

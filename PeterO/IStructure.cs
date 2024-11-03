@@ -14,11 +14,11 @@ namespace PeterO {
     /// <summary>Not documented yet.</summary>
     /// <param name='stream'>The parameter <paramref name='stream'/> is
     /// a.IO.Stream object.</param>
-    void Read (Stream stream);
+    void Read(Stream stream);
 
     /// <summary>Not documented yet.</summary>
     /// <param name='stream'>The parameter <paramref name='stream'/> is
     /// a.IO.Stream object.</param>
-    void Write (Stream stream);
+    void Write(Stream stream);
   }
 }

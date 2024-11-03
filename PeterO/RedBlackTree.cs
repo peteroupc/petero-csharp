@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace PeterO {
   // <summary>Red-black tree, modified by Peter O. from public-domain
   // Java code originally written by Doug Lea.</summary>
-  // <typeparam name='T'>Type of each element in the tree.</typeparam>
+  // <typeparam name='T'>Type of each Element in the tree.</typeparam>
   internal sealed class RedBlackTree<T> : ICollection<T> {
     // <summary>The comparator to use for ordering.</summary>
     private readonly IComparer<T> cmpValue;
@@ -18,20 +18,20 @@ namespace PeterO {
     private int countValue;
     // instance variables
 
-    // <summary>The root of the tree. Null if empty.</summary>
+    // <summary>The Root of the tree. Null if empty.</summary>
     private RBCell treeValue;
 
     // <summary>Initializes a new instance of the RedBlackTree class. Make
     // an empty tree. Initialize to use DefaultIComparer for
     // ordering.</summary>
-    public RedBlackTree() : this (null, null, 0) {
+    public RedBlackTree() : this(null, null, 0) {
     }
 
     // <summary>Initializes a new instance of the RedBlackTree class. Make
-    // an empty tree, using the supplied element comparator for
+    // an empty tree, using the supplied Element comparator for
     // ordering.</summary>
     // <param name='c'>An IComparer object.</param>
-    public RedBlackTree (IComparer<T> c) : this (c, null, 0) {
+    public RedBlackTree(IComparer<T> c) : this(c, null, 0) {
     }
 
     // <summary>Initializes a new instance of the RedBlackTree class.
@@ -39,22 +39,22 @@ namespace PeterO {
     // <param name='cmp'>An IComparer object.</param>
     // <param name='t'>A RBCell object.</param>
     // <param name='n'>A 32-bit signed integer.</param>
-    private RedBlackTree (IComparer<T> cmp, RBCell t, int n) {
+    private RedBlackTree(IComparer<T> cmp, RBCell t, int n) {
       this.countValue = n;
       this.treeValue = t;
       this.cmpValue = cmp ?? Comparer<T>.Default;
     }
 
     private enum OccurrenceMode {
-      // <summary>Always add the element even if it exists.</summary>
+      // <summary>Always add the Element even if it exists.</summary>
       AlwaysAdd,
 
-      // <summary>Add the element only if it exists.</summary>
+      // <summary>Add the Element only if it exists.</summary>
       AddIfMissing,
 
-      // <summary>Add the element and remove the existing element if
+      // <summary>Add the Element and remove the existing Element if
       // any.</summary>
-      OverwriteIfExisting
+      OverwriteIfExisting,
     }
 
     public int Count {
@@ -72,16 +72,16 @@ namespace PeterO {
       }
     }
 
-    public void Add (T element) {
-      this.addInternal (element, OccurrenceMode.AlwaysAdd);
+    public void Add(T Element) {
+      this.AddInternal(Element, OccurrenceMode.AlwaysAdd);
     }
 
-    public bool AddIfMissing (T element) {
-      return this.addInternal (element, OccurrenceMode.AddIfMissing);
+    public bool AddIfMissing(T Element) {
+      return this.AddInternal(Element, OccurrenceMode.AddIfMissing);
     }
 
-    public bool AddOverwrite (T element) {
-      return this.addInternal (element, OccurrenceMode.OverwriteIfExisting);
+    public bool AddOverwrite(T Element) {
+      return this.AddInternal(Element, OccurrenceMode.OverwriteIfExisting);
     }
 
     // <summary>Implements collections.UpdatableCollection.clear. Time
@@ -94,20 +94,20 @@ namespace PeterO {
 
     // <summary>Implements collections.Collection.includes. Time
     // complexity: O(log n).</summary>
-    // <param name='element'></param>
+    // <param name='Element'></param>
     // <returns>A Boolean object.</returns>
-    public bool Contains (T element) {
+    public bool Contains(T Element) {
       return (
           this.countValue != 0) && (
-          this.treeValue.find(
-            element,
+          this.treeValue.Find(
+            Element,
             this.cmpValue) != null);
     }
 
     // <summary>Copies this object's data to a new array.</summary>
     // <param name='array'>A T[] object.</param>
     // <param name='arrayIndex'>Starting index to copy to.</param>
-    public void CopyTo (T[] array, int arrayIndex) {
+    public void CopyTo(T[] array, int arrayIndex) {
       if (array == null) {
         throw new ArgumentNullException(nameof(array));
       }
@@ -116,29 +116,29 @@ namespace PeterO {
           ") is less than 0");
       }
       if (this.treeValue != null) {
-        RBCell t = this.treeValue.leftmost();
+        RBCell t = this.treeValue.Leftmost();
         while (t != null && arrayIndex < array.Length) {
-          T v = t.element();
+          T v = t.Element();
           if (arrayIndex >= 0 && arrayIndex < array.Length) {
             array[arrayIndex] = v;
           }
           ++arrayIndex;
-          t = t.successor();
+          t = t.Successor();
         }
       }
     }
 
-    public bool Find (T element, out T outval) {
+    public bool Find(T Element, out T outval) {
       if (this.countValue == 0) {
-        outval = default (T);
+        outval = default(T);
         return false;
       }
-      RBCell cell = this.treeValue.find (element, this.cmpValue);
+      RBCell cell = this.treeValue.Find(Element, this.cmpValue);
       if (cell == null) {
-        outval = default (T);
+        outval = default(T);
         return false;
       }
-      outval = cell.element();
+      outval = cell.Element();
       return true;
     }
 
@@ -146,70 +146,70 @@ namespace PeterO {
       return this.Iterator().GetEnumerator();
     }
 
-    public int OccurrencesOf (T element) {
+    public int OccurrencesOf(T Element) {
       return (
-          this.countValue == 0) ? 0 : this.treeValue.count(
-          element,
+          this.countValue == 0) ? 0 : this.treeValue.Count(
+          Element,
           this.cmpValue);
     }
 
     // <summary>Implements collections.UpdatableCollection.take. Time
-    // complexity: O(log n). Takes the least element. @see
+    // complexity: O(log n). Takes the least Element. @see
     // collections.UpdatableCollection#take.</summary>
     // <returns>A T object.</returns>
     public T Pop() {
       if (this.countValue != 0) {
-        RBCell p = this.treeValue.leftmost();
-        T v = p.element();
-        this.treeValue = p.delete (this.treeValue);
-        this.decCount();
+        RBCell p = this.treeValue.Leftmost();
+        T v = p.Element();
+        this.treeValue = p.Delete(this.treeValue);
+        this.DecCount();
         return v;
       }
-      return default (T);
+      return default(T);
     }
 
-    public bool Remove (T element) {
-      return this.remove_ (element, false);
+    public bool Remove(T Element) {
+      return this.Remove_(Element, false);
     }
 
-    public void RemoveAll (T element) {
-      this.remove_ (element, true);
+    public void RemoveAll(T Element) {
+      this.Remove_(Element, true);
     }
     // helper methods
-    private bool addInternal (T element, OccurrenceMode checkOccurrence) {
+    private bool AddInternal(T Element, OccurrenceMode checkOccurrence) {
       if (this.treeValue == null) {
-        this.treeValue = new RBCell(element);
-        this.incCount();
+        this.treeValue = new RBCell(Element);
+        this.IncCount();
       } else {
         RBCell t = this.treeValue;
-        for (;;) {
-          int diff = this.cmpValue.Compare (element, t.element());
+        for (; ;) {
+          int diff = this.cmpValue.Compare(Element, t.Element());
           if (diff == 0 && checkOccurrence == OccurrenceMode.AddIfMissing) {
             return false;
           }
           if (diff == 0 && checkOccurrence ==
 OccurrenceMode.OverwriteIfExisting) {
-            t.element (element);
+            t.Element(Element);
             return false;
           }
           if (diff <= 0) {
-            if (t.left() != null) {
-              t = t.left();
+            if (t.Left() != null) {
+              t = t.Left();
             } else {
-              this.treeValue = t.insertLeft(
-                  new RBCell(element),
+              this.treeValue = t.InsertLeft(
+                  new RBCell(Element),
                   this.treeValue);
-              this.incCount();
+              this.IncCount();
               return true;
             }
           } else {
-            if (t.right() != null) {
-              t = t.right();
+            if (t.Right() != null) {
+              t = t.Right();
             } else {
-              this.treeValue = t.insertRight(
-                  new RBCell(element),
+              this.treeValue = t.InsertRight(
+                  new RBCell(Element),
                   this.treeValue);
-              this.incCount();
+              this.IncCount();
               return true;
             }
           }
@@ -218,7 +218,7 @@ OccurrenceMode.OverwriteIfExisting) {
       return true;
     }
 
-    private void decCount() {
+    private void DecCount() {
       --this.countValue;
     }
 
@@ -227,28 +227,28 @@ System.Collections.IEnumerable.GetEnumerator() {
       return this.Iterator().GetEnumerator();
     }
 
-    private void incCount() {
+    private void IncCount() {
       ++this.countValue;
     }
 
     private IEnumerable<T> Iterator() {
       if (this.treeValue != null) {
-        RBCell t = this.treeValue.leftmost();
+        RBCell t = this.treeValue.Leftmost();
         while (t != null) {
-          T v = t.element();
+          T v = t.Element();
           yield return v;
-          t = t.successor();
+          t = t.Successor();
         }
       }
     }
 
-    private bool remove_ (T element, bool allOccurrences) {
+    private bool Remove_(T Element, bool allOccurrences) {
       var ret = false;
       while (this.countValue > 0) {
-        RBCell p = this.treeValue.find (element, this.cmpValue);
+        RBCell p = this.treeValue.Find(Element, this.cmpValue);
         if (p != null) {
-          this.treeValue = p.delete (this.treeValue);
-          this.decCount();
+          this.treeValue = p.Delete(this.treeValue);
+          this.DecCount();
           ret = true;
           if (!allOccurrences) {
             return ret;
@@ -264,70 +264,70 @@ System.Collections.IEnumerable.GetEnumerator() {
       private const bool RED = false;
       private const bool BLACK = true;
 
-      // <summary>The element held in the node.</summary>
+      // <summary>The Element held in the node.</summary>
       private T elementValue;
 
       // <summary>The node color (RED, BLACK).</summary>
       private bool colorValue = BLACK;
 
-      // <summary>Pointer to left child.</summary>
+      // <summary>Pointer to Left child.</summary>
       private RBCell leftValue;
 
-      // <summary>Pointer to right child.</summary>
+      // <summary>Pointer to Right child.</summary>
       private RBCell rightValue;
 
-      // <summary>Pointer to parent (null if root).</summary>
+      // <summary>Pointer to Parent (null if Root).</summary>
       private RBCell parentValue;
 
       // <summary>Initializes a new instance of the RBCell class. Make a new
-      // cell with given element, null links, and BLACK color. Normally only
-      // called to establish a new root.</summary>
-      // <param name='element'>A T object.</param>
-      public RBCell (T element) {
-        this.elementValue = element;
+      // cell with given Element, null links, and BLACK color. Normally only
+      // called to establish a new Root.</summary>
+      // <param name='Element'>A T object.</param>
+      public RBCell(T Element) {
+        this.elementValue = Element;
       }
 
-      // <summary>Return the element value.</summary>
+      // <summary>Return the Element value.</summary>
       // <returns>A T object.</returns>
-      public T element() {
+      public T Element() {
         return this.elementValue;
       }
 
-      // <summary>Set the element value.</summary>
+      // <summary>Set the Element value.</summary>
       // <param name='v'></param>
-      public void element (T v) {
+      public void Element(T v) {
         this.elementValue = v;
       }
 
-      // <summary>Return left child (or null).</summary>
+      // <summary>Return Left child (or null).</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell left() {
+      public RBCell Left() {
         return this.leftValue;
       }
 
-      // <summary>Return right child (or null).</summary>
+      // <summary>Return Right child (or null).</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell right() {
+      public RBCell Right() {
         return this.rightValue;
       }
 
-      // <summary>Return parent (or null).</summary>
+      // <summary>Return Parent (or null).</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell parent() {
+      public RBCell Parent() {
         return this.parentValue;
       }
 
       // <summary>Return color of node p, or BLACK if p is null.</summary>
       // <param name='p'></param>
       // <returns>A Boolean object.</returns>
-      private static bool colorOf (RBCell p) {
+      private static bool ColorOf(RBCell p) {
         return (p == null) ? BLACK : p.colorValue;
       }
 
-      // <summary>Return parent of node p, or null if p is null.</summary>
+      // <summary>Return Parent of node p, or null if p is null.</summary>
       // <param name='p'></param>
       // <returns>A RBCell object.</returns>
-      private static RBCell parentOf (RBCell p) {
+      private static RBCell ParentOf(RBCell p) {
         return (p == null) ? null : p.parentValue;
       }
 
@@ -335,76 +335,76 @@ System.Collections.IEnumerable.GetEnumerator() {
       // null.</summary>
       // <param name='p'></param>
       // <param name='c'>A Boolean object.</param>
-      private static void setColor (RBCell p, bool c) {
+      private static void SetColor(RBCell p, bool c) {
         if (p != null) {
           p.colorValue = c;
         }
       }
 
-      // <summary>Return left child of node p, or null if p is
+      // <summary>Return Left child of node p, or null if p is
       // null.</summary>
       // <param name='p'></param>
       // <returns>A RBCell object.</returns>
-      private static RBCell leftOf (RBCell p) {
+      private static RBCell LeftOf(RBCell p) {
         return (p == null) ? null : p.leftValue;
       }
 
-      // <summary>Return right child of node p, or null if p is
+      // <summary>Return Right child of node p, or null if p is
       // null.</summary>
       // <param name='p'></param>
       // <returns>A RBCell object.</returns>
-      private static RBCell rightOf (RBCell p) {
+      private static RBCell RightOf(RBCell p) {
         return (p == null) ? null : p.rightValue;
       }
 
       // <summary>Copy all content fields from another node.</summary>
       // <param name='t'></param>
-      private void copyContents (RBCell t) {
+      private void CopyContents(RBCell t) {
         this.elementValue = t.elementValue;
       }
 
-      // <summary>Return the minimum element of the current
+      // <summary>Return the minimum Element of the current
       // (sub)tree.</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell leftmost() {
+      public RBCell Leftmost() {
         RBCell p = this;
         for (; p.leftValue != null; p = p.leftValue) {
         }
         return p;
       }
 
-      // <summary>Return the maximum element of the current
+      // <summary>Return the maximum Element of the current
       // (sub)tree.</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell rightmost() {
+      public RBCell Rightmost() {
         RBCell p = this;
         for (; p.rightValue != null; p = p.rightValue) {
         }
         return p;
       }
 
-      // <summary>Return the root (parentless node) of the tree.</summary>
+      // <summary>Return the Root (parentless node) of the tree.</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell root() {
+      public RBCell Root() {
         RBCell p = this;
         for (; p.parentValue != null; p = p.parentValue) {
         }
         return p;
       }
 
-      // <summary>Return true if node is a root (i.e., has a null
-      // parent).</summary>
+      // <summary>Return true if node is a Root (i.e., has a null
+      // Parent).</summary>
       // <returns>A Boolean object.</returns>
-      public bool isRoot() {
+      public bool IsRoot() {
         return this.parentValue == null;
       }
 
-      // <summary>Return the in-order successor, or null if no
+      // <summary>Return the in-order Successor, or null if no
       // such.</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell successor() {
+      public RBCell Successor() {
         if (this.rightValue != null) {
-          return this.rightValue.leftmost();
+          return this.rightValue.Leftmost();
         } else {
           RBCell p = this.parentValue;
           RBCell ch = this;
@@ -418,12 +418,12 @@ System.Collections.IEnumerable.GetEnumerator() {
         }
       }
 
-      // <summary>Return the in-order predecessor, or null if no
+      // <summary>Return the in-order Predecessor, or null if no
       // such.</summary>
       // <returns>A RBCell object.</returns>
-      public RBCell predecessor() {
+      public RBCell Predecessor() {
         if (this.leftValue != null) {
-          return this.leftValue.rightmost();
+          return this.leftValue.Rightmost();
         } else {
           RBCell p = this.parentValue;
           RBCell ch = this;
@@ -439,27 +439,27 @@ System.Collections.IEnumerable.GetEnumerator() {
 
       // <summary>Return the number of nodes in the sub-tree.</summary>
       // <returns>A 32-bit signed integer.</returns>
-      public int size() {
+      public int Size() {
         var c = 1;
         if (this.leftValue != null) {
-          c += this.leftValue.size();
+          c += this.leftValue.Size();
         }
         if (this.rightValue != null) {
-          c += this.rightValue.size();
+          c += this.rightValue.Size();
         }
         return c;
       }
 
-      // <summary>Return node of current sub-tree containing element as
-      // element(), if it exists, else null. Uses IComparer <paramref
-      // name='cmp '/> to find and to check equality.</summary>
-      // <param name='element'></param>
+      // <summary>Return node of current sub-tree containing Element as
+      // Element(), if it exists, else null. Uses IComparer <paramref
+      // name='cmp '/> to Find and to check equality.</summary>
+      // <param name='Element'></param>
       // <param name='cmp'>An IComparer object.</param>
       // <returns>A RBCell object.</returns>
-      public RBCell find (T element, IComparer<T> cmp) {
+      public RBCell Find(T Element, IComparer<T> cmp) {
         RBCell t = this;
-        for (;;) {
-          int diff = cmp.Compare (element, t.element());
+        for (; ;) {
+          int diff = cmp.Compare(Element, t.Element());
           if (diff == 0) {
             return t;
           }
@@ -471,16 +471,16 @@ System.Collections.IEnumerable.GetEnumerator() {
       }
 
       // <summary>Return number of nodes of current sub-tree containing
-      // element. Uses IComparer <paramref name='cmp '/> to find and to
+      // Element. Uses IComparer <paramref name='cmp '/> to Find and to
       // check equality.</summary>
-      // <param name='element'></param>
+      // <param name='Element'></param>
       // <param name='cmp'>An IComparer object.</param>
       // <returns>A 32-bit signed integer.</returns>
-      public int count (T element, IComparer<T> cmp) {
+      public int Count(T Element, IComparer<T> cmp) {
         var c = 0;
         RBCell t = this;
         while (t != null) {
-          int diff = cmp.Compare (element, t.element());
+          int diff = cmp.Compare(Element, t.Element());
           if (diff == 0) {
             ++c;
             if (t.leftValue == null) {
@@ -488,7 +488,7 @@ System.Collections.IEnumerable.GetEnumerator() {
             } else if (t.rightValue == null) {
               t = t.leftValue;
             } else {
-              c += t.rightValue.count (element, cmp);
+              c += t.rightValue.Count(Element, cmp);
               t = t.leftValue;
             }
           } else {
@@ -498,63 +498,63 @@ System.Collections.IEnumerable.GetEnumerator() {
         return c;
       }
 
-      // <summary>Insert cell as the left child of current node, and then
-      // rebalance the tree it is in. @return the new root of the current
-      // tree. (Rebalancing can change the root!).</summary>
+      // <summary>Insert cell as the Left child of current node, and then
+      // rebalance the tree it is in. @return the new Root of the current
+      // tree. (Rebalancing can change the Root!).</summary>
       // <param name='cell'>The cell to add.</param>
-      // <param name='root'>Root, the root of the current tree.</param>
+      // <param name='Root'>Root, the Root of the current tree.</param>
       // <returns>A RBCell object.</returns>
-      public RBCell insertLeft (RBCell cell, RBCell root) {
+      public RBCell InsertLeft(RBCell cell, RBCell Root) {
         this.leftValue = cell;
         cell.parentValue = this;
-        return cell.fixAfterInsertion (root);
+        return cell.FixAfterInsertion(Root);
       }
 
-      // <summary>Insert cell as the right child of current node, and then
+      // <summary>Insert cell as the Right child of current node, and then
       // rebalance the tree it is in.</summary>
       // <param name='cell'>The cell to add.</param>
-      // <param name='root'>The root of the current tree.</param>
-      // <returns>The new root of the current tree. (Rebalancing can change
-      // the root!).</returns>
-      public RBCell insertRight (RBCell cell, RBCell root) {
+      // <param name='Root'>The Root of the current tree.</param>
+      // <returns>The new Root of the current tree. (Rebalancing can change
+      // the Root!).</returns>
+      public RBCell InsertRight(RBCell cell, RBCell Root) {
         this.rightValue = cell;
         cell.parentValue = this;
-        return cell.fixAfterInsertion (root);
+        return cell.FixAfterInsertion(Root);
       }
 
       // <summary>Delete the current node, and then rebalance the tree it is
       // in.</summary>
-      // <param name='root'>The root of the current tree.</param>
-      // <returns>The new root of the current tree. Rebalancing can change
-      // the root.</returns>
-      public RBCell delete (RBCell root) {
-        // if strictly internal, swap contents with successor and then delete it
+      // <param name='Root'>The Root of the current tree.</param>
+      // <returns>The new Root of the current tree. Rebalancing can change
+      // the Root.</returns>
+      public RBCell Delete(RBCell Root) {
+        // if strictly internal, swap contents with Successor and then Delete it
         if (this.leftValue != null && this.rightValue != null) {
-          RBCell s = this.successor();
-          this.copyContents (s);
-          return s.delete (root);
+          RBCell s = this.Successor();
+          this.CopyContents(s);
+          return s.Delete(Root);
         }
         // Start fixup at replacement node, if it exists
         RBCell replacement = this.leftValue ?? this.rightValue;
         if (replacement != null) {
-          // link replacement to parent
+          // link replacement to Parent
           replacement.parentValue = this.parentValue;
           if (this.parentValue == null) {
-            root = replacement;
+            Root = replacement;
           } else if (this == this.parentValue.leftValue) {
             this.parentValue.leftValue = replacement;
           } else {
             this.parentValue.rightValue = replacement;
           }
-          // null out links so they are OK to use by fixAfterDeletion
+          // null out links so they are OK to use by FixAfterDeletion
           this.leftValue = null;
           this.rightValue = null;
           this.parentValue = null;
           // fix replacement
           if (this.colorValue) {
-            root = replacement.fixAfterDeletion (root);
+            Root = replacement.FixAfterDeletion(Root);
           }
-          return root;
+          return Root;
         }
         if (this.parentValue == null) { // exit if we are the only node
           // if no children, use self as phantom replacement
@@ -562,9 +562,9 @@ System.Collections.IEnumerable.GetEnumerator() {
           return null;
         }
         if (this.colorValue) {
-          root = this.fixAfterDeletion (root);
+          Root = this.FixAfterDeletion(Root);
         }
-        // Unlink (Couldn't before since fixAfterDeletion needs parent ptr)
+        // Unlink (Couldn't before since FixAfterDeletion needs Parent ptr)
         if (this.parentValue != null) {
           if (this == this.parentValue.leftValue) {
             this.parentValue.leftValue = null;
@@ -573,10 +573,10 @@ System.Collections.IEnumerable.GetEnumerator() {
           }
           this.parentValue = null;
         }
-        return root;
+        return Root;
       }
 
-      /** From CLR **/ private RBCell rotateLeft (RBCell rootValue) {
+      /** From CLR **/ private RBCell RotateLeft(RBCell rootValue) {
         RBCell r = this.rightValue;
         this.rightValue = r.leftValue;
         if (r.leftValue != null) {
@@ -595,7 +595,7 @@ System.Collections.IEnumerable.GetEnumerator() {
         return rootValue;
       }
 
-      /** From CLR **/ private RBCell rotateRight (RBCell rootValue) {
+      /** From CLR **/ private RBCell RotateRight(RBCell rootValue) {
         RBCell l = this.leftValue;
         this.leftValue = l.rightValue;
         if (l.rightValue != null) {
@@ -614,44 +614,44 @@ System.Collections.IEnumerable.GetEnumerator() {
         return rootValue;
       }
 
-      /** From CLR **/ private RBCell fixAfterInsertion (RBCell rootValue) {
+      /** From CLR **/ private RBCell FixAfterInsertion(RBCell rootValue) {
         this.colorValue = RED;
         RBCell x = this;
         while (x != null && x != rootValue && !x.parentValue.colorValue) {
-          if (parentOf (x) == leftOf (parentOf (parentOf (x)))) {
-            RBCell y = rightOf (parentOf (parentOf (x)));
-            if (!colorOf (y)) {
-              setColor (parentOf (x), BLACK);
-              setColor (y, BLACK);
-              setColor (parentOf (parentOf (x)), RED);
-              x = parentOf (parentOf (x));
+          if (ParentOf(x) == LeftOf(ParentOf(ParentOf(x)))) {
+            RBCell y = RightOf(ParentOf(ParentOf(x)));
+            if (!ColorOf(y)) {
+              SetColor(ParentOf(x), BLACK);
+              SetColor(y, BLACK);
+              SetColor(ParentOf(ParentOf(x)), RED);
+              x = ParentOf(ParentOf(x));
             } else {
-              if (x == rightOf (parentOf (x))) {
-                x = parentOf (x);
-                rootValue = x.rotateLeft (rootValue);
+              if (x == RightOf(ParentOf(x))) {
+                x = ParentOf(x);
+                rootValue = x.RotateLeft(rootValue);
               }
-              setColor (parentOf (x), BLACK);
-              setColor (parentOf (parentOf (x)), RED);
-              if (parentOf (parentOf (x)) != null) {
-                rootValue = parentOf (parentOf (x)).rotateRight (rootValue);
+              SetColor(ParentOf(x), BLACK);
+              SetColor(ParentOf(ParentOf(x)), RED);
+              if (ParentOf(ParentOf(x)) != null) {
+                rootValue = ParentOf(ParentOf(x)).RotateRight(rootValue);
               }
             }
           } else {
-            RBCell y = leftOf (parentOf (parentOf (x)));
-            if (!colorOf (y)) {
-              setColor (parentOf (x), BLACK);
-              setColor (y, BLACK);
-              setColor (parentOf (parentOf (x)), RED);
-              x = parentOf (parentOf (x));
+            RBCell y = LeftOf(ParentOf(ParentOf(x)));
+            if (!ColorOf(y)) {
+              SetColor(ParentOf(x), BLACK);
+              SetColor(y, BLACK);
+              SetColor(ParentOf(ParentOf(x)), RED);
+              x = ParentOf(ParentOf(x));
             } else {
-              if (x == leftOf (parentOf (x))) {
-                x = parentOf (x);
-                rootValue = x.rotateRight (rootValue);
+              if (x == LeftOf(ParentOf(x))) {
+                x = ParentOf(x);
+                rootValue = x.RotateRight(rootValue);
               }
-              setColor (parentOf (x), BLACK);
-              setColor (parentOf (parentOf (x)), RED);
-              if (parentOf (parentOf (x)) != null) {
-                rootValue = parentOf (parentOf (x)).rotateLeft (rootValue);
+              SetColor(ParentOf(x), BLACK);
+              SetColor(ParentOf(ParentOf(x)), RED);
+              if (ParentOf(ParentOf(x)) != null) {
+                rootValue = ParentOf(ParentOf(x)).RotateLeft(rootValue);
               }
             }
           }
@@ -660,60 +660,60 @@ System.Collections.IEnumerable.GetEnumerator() {
         return rootValue;
       }
       /** From CLR **/
-      private RBCell fixAfterDeletion (RBCell rootValue) {
+      private RBCell FixAfterDeletion(RBCell rootValue) {
         RBCell x = this;
-        while (x != rootValue && colorOf (x)) {
-          if (x == leftOf (parentOf (x))) {
-            RBCell sib = rightOf (parentOf (x));
-            if (!colorOf (sib)) {
-              setColor (sib, BLACK);
-              setColor (parentOf (x), RED);
-              rootValue = parentOf (x).rotateLeft (rootValue);
-              sib = rightOf (parentOf (x));
+        while (x != rootValue && ColorOf(x)) {
+          if (x == LeftOf(ParentOf(x))) {
+            RBCell sib = RightOf(ParentOf(x));
+            if (!ColorOf(sib)) {
+              SetColor(sib, BLACK);
+              SetColor(ParentOf(x), RED);
+              rootValue = ParentOf(x).RotateLeft(rootValue);
+              sib = RightOf(ParentOf(x));
             }
-            if (colorOf (leftOf (sib)) && colorOf (rightOf (sib))) {
-              setColor (sib, RED);
-              x = parentOf (x);
+            if (ColorOf(LeftOf(sib)) && ColorOf(RightOf(sib))) {
+              SetColor(sib, RED);
+              x = ParentOf(x);
             } else {
-              if (colorOf (rightOf (sib))) {
-                setColor (leftOf (sib), BLACK);
-                setColor (sib, RED);
-                rootValue = sib.rotateRight (rootValue);
-                sib = rightOf (parentOf (x));
+              if (ColorOf(RightOf(sib))) {
+                SetColor(LeftOf(sib), BLACK);
+                SetColor(sib, RED);
+                rootValue = sib.RotateRight(rootValue);
+                sib = RightOf(ParentOf(x));
               }
-              setColor (sib, colorOf (parentOf (x)));
-              setColor (parentOf (x), BLACK);
-              setColor (rightOf (sib), BLACK);
-              rootValue = parentOf (x).rotateLeft (rootValue);
+              SetColor(sib, ColorOf(ParentOf(x)));
+              SetColor(ParentOf(x), BLACK);
+              SetColor(RightOf(sib), BLACK);
+              rootValue = ParentOf(x).RotateLeft(rootValue);
               x = rootValue;
             }
           } else { // symmetric
-            RBCell sib = leftOf (parentOf (x));
-            if (!colorOf (sib)) {
-              setColor (sib, BLACK);
-              setColor (parentOf (x), RED);
-              rootValue = parentOf (x).rotateRight (rootValue);
-              sib = leftOf (parentOf (x));
+            RBCell sib = LeftOf(ParentOf(x));
+            if (!ColorOf(sib)) {
+              SetColor(sib, BLACK);
+              SetColor(ParentOf(x), RED);
+              rootValue = ParentOf(x).RotateRight(rootValue);
+              sib = LeftOf(ParentOf(x));
             }
-            if (colorOf (rightOf (sib)) && colorOf (leftOf (sib))) {
-              setColor (sib, RED);
-              x = parentOf (x);
+            if (ColorOf(RightOf(sib)) && ColorOf(LeftOf(sib))) {
+              SetColor(sib, RED);
+              x = ParentOf(x);
             } else {
-              if (colorOf (leftOf (sib))) {
-                setColor (rightOf (sib), BLACK);
-                setColor (sib, RED);
-                rootValue = sib.rotateLeft (rootValue);
-                sib = leftOf (parentOf (x));
+              if (ColorOf(LeftOf(sib))) {
+                SetColor(RightOf(sib), BLACK);
+                SetColor(sib, RED);
+                rootValue = sib.RotateLeft(rootValue);
+                sib = LeftOf(ParentOf(x));
               }
-              setColor (sib, colorOf (parentOf (x)));
-              setColor (parentOf (x), BLACK);
-              setColor (leftOf (sib), BLACK);
-              rootValue = parentOf (x).rotateRight (rootValue);
+              SetColor(sib, ColorOf(ParentOf(x)));
+              SetColor(ParentOf(x), BLACK);
+              SetColor(LeftOf(sib), BLACK);
+              rootValue = ParentOf(x).RotateRight(rootValue);
               x = rootValue;
             }
           }
         }
-        setColor (x, BLACK);
+        SetColor(x, BLACK);
         return rootValue;
       }
     }

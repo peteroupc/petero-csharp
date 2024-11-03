@@ -1,65 +1,23 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Project DefaultTargets='Build' ToolsVersion='4.0' xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
+<Project Sdk='Microsoft.NET.Sdk'>
   <PropertyGroup>
-    <Configuration Condition=' &apos;$(Configuration)&apos; == &apos;&apos; '>Release</Configuration>
-    <Platform Condition=' &apos;$(Platform)&apos; == &apos;&apos; '>AnyCPU</Platform>
-    <ProjectGuid>{B85172EC-D78D-47A0-AD9E-A801D238F28C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>PeterO</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
-  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+    <TargetFramework>netcoreapp8.0</TargetFramework>
+  </PropertyGroup>
   <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Debug&apos; '>
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\PeterO.xml</DocumentationFile>
-  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
   <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Release&apos; '>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Release\PeterO.xml</DocumentationFile>
-  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
-  <PropertyGroup>
-    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-<RootNamespace>petero_csharp</RootNamespace>
-  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
   <ItemGroup>
-    <Reference Include='System'/>
-    <Reference Include='System.Core'/>
-    <Reference Include='System.Xml'/>
-  <AdditionalFiles Include='stylecop.json'/><AdditionalFiles Include='rules.ruleset'/><PackageReference Include='StyleCop.Analyzers'><Version>1.1.118</Version></PackageReference><PackageReference Include='Microsoft.CodeAnalysis.FxCopAnalyzers'><Version>3.3.2</Version></PackageReference><PackageReference Include='Microsoft.CodeAnalysis.NetAnalyzers'><Version>7.0.3</Version></PackageReference></ItemGroup>
-  <ItemGroup>
-    <Compile Include='PeterO\ArrayUtil.cs'/>
-    <Compile Include='PeterO\DisposableList.cs'/>
-    <Compile Include='PeterO\IniEntry.cs'/>
-    <Compile Include='PeterO\IniFile.cs'/>
-    <Compile Include='PeterO\IniMergeBehavior.cs'/>
-    <Compile Include='PeterO\IStructure.cs'/>
-    <Compile Include='PeterO\ListSegment.cs'/>
-    <Compile Include='PeterO\PartialStream.cs'/>
-    <Compile Include='PeterO\Pair.cs'/>
-    <Compile Include='PeterO\Png.cs'/>
-    <Compile Include='PeterO\Png4BitIndexed.cs'/>
-    <Compile Include='PeterO\Png8BitIndexed.cs'/>
-    <Compile Include='PeterO\Util.cs'/>
-    <Compile Include='PeterO\XEReader.cs'/>
-    <Compile Include='PeterO\XEWriter.cs'/>
-    <Compile Include='PeterO\DisposableLists.cs'/>
-    <Compile Include='PeterO\IniSection.cs'/>
-  </ItemGroup>
-  <Import Project='$(MSBuildToolsPath)\Microsoft.CSharp.targets'/>
+  <AdditionalFiles Include='stylecop.json'/><AdditionalFiles Include='rules.ruleset'/></ItemGroup>
+      <ItemGroup>
+        <PackageReference Include='Microsoft.NET.Test.Sdk' Version='15.9.0'/>
+        <PackageReference Include='NUnit' Version='3.13.2'/>
+        <PackageReference Include='Microsoft.CodeAnalysis.NetAnalyzers' PrivateAssets='All' Version='7.0.3'/>
+        <PackageReference Include='NUnit3TestAdapter' Version='3.16.1'>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include='StyleCop.Analyzers' PrivateAssets='All' Version='1.2.0-beta.354'/>
+      </ItemGroup>
    </Project>

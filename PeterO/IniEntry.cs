@@ -21,7 +21,7 @@ namespace PeterO {
     /// IniEntry object.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='entry'/> is null.</exception>
-    public IniEntry (IniEntry entry) {
+    public IniEntry(IniEntry entry) {
       if (entry == null) {
         throw new ArgumentNullException(nameof(entry));
       }
@@ -38,23 +38,23 @@ namespace PeterO {
     /// name='key'/> or <paramref name='value'/> is null.</exception>
     /// <exception cref='ArgumentException'>Characters in key are not
     /// valid.; Characters in value are not valid.</exception>
-    public IniEntry (string key, string value) {
+    public IniEntry(string key, string value) {
       if (key == null) {
         throw new ArgumentNullException(nameof(key));
       }
       if (value == null) {
         throw new ArgumentNullException(nameof(value));
       }
-      if (key.IndexOfAny (new[] {
+      if (key.IndexOfAny(new[] {
         '\n',
         '\0',
-        '='
+        '=',
       }) >= 0) {
         throw new ArgumentException("Characters in key are not valid.");
       }
-      if (value.IndexOfAny (new[] {
+      if (value.IndexOfAny(new[] {
         '\n',
-        '\0'
+        '\0',
       }) >= 0) {
         throw new ArgumentException("Characters in value are not valid.");
       }
@@ -69,18 +69,18 @@ namespace PeterO {
     /// name='comment'/> is null.</exception>
     /// <exception cref='ArgumentException'>Value is not a comment.;
     /// Characters in comment are not valid.</exception>
-    public IniEntry (string comment) {
+    public IniEntry(string comment) {
       if (comment == null) {
         throw new ArgumentNullException(nameof(comment));
       }
-      if (comment.IndexOfAny (new[] {
-      ';' // ,'#'
+      if (comment.IndexOfAny(new[] {
+      ';' // ,'#',,,,,,
     }) != 0) {
         throw new ArgumentException("Value is not a comment.");
       }
-      if (comment.IndexOfAny (new[] {
+      if (comment.IndexOfAny(new[] {
         '\n',
-        '\0'
+        '\0',
       }) >= 0) {
         throw new ArgumentException("Characters in comment are not valid.");
       }
@@ -103,11 +103,11 @@ namespace PeterO {
     public override string ToString() {
       var sb = new StringBuilder();
       if (this.key == null) {
-        sb.Append (this.value);
+        sb.Append(this.value);
       } else {
-        sb.Append (this.key);
-        sb.Append ('=');
-        sb.Append (this.value);
+        sb.Append(this.key);
+        sb.Append('=');
+        sb.Append(this.value);
       }
       return sb.ToString();
     }

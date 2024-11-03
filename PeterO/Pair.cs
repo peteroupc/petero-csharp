@@ -22,7 +22,7 @@ namespace PeterO {
     /// TFirst object.</param>
     /// <param name='second'>The parameter <paramref name='second'/> is a
     /// TSecond object.</param>
-    public Pair (TFirst first, TSecond second) {
+    public Pair(TFirst first, TSecond second) {
       this.first = first;
       this.second = second;
     }
@@ -56,10 +56,10 @@ namespace PeterO {
     public override int GetHashCode() {
       var code = 17;
       unchecked {
-        if ((object)this.first != (object)default (TFirst)) {
+        if ((object)this.first != (object)default(TFirst)) {
           code *= 19 + this.first.GetHashCode();
         }
-        if ((object)this.second != (object)default (TSecond)) {
+        if ((object)this.second != (object)default(TSecond)) {
           code *= 23 + this.second.GetHashCode();
         }
       }
@@ -70,9 +70,9 @@ namespace PeterO {
     /// <param name='other'>The parameter <paramref name='other'/> is
     /// a.Pair{`0 object.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool Equals (Pair<TFirst, TSecond> other) {
-      return Object.Equals (this.first, other.first) &&
-        Object.Equals (this.second, other.second);
+    public bool Equals(Pair<TFirst, TSecond> other) {
+      return Object.Equals(this.first, other.first) &&
+        Object.Equals(this.second, other.second);
     }
 
     /// <summary>Determines whether this object and another object are
@@ -81,10 +81,10 @@ namespace PeterO {
     /// arbitrary object.</param>
     /// <returns><c>true</c> if this object and another object are equal;
     /// otherwise, <c>false</c>.</returns>
-    public override bool Equals (object obj) {
+    public override bool Equals(object obj) {
       var other = obj as Pair<TFirst, TSecond>;
-      return (other != null) && (Object.Equals (this.first, other.first) &&
-          Object.Equals (this.second, other.second));
+      return (other != null) && (Object.Equals(this.first, other.first) &&
+          Object.Equals(this.second, other.second));
     }
   }
 }

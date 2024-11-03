@@ -21,7 +21,7 @@ namespace PeterO {
     private XEReader() {
     }
 
-    private XEReader (XmlReader reader, bool leaveOpen) {
+    private XEReader(XmlReader reader, bool leaveOpen) {
       this.reader = reader;
       this.leaveOpen = leaveOpen;
     }
@@ -95,22 +95,22 @@ namespace PeterO {
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
     /// <exception cref='InvalidOperationException'>This element's content
     /// was already read or being read.</exception>
-    public bool IsElement (string localName, string namespaceName) {
+    public bool IsElement(string localName, string namespaceName) {
       if (this.reading) {
         throw new InvalidOperationException("Content already read.");
       }
-      return this.reader.IsStartElement (localName, namespaceName);
+      return this.reader.IsStartElement(localName, namespaceName);
     }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='localName'>The parameter <paramref name='localName'/>
     /// is a text string.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool IsElement (string localName) {
+    public bool IsElement(string localName) {
       if (this.reading) {
         throw new InvalidOperationException("Content already read.");
       }
-      return this.reader.IsStartElement (localName);
+      return this.reader.IsStartElement(localName);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -119,9 +119,9 @@ namespace PeterO {
     /// <param name='namespaceName'>The parameter <paramref
     /// name='namespaceName'/> is a text string.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool MoveNext (string localName, string namespaceName) {
+    public bool MoveNext(string localName, string namespaceName) {
       while (this.MoveNext()) {
-        if (this.reader.IsStartElement (localName, namespaceName)) {
+        if (this.reader.IsStartElement(localName, namespaceName)) {
           return true;
         }
       }
@@ -132,9 +132,9 @@ namespace PeterO {
     /// <param name='localName'>The parameter <paramref name='localName'/>
     /// is a text string.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool MoveNext (string localName) {
+    public bool MoveNext(string localName) {
       while (this.MoveNext()) {
-        if (this.reader.IsStartElement (localName)) {
+        if (this.reader.IsStartElement(localName)) {
           return true;
         }
       }
@@ -182,7 +182,7 @@ namespace PeterO {
         throw new InvalidOperationException("Content already read.");
       }
       this.isUnread = false;
-      return Create (this.reader);
+      return Create(this.reader);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -217,14 +217,14 @@ namespace PeterO {
     /// <returns>A XEReader object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='file'/> is null.</exception>
-    public static XEReader Create (string file) {
+    public static XEReader Create(string file) {
       if (file == null) {
         throw new ArgumentNullException(nameof(file));
       }
       if (file.Length == 0) {
         throw new ArgumentException("file" + " is empty.");
       }
-      return Create (XmlReader.Create (file));
+      return Create(XmlReader.Create(file));
     }
 
     /// <summary>Not documented yet.</summary>
@@ -233,7 +233,7 @@ namespace PeterO {
     /// <returns>A XEReader object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='reader'/> is null.</exception>
-    public static XEReader Create (XmlReader reader) {
+    public static XEReader Create(XmlReader reader) {
       if (reader == null) {
         throw new ArgumentNullException(nameof(reader));
       }

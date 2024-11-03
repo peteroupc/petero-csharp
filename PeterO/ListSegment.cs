@@ -37,7 +37,7 @@ namespace PeterO {
     /// 32-bit signed integer.</param>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public ListSegment (IList<T> list, int start, int count) {
+    public ListSegment(IList<T> list, int start, int count) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -88,7 +88,7 @@ namespace PeterO {
 
       set {
         this.list[this.start + index] = value;
-        this.ContentsModified (this, null);
+        this.ContentsModified(this, null);
       }
     }
 
@@ -118,9 +118,9 @@ namespace PeterO {
     /// <param name='item'>The parameter <paramref name='item'/> is a `0
     /// object.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public int IndexOf (T item) {
+    public int IndexOf(T item) {
       for (int i = 0; i < this.count; ++i) {
-        if (this.comparer.Equals (this.list[this.start + i], item)) {
+        if (this.comparer.Equals(this.list[this.start + i], item)) {
           return this.start + i;
         }
       }
@@ -132,7 +132,7 @@ namespace PeterO {
     /// 32-bit signed integer.</param>
     /// <param name='item'>The parameter <paramref name='item'/> is a T
     /// object.</param>
-    public void Insert (int index, T item) {
+    public void Insert(int index, T item) {
       throw new NotSupportedException("Changing the size of a list segment" +
 "\u0020is not" +
 "\u0020supported.");
@@ -141,7 +141,7 @@ namespace PeterO {
     /// <summary>This method is not supported.</summary>
     /// <param name='index'>The parameter <paramref name='index'/> is a
     /// 32-bit signed integer.</param>
-    public void RemoveAt (int index) {
+    public void RemoveAt(int index) {
       throw new NotSupportedException("Changing the size of a list segment" +
 "\u0020is not" +
 "\u0020supported.");
@@ -152,7 +152,7 @@ namespace PeterO {
     /// object.</param>
     /// <exception cref='NotSupportedException'>Always thrown, because
     /// changing the size of a list segment is not supported.</exception>
-    public void Add (T item) {
+    public void Add(T item) {
       throw new NotSupportedException("Changing the size of a list segment" +
 "\u0020is not" +
 "\u0020supported.");
@@ -169,8 +169,8 @@ namespace PeterO {
     /// <param name='item'>The parameter <paramref name='item'/> is a `0
     /// object.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool Contains (T item) {
-      return this.IndexOf (item) >= 0;
+    public bool Contains(T item) {
+      return this.IndexOf(item) >= 0;
     }
 
     /// <summary>Not documented yet.</summary>
@@ -182,7 +182,7 @@ namespace PeterO {
     /// name='array'/> is null.</exception>
     /// <exception cref='ArgumentException'>Array index and count must fit
     /// the bounds of the array.</exception>
-    public void CopyTo (T[] array, int arrayIndex) {
+    public void CopyTo(T[] array, int arrayIndex) {
       if (array == null) {
         throw new ArgumentNullException(nameof(array));
       }
@@ -206,7 +206,7 @@ namespace PeterO {
     /// <param name='item'>The parameter <paramref name='item'/> is a T
     /// object.</param>
     /// <returns>Either <c>true</c> or <c>false</c>.</returns>
-    public bool Remove (T item) {
+    public bool Remove(T item) {
       throw new NotSupportedException("Changing the size of a list segment" +
 "\u0020is not" +
 "\u0020supported.");
@@ -217,11 +217,11 @@ namespace PeterO {
       private int index = -1;
       private bool wasModified;
 
-      private void OnContentsModified (object sender, EventArgs eventArgs) {
+      private void OnContentsModified(object sender, EventArgs eventArgs) {
         this.wasModified = true;
       }
 
-      public ListSegmentEnumerator (ListSegment<T> list) {
+      public ListSegmentEnumerator(ListSegment<T> list) {
         this.list = list;
         this.list.ContentsModified += this.OnContentsModified;
       }

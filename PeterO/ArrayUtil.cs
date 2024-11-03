@@ -20,7 +20,7 @@ namespace PeterO {
     /// <typeparam name='T'>Any object type.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='random'/> or <paramref name='list'/> is null.</exception>
-    public static void Shuffle<T> (IList<T> list, Random random) {
+    public static void Shuffle<T>(IList<T> list, Random random) {
       if (random == null) {
         throw new ArgumentNullException(nameof(random));
       }
@@ -28,7 +28,7 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(list));
       }
       for (int i = list.Count - 1; i >= 1; --i) {
-        var other = random.Next (i + 1);
+        var other = random.Next(i + 1);
         if (i != other) {
           var obj = list[i];
           list[i] = list[other];
@@ -44,7 +44,7 @@ namespace PeterO {
     /// <typeparam name='T'>Any object type.</typeparam>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static void Reverse<T> (IList<T> list) {
+    public static void Reverse<T>(IList<T> list) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -74,7 +74,7 @@ namespace PeterO {
     /// name='count'/>.</exception>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='list'/> is null.</exception>
-    public static void Reverse<T> (IList<T> list, int index, int count) {
+    public static void Reverse<T>(IList<T> list, int index, int count) {
       if (list == null) {
         throw new ArgumentNullException(nameof(list));
       }
@@ -117,7 +117,7 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='items'/> is null.</exception>
-    public static T FindItem<T> (
+    public static T FindItem<T>(
       IEnumerable<T> items,
       T itemToFind,
       T defaultValue) {
@@ -126,7 +126,7 @@ namespace PeterO {
       }
       var eqc = EqualityComparer<T>.Default;
       foreach (T item in items) {
-        if (eqc.Equals (item, itemToFind)) {
+        if (eqc.Equals(item, itemToFind)) {
           return item;
         }
       }
@@ -144,7 +144,7 @@ namespace PeterO {
     /// <returns>A T object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='items'/> or <paramref name='func'/> is null.</exception>
-    public static T FindItem<T> (
+    public static T FindItem<T>(
       IEnumerable<T> items,
       Predicate<T> func,
       T defaultValue) {
@@ -155,7 +155,7 @@ namespace PeterO {
         throw new ArgumentNullException(nameof(func));
       }
       foreach (T item in items) {
-        if (func (item)) {
+        if (func(item)) {
           return item;
         }
       }
@@ -170,7 +170,7 @@ namespace PeterO {
     /// <returns>A T[] object.</returns>
     /// <exception cref='ArgumentNullException'>The parameter _collection_
     /// is null.</exception>
-    public static T[] ToArray<T> (IEnumerable<T> collection) {
+    public static T[] ToArray<T>(IEnumerable<T> collection) {
       if (collection == null) {
         throw new ArgumentNullException(nameof(collection));
       }
@@ -186,9 +186,9 @@ List<T>(collection).ToArray();
     /// a.Collections.Generic.IList{``0} object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int CompareLists<T> (IList<T> list1, IList<T> list2) where T :
+    public static int CompareLists<T>(IList<T> list1, IList<T> list2) where T :
       IComparable<T> {
-      return CompareLists (list1, list2, Comparer<T>.Default);
+      return CompareLists(list1, list2, Comparer<T>.Default);
     }
 
     /// <summary>Compares two lists with the same type of items.</summary>
@@ -202,7 +202,7 @@ List<T>(collection).ToArray();
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='comparer'/> is null.</exception>
-    public static int CompareLists<T> (
+    public static int CompareLists<T>(
       IList<T> list1,
       IList<T> list2,
       IComparer<T> comparer) where T : IComparable<T> {
@@ -219,9 +219,9 @@ List<T>(collection).ToArray();
       if (list2 == null) {
         return 1;
       }
-      var len = Math.Min (list1.Count, list2.Count);
+      var len = Math.Min(list1.Count, list2.Count);
       for (int i = 0; i < len; ++i) {
-        c = comparer.Compare (list1[i], list2[i]);
+        c = comparer.Compare(list1[i], list2[i]);
         if (c != 0) {
           break;
         }
@@ -239,10 +239,10 @@ List<T>(collection).ToArray();
     /// a.Collections.Generic.IEnumerable{``0} object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int CompareArrays<T> (
+    public static int CompareArrays<T>(
       IEnumerable<T> array1,
       IEnumerable<T> array2) where T : IComparable<T> {
-      return CompareArrays (array1, array2, Comparer<T>.Default);
+      return CompareArrays(array1, array2, Comparer<T>.Default);
     }
 
     /// <summary>Not documented yet.</summary>
@@ -256,7 +256,7 @@ List<T>(collection).ToArray();
     /// <returns>A 32-bit signed integer.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='comparer'/> is null.</exception>
-    public static int CompareArrays<T> (
+    public static int CompareArrays<T>(
       IEnumerable<T> array1,
       IEnumerable<T> array2,
       IComparer<T> comparer) where T : IComparable<T> {
@@ -289,7 +289,7 @@ List<T>(collection).ToArray();
               // both have no items left
               return 0;
             }
-            var c = comparer.Compare (enumA.Current, enumB.Current);
+            var c = comparer.Compare(enumA.Current, enumB.Current);
             if (c != 0) {
               return c;
             }
@@ -306,10 +306,10 @@ List<T>(collection).ToArray();
     /// <returns><c>true</c> if both enumerable objects are null or both
     /// enumerable objects have the same elements and number of elements in
     /// the same order; otherwise, <c>false</c>.</returns>
-    public static bool ArraysEqual<T> (
+    public static bool ArraysEqual<T>(
       IEnumerable<T> array1,
       IEnumerable<T> array2) {
-      return ArraysEqual (array1, array2, EqualityComparer<T>.Default);
+      return ArraysEqual(array1, array2, EqualityComparer<T>.Default);
     }
 
     /// <summary>Determines whether two enumerable objects are
@@ -325,7 +325,7 @@ List<T>(collection).ToArray();
     /// otherwise, <c>false</c>.</returns>
     /// <exception cref='ArgumentNullException'>The parameter <paramref
     /// name='comparer'/> is null.</exception>
-    public static bool ArraysEqual<T> (
+    public static bool ArraysEqual<T>(
       IEnumerable<T> array1,
       IEnumerable<T> array2,
       IEqualityComparer<T> comparer) {
@@ -352,7 +352,7 @@ List<T>(collection).ToArray();
               ret = true;
               break;
             }
-            if (!comparer.Equals (enumA.Current, enumB.Current)) {
+            if (!comparer.Equals(enumA.Current, enumB.Current)) {
               ret = false;
               break;
             }
@@ -366,23 +366,23 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Byte} object.</param>
     /// <returns>A text string.</returns>
-    public static string ArrayToStringHex (IEnumerable<byte> array) {
+    public static string ArrayToStringHex(IEnumerable<byte> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append ("{");
+      b.Append("{");
       var first = true;
       string hex = "0123456789ABCDEF";
       foreach (byte value in array) {
         if (!first) {
-          b.Append (", ");
+          b.Append(", ");
         }
-        b.Append (hex[ (int)((value >> 4) & 15)]);
-        b.Append (hex[ (int)(value & 15)]);
+        b.Append(hex[(int)((value >> 4) & 15)]);
+        b.Append(hex[(int)(value & 15)]);
         first = false;
       }
-      b.Append ("}");
+      b.Append("}");
       return b.ToString();
     }
 
@@ -390,29 +390,29 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Int32} object.</param>
     /// <returns>A text string.</returns>
-    public static string ArrayToStringHex (IEnumerable<int> array) {
+    public static string ArrayToStringHex(IEnumerable<int> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append ("{");
+      b.Append("{");
       var first = true;
       string hex = "0123456789ABCDEF";
       foreach (int value in array) {
         if (!first) {
-          b.Append (", ");
+          b.Append(", ");
         }
-        b.Append (hex[ (int)((value >> 28) & 15)]);
-        b.Append (hex[ (int)((value >> 24) & 15)]);
-        b.Append (hex[ (int)((value >> 20) & 15)]);
-        b.Append (hex[ (int)((value >> 16) & 15)]);
-        b.Append (hex[ (int)((value >> 12) & 15)]);
-        b.Append (hex[ (int)((value >> 8) & 15)]);
-        b.Append (hex[ (int)((value >> 4) & 15)]);
-        b.Append (hex[ (int)(value & 15)]);
+        b.Append(hex[(int)((value >> 28) & 15)]);
+        b.Append(hex[(int)((value >> 24) & 15)]);
+        b.Append(hex[(int)((value >> 20) & 15)]);
+        b.Append(hex[(int)((value >> 16) & 15)]);
+        b.Append(hex[(int)((value >> 12) & 15)]);
+        b.Append(hex[(int)((value >> 8) & 15)]);
+        b.Append(hex[(int)((value >> 4) & 15)]);
+        b.Append(hex[(int)(value & 15)]);
         first = false;
       }
-      b.Append ("}");
+      b.Append("}");
       return b.ToString();
     }
 
@@ -421,21 +421,21 @@ List<T>(collection).ToArray();
     /// a.Collections.Generic.IEnumerable{``0} object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A text string.</returns>
-    public static string ArrayToString<T> (IEnumerable<T> array) {
+    public static string ArrayToString<T>(IEnumerable<T> array) {
       if (array == null) {
         return "null";
       }
       var b = new StringBuilder();
-      b.Append ("{");
+      b.Append("{");
       var first = true;
       foreach (T value in array) {
         if (!first) {
-          b.Append (", ");
+          b.Append(", ");
         }
-        b.Append (String.Empty + value);
+        b.Append(String.Empty + value);
         first = false;
       }
-      b.Append ("}");
+      b.Append("}");
       return b.ToString();
     }
 
@@ -443,7 +443,7 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Byte} object.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int ArrayHashCode (IEnumerable<byte> array) {
+    public static int ArrayHashCode(IEnumerable<byte> array) {
       var ret = 17;
       if (array != null) {
         foreach (byte value in array) {
@@ -457,7 +457,7 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Int32} object.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int ArrayHashCode (IEnumerable<int> array) {
+    public static int ArrayHashCode(IEnumerable<int> array) {
       var ret = 17;
       if (array != null) {
         foreach (int value in array) {
@@ -471,13 +471,13 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Single} object.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int ArrayHashCode (IEnumerable<float> array) {
+    public static int ArrayHashCode(IEnumerable<float> array) {
       var ret = 17;
       if (array != null) {
         foreach (float value in array) {
           ret += (
               37 * ret) + BitConverter.ToInt32(
-              BitConverter.GetBytes ((float)value),
+              BitConverter.GetBytes((float)value),
               0);
         }
       }
@@ -488,12 +488,13 @@ List<T>(collection).ToArray();
     /// <param name='array'>The parameter <paramref name='array'/> is
     /// a.Collections.Generic.IEnumerable{System.Double} object.</param>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int ArrayHashCode (IEnumerable<double> array) {
+    public static int ArrayHashCode(IEnumerable<double> array) {
       var ret = 17;
       if (array != null) {
         foreach (double value in array) {
-          var code = BitConverter.ToInt64 (BitConverter.GetBytes
-((double)value), 0);
+          var code = BitConverter.ToInt64(BitConverter.GetBytes(
+  (double)value),
+ 0);
           ret += (37 * ret) + (int)(code ^ (code >> 32));
         }
       }
@@ -505,12 +506,12 @@ List<T>(collection).ToArray();
     /// a.Collections.Generic.IEnumerable{``0} object.</param>
     /// <typeparam name='T'>Type parameter not documented yet.</typeparam>
     /// <returns>A 32-bit signed integer.</returns>
-    public static int ArrayHashCode<T> (IEnumerable<T> array) {
+    public static int ArrayHashCode<T>(IEnumerable<T> array) {
       var ret = 17;
       if (array != null) {
         foreach (T value in array) {
           ret *= 37;
-          if ((object)value != (object)default (T)) {
+          if ((object)value != (object)default(T)) {
             ret += value.GetHashCode();
           }
         }
